@@ -1,0 +1,188 @@
+/**
+ * 8051 Tetris Application
+ */
+
+#include "STC15_8051.h"
+#include "src/Timing.h"
+#include "src/Timing.c"
+#include "src/ShiftRegister.c"
+#include "src/LCDInterface.c"
+#include "src/LCDChars.h"
+#include "src/LCDChars.c"
+//#include "src/EclipseTetris/TetrisLogic.c_"
+
+//__sfr __at(0xB0)P3; // 8 bitPort3 P3.7 P3.6 P3.5 P3.4 P3.3 P3.2 P3.1 P3.0 1111,1111
+//__sfr __at(0xB2)P3M0; // 0000,0000
+//__sfr __at(0xB1)P3M1; // 0000,0000
+
+//__bit a[128];
+
+
+// LEFT_BUTTON
+// RIGHT_BUTTON
+// ROTATE_BUTTON
+
+
+
+
+static void Print(unsigned char* str)
+{
+    while(*str)
+    {
+        LCD_SEND_DATA(*str);
+        str++;
+    }
+}
+
+// #define AUDIO_SET_OUPUT() LCD_PINS_SHIFT_REG_VALUES = (LCD_PINS_SHIFT_REG_VALUES | (1 << 1))
+// #define AUDIO_CLEAR_OUTPUT() LCD_PINS_SHIFT_REG_VALUES = (LCD_PINS_SHIFT_REG_VALUES & ~(1 << 1))
+// 
+// static  __bit setOutPut = 1;
+// 
+// static void Audio_MiddleC(void)
+// {
+//     LCD_PINS_SHIFT_REG_VALUES = 0x00;
+//     //while(1)
+//     {
+//         unsigned short i;
+//         if(setOutPut)
+//         {
+//             AUDIO_SET_OUPUT();
+//         }
+//         else
+//         {
+//            AUDIO_CLEAR_OUTPUT();
+//         }
+//         setOutPut = !setOutPut;
+//         ShiftRegisterChangePinState(LCD_PINS_SHIFT_REG_VALUES);
+//         for(i = 0; i < 250; i++)
+//         {
+//             Delay1us();
+//         }
+//         Delay1ms();
+//     }
+// }
+// 
+// static void CInMiddleOfTrebleClef(void)
+// {
+//     //__bit setOutPut = 1;
+//     LCD_PINS_SHIFT_REG_VALUES = 0x00;
+//     //while(1)
+//     {
+//         unsigned short i;
+//         if(setOutPut)
+//         {
+//             AUDIO_SET_OUPUT();
+//         }
+//         else
+//         {
+//            AUDIO_CLEAR_OUTPUT();
+//         }
+//         setOutPut = !setOutPut;
+//         ShiftRegisterChangePinState(LCD_PINS_SHIFT_REG_VALUES);
+//         for(i = 0; i < 265; i++)
+//         {
+//             Delay1us();
+//         }
+//     }
+// }
+
+int main()
+{
+    unsigned char buttonPressed = 0;
+    //__bit toneOne = 1;
+
+
+
+    ShiftRegisterInit();
+
+    LCD_INIT();
+    LCD_INIT();
+    LCD_INIT();
+    LCD_CMD_SET_CURSOR(0, 0);
+    LCD_SEND_DATA('A');
+
+/*     LCD_CMD_UPLOAD_CUSTOM_CHAR(LCD_CHAR_TOP_SHAPE_CHAR_INDEX, LCDCharTopShapeData);
+    LCD_CMD_UPLOAD_CUSTOM_CHAR(LCD_CHAR_MIDDLE_SHAPE_CHAR_INDEX, LCDCharMiddleShapeData);
+    LCD_CMD_UPLOAD_CUSTOM_CHAR(LCD_CHAR_BOTTOM_SHAPE_CHAR_INDEX, LCDCharBottomShapeData);
+    LCD_CMD_UPLOAD_CUSTOM_CHAR(LCD_CHAR_TOP_TWO_SHAPE_CHAR_INDEX, LCDCharTopTwoShapeData);
+    LCD_CMD_UPLOAD_CUSTOM_CHAR(LCD_CHAR_BOTTOM_TWO_SHAPE_CHAR_INDEX, LCDCharBottomTwoShapeData);
+    LCD_CMD_UPLOAD_CUSTOM_CHAR(LCD_CHAR_THREE_SHAPE_CHAR_INDEX, LCDCharThreeShapeData);
+
+    LCD_CMD_SET_CURSOR(0, 0);
+    LCD_SEND_DATA('A');
+    LCD_CMD_SET_CURSOR(1, 0);
+    LCD_SEND_DATA(5);
+
+    LCD_CMD_SET_CURSOR(0, 0); */
+
+   
+
+    // Infinite loop
+	while(1)
+	{
+/*         if(toneOne == 1)
+        {
+            Audio_MiddleC();
+        }
+        else
+        {
+            CInMiddleOfTrebleClef();
+        } */
+	
+        //LCD_CMD_SCROLL_DISPLAY_LEFT();
+
+        //DelayMilliseconds(300);
+
+        if (LEFT_BUTTON)
+        {
+            //LCD_CMD_CLEAR();
+
+            //LCD_CMD_SET_CURSOR(0, 0);
+            //Print("261.63");
+            //toneOne = 1;
+/*             LCD_SEND_DATA(LCD_CHAR_THREE_SHAPE_CHAR_INDEX);
+            LCD_CMD_SET_CURSOR(1, 0);
+            LCD_SEND_DATA(LCD_CHAR_MIDDLE_SHAPE_CHAR_INDEX); */
+        }
+/*         else if (RIGHT_BUTTON)
+        {
+            LCD_CMD_CLEAR();
+
+            LCD_CMD_SET_CURSOR(0, 0);
+            LCD_SEND_DATA(LCD_CHAR_TOP_SHAPE_CHAR_INDEX);
+
+            LCD_CMD_SET_CURSOR(1, 0);
+            LCD_SEND_DATA(LCD_CHAR_TOP_SHAPE_CHAR_INDEX);
+
+            LCD_CMD_SET_CURSOR(2, 0);
+            LCD_SEND_DATA(LCD_CHAR_TOP_SHAPE_CHAR_INDEX);
+
+            LCD_CMD_SET_CURSOR(3, 0);
+            LCD_SEND_DATA(LCD_CHAR_TOP_SHAPE_CHAR_INDEX);
+        } */
+        else if (ROTATE_BUTTON)
+        {
+            LCD_CMD_CLEAR();
+
+            //LCD_CMD_SET_CURSOR(0, 0);
+            //Print("523.25");
+            //toneOne = 0;
+
+/*             LCD_CMD_SET_CURSOR(0, 1);
+            LCD_SEND_DATA(LCD_CHAR_BOTTOM_TWO_SHAPE_CHAR_INDEX);
+            LCD_CMD_SET_CURSOR(1, 1);
+            LCD_SEND_DATA(LCD_CHAR_BOTTOM_SHAPE_CHAR_INDEX);
+            LCD_CMD_SET_CURSOR(2, 1);
+            LCD_SEND_DATA(LCD_CHAR_BOTTOM_SHAPE_CHAR_INDEX); */
+        }
+
+	    //SET_PIN_LOW(SHIFT_REG_VALUE_PIN);
+        //SET_PIN_HIGH(SHIFT_REG_VALUE_PIN);
+    }
+
+	// Report success
+	return 0;
+}
+
+

@@ -1,0 +1,18 @@
+#ifndef LCD_CHARS_H_INCLUDED
+#define LCD_CHARS_H_INCLUDED
+
+extern const unsigned char LCDCharTopShapeData[8];
+extern const unsigned char LCDCharMiddleShapeData[8];
+extern const unsigned char LCDCharBottomShapeData[8];
+extern const unsigned char LCDCharTopTwoShapeData[8];
+extern const unsigned char LCDCharBottomTwoShapeData[8];
+extern const unsigned char LCDCharThreeShapeData[8];
+
+#define LCD_CHAR_TOP_SHAPE_CHAR_INDEX        0
+#define LCD_CHAR_MIDDLE_SHAPE_CHAR_INDEX     1
+#define LCD_CHAR_BOTTOM_SHAPE_CHAR_INDEX     2
+#define LCD_CHAR_TOP_TWO_SHAPE_CHAR_INDEX    3
+#define LCD_CHAR_BOTTOM_TWO_SHAPE_CHAR_INDEX 4
+#define LCD_CHAR_THREE_SHAPE_CHAR_INDEX      5
+
+#endif // LCD_CHARS_H_INCLUDED

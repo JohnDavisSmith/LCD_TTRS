@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ELL6UH470M
+D Fixed Inductors 47uH 20% 160mohm 900mA
+K
+F http://industrial.panasonic.com/cdbs/www-data/pdf/AGM0000/AGM0000CE9.pdf
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,1463 @@
+ASxxxx Linker V03.00 + NoICE + sdld,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   FFFFFF00  s_BSEG                          
+C:   00000000  l_BIT_BANK                      
+C:   00000000  l_BSEG                          
+C:   00000000  l_BSEG_BYTES                    
+C:   00000000  l_CABS                          
+C:   00000000  l_GSINIT1                       
+C:   00000000  l_GSINIT5                       
+C:   00000000  l_IABS                          
+C:   00000000  l_ISEG                          
+C:   00000000  l_OSEG                          
+C:   00000000  l_PSEG                          
+C:   00000000  l_REG_BANK_1                    
+C:   00000000  l_REG_BANK_2                    
+C:   00000000  l_REG_BANK_3                    
+C:   00000000  l_RSEG                          
+C:   00000000  l_RSEG0                         
+C:   00000000  l_RSEG1                         
+C:   00000000  l_XABS                          
+C:   00000000  l_XINIT                         
+C:   00000000  l_XISEG                         
+C:   00000000  l_XSEG                          
+C:   00000000  l__CODE                         
+C:   00000000  s_BSEG_BYTES                    
+C:   00000000  s_CABS                          
+C:   00000000  s_DSEG                          
+C:   00000000  s_HOME                          
+C:   00000000  s_IABS                          
+C:   00000000  s_ISEG                          
+C:   00000000  s_PSEG                          
+C:   00000000  s_REG_BANK_0                    
+C:   00000000  s_RSEG                          
+C:   00000000  s_RSEG0                         
+C:   00000000  s_RSEG1                         
+C:   00000000  s_XABS                          
+C:   00000000  s_XISEG                         
+C:   00000000  s_XSEG                          
+C:   00000003  l_GSFINAL                       
+C:   00000003  l_GSINIT                        
+C:   00000003  l_GSINIT0                       
+C:   00000006  l_HOME                          
+C:   00000006  s_GSINIT0                       
+C:   00000008  l_REG_BANK_0                    
+C:   00000008  s_REG_BANK_1                    
+C:   00000009  s_GSINIT1                       
+C:   00000009  s_GSINIT2                       
+C:   0000000A  l_GSINIT2                       
+C:   0000000E  s_SSEG                          
+C:   00000010  s_REG_BANK_2                    
+C:   00000013  s_GSINIT3                       
+C:   00000018  s_BIT_BANK                      
+ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000018  s_OSEG                          
+C:   00000018  s_REG_BANK_3                    
+C:   00000020  s__CODE                         
+C:   00000022  l_GSINIT3                       
+C:   0000002A  l_GSINIT4                       
+C:   00000034  l_CONST                         
+C:   00000035  s_GSINIT4                       
+C:   0000005F  s_GSINIT                        
+C:   0000005F  s_GSINIT5                       
+C:   00000062  s_GSFINAL                       
+C:   00000065  s_CSEG                          
+C:   00000072  l_SSEG                          
+C:   00000080  l_DSEG                          
+C:   00000080  l_IRAM                          
+C:   00000381  l_CSEG                          
+C:   000003E6  s_CONST                         
+C:   0000041A  s_XINIT                         
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000000  .__.ABS.                           _startup
+     00000080  G$P0$0$0                           LEDBlink
+     00000080  G$P0_0$0$0                         LEDBlink
+     00000080  _P0                                LEDBlink
+     00000080  _P0_0                              LEDBlink
+     00000081  G$P0_1$0$0                         LEDBlink
+     00000081  G$SP$0$0                           LEDBlink
+     00000081  _P0_1                              LEDBlink
+     00000081  _SP                                LEDBlink
+     00000082  G$DPL$0$0                          LEDBlink
+     00000082  G$P0_2$0$0                         LEDBlink
+     00000082  _DPL                               LEDBlink
+     00000082  _P0_2                              LEDBlink
+     00000083  G$DPH$0$0                          LEDBlink
+     00000083  G$P0_3$0$0                         LEDBlink
+     00000083  _DPH                               LEDBlink
+     00000083  _P0_3                              LEDBlink
+     00000084  G$P0_4$0$0                         LEDBlink
+     00000084  _P0_4                              LEDBlink
+     00000085  G$P0_5$0$0                         LEDBlink
+     00000085  _P0_5                              LEDBlink
+     00000086  G$P0_6$0$0                         LEDBlink
+     00000086  _P0_6                              LEDBlink
+     00000087  G$P0_7$0$0                         LEDBlink
+     00000087  G$PCON$0$0                         LEDBlink
+     00000087  _P0_7                              LEDBlink
+     00000087  _PCON                              LEDBlink
+     00000088  G$IT0$0$0                          LEDBlink
+     00000088  G$TCON$0$0                         LEDBlink
+     00000088  _IT0                               LEDBlink
+     00000088  _TCON                              LEDBlink
+     00000089  G$IE0$0$0                          LEDBlink
+     00000089  G$TMOD$0$0                         LEDBlink
+     00000089  _IE0                               LEDBlink
+     00000089  _TMOD                              LEDBlink
+     0000008A  G$IT1$0$0                          LEDBlink
+     0000008A  G$TL0$0$0                          LEDBlink
+     0000008A  _IT1                               LEDBlink
+     0000008A  _TL0                               LEDBlink
+     0000008B  G$IE1$0$0                          LEDBlink
+     0000008B  G$TL1$0$0                          LEDBlink
+     0000008B  _IE1                               LEDBlink
+     0000008B  _TL1                               LEDBlink
+     0000008C  G$TH0$0$0                          LEDBlink
+     0000008C  G$TR0$0$0                          LEDBlink
+     0000008C  _TH0                               LEDBlink
+     0000008C  _TR0                               LEDBlink
+     0000008D  G$TF0$0$0                          LEDBlink
+     0000008D  G$TH1$0$0                          LEDBlink
+     0000008D  _TF0                               LEDBlink
+ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000008D  _TH1                               LEDBlink
+     0000008E  G$TR1$0$0                          LEDBlink
+     0000008E  _TR1                               LEDBlink
+     0000008F  G$TF1$0$0                          LEDBlink
+     0000008F  _TF1                               LEDBlink
+     00000090  G$P1$0$0                           LEDBlink
+     00000090  G$P1_0$0$0                         LEDBlink
+     00000090  _P1                                LEDBlink
+     00000090  _P1_0                              LEDBlink
+     00000091  G$P1M1$0$0                         LEDBlink
+     00000091  G$P1_1$0$0                         LEDBlink
+     00000091  _P1M1                              LEDBlink
+     00000091  _P1_1                              LEDBlink
+     00000092  G$P1M0$0$0                         LEDBlink
+     00000092  G$P1_2$0$0                         LEDBlink
+     00000092  _P1M0                              LEDBlink
+     00000092  _P1_2                              LEDBlink
+     00000093  G$P0M1$0$0                         LEDBlink
+     00000093  G$P1_3$0$0                         LEDBlink
+     00000093  _P0M1                              LEDBlink
+     00000093  _P1_3                              LEDBlink
+     00000094  G$P0M0$0$0                         LEDBlink
+     00000094  G$P1_4$0$0                         LEDBlink
+     00000094  _P0M0                              LEDBlink
+     00000094  _P1_4                              LEDBlink
+     00000095  G$P1_5$0$0                         LEDBlink
+     00000095  G$P2M1$0$0                         LEDBlink
+     00000095  _P1_5                              LEDBlink
+     00000095  _P2M1                              LEDBlink
+     00000096  G$P1_6$0$0                         LEDBlink
+     00000096  G$P2M0$0$0                         LEDBlink
+     00000096  _P1_6                              LEDBlink
+     00000096  _P2M0                              LEDBlink
+     00000097  G$P1_7$0$0                         LEDBlink
+     00000097  _P1_7                              LEDBlink
+     00000098  G$RI$0$0                           LEDBlink
+     00000098  G$SCON$0$0                         LEDBlink
+     00000098  _RI                                LEDBlink
+     00000098  _SCON                              LEDBlink
+     00000099  G$SBUF$0$0                         LEDBlink
+     00000099  G$TI$0$0                           LEDBlink
+     00000099  _SBUF                              LEDBlink
+     00000099  _TI                                LEDBlink
+     0000009A  G$RB8$0$0                          LEDBlink
+     0000009A  _RB8                               LEDBlink
+     0000009B  G$TB8$0$0                          LEDBlink
+     0000009B  _TB8                               LEDBlink
+     0000009C  G$REN$0$0                          LEDBlink
+     0000009C  _REN                               LEDBlink
+     0000009D  G$SM2$0$0                          LEDBlink
+     0000009D  _SM2                               LEDBlink
+ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000009E  G$SM1$0$0                          LEDBlink
+     0000009E  _SM1                               LEDBlink
+     0000009F  G$SM0$0$0                          LEDBlink
+     0000009F  _SM0                               LEDBlink
+     000000A0  G$P2$0$0                           LEDBlink
+     000000A0  G$P2_0$0$0                         LEDBlink
+     000000A0  _P2                                LEDBlink
+     000000A0  _P2_0                              LEDBlink
+     000000A0  __XPAGE                            
+     000000A1  G$P2_1$0$0                         LEDBlink
+     000000A1  _P2_1                              LEDBlink
+     000000A2  G$P2_2$0$0                         LEDBlink
+     000000A2  _P2_2                              LEDBlink
+     000000A3  G$P2_3$0$0                         LEDBlink
+     000000A3  _P2_3                              LEDBlink
+     000000A4  G$P2_4$0$0                         LEDBlink
+     000000A4  _P2_4                              LEDBlink
+     000000A5  G$P2_5$0$0                         LEDBlink
+     000000A5  _P2_5                              LEDBlink
+     000000A6  G$P2_6$0$0                         LEDBlink
+     000000A6  _P2_6                              LEDBlink
+     000000A7  G$P2_7$0$0                         LEDBlink
+     000000A7  _P2_7                              LEDBlink
+     000000A8  G$EX0$0$0                          LEDBlink
+     000000A8  G$IE$0$0                           LEDBlink
+     000000A8  _EX0                               LEDBlink
+     000000A8  _IE                                LEDBlink
+     000000A9  G$ET0$0$0                          LEDBlink
+     000000A9  _ET0                               LEDBlink
+     000000AA  G$EX1$0$0                          LEDBlink
+     000000AA  _EX1                               LEDBlink
+     000000AB  G$ET1$0$0                          LEDBlink
+     000000AB  _ET1                               LEDBlink
+     000000AC  G$ES$0$0                           LEDBlink
+     000000AC  _ES                                LEDBlink
+     000000AF  G$EA$0$0                           LEDBlink
+     000000AF  _EA                                LEDBlink
+     000000B0  G$P3$0$0                           LEDBlink
+     000000B0  G$P3_0$0$0                         LEDBlink
+     000000B0  G$RXD$0$0                          LEDBlink
+     000000B0  _P3                                LEDBlink
+     000000B0  _P3_0                              LEDBlink
+     000000B0  _RXD                               LEDBlink
+     000000B1  G$P3M1$0$0                         LEDBlink
+     000000B1  G$P3_1$0$0                         LEDBlink
+     000000B1  G$TXD$0$0                          LEDBlink
+     000000B1  _P3M1                              LEDBlink
+     000000B1  _P3_1                              LEDBlink
+     000000B1  _TXD                               LEDBlink
+     000000B2  G$INT0$0$0                         LEDBlink
+     000000B2  G$P3M0$0$0                         LEDBlink
+ASxxxx Linker V03.00 + NoICE + sdld,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000B2  G$P3_2$0$0                         LEDBlink
+     000000B2  _INT0                              LEDBlink
+     000000B2  _P3M0                              LEDBlink
+     000000B2  _P3_2                              LEDBlink
+     000000B3  G$INT1$0$0                         LEDBlink
+     000000B3  G$P3_3$0$0                         LEDBlink
+     000000B3  G$P4M1$0$0                         LEDBlink
+     000000B3  _INT1                              LEDBlink
+     000000B3  _P3_3                              LEDBlink
+     000000B3  _P4M1                              LEDBlink
+     000000B4  G$P3_4$0$0                         LEDBlink
+     000000B4  G$P4M0$0$0                         LEDBlink
+     000000B4  G$T0$0$0                           LEDBlink
+     000000B4  _P3_4                              LEDBlink
+     000000B4  _P4M0                              LEDBlink
+     000000B4  _T0                                LEDBlink
+     000000B5  G$P3_5$0$0                         LEDBlink
+     000000B5  G$T1$0$0                           LEDBlink
+     000000B5  _P3_5                              LEDBlink
+     000000B5  _T1                                LEDBlink
+     000000B6  G$P3_6$0$0                         LEDBlink
+     000000B6  G$WR$0$0                           LEDBlink
+     000000B6  _P3_6                              LEDBlink
+     000000B6  _WR                                LEDBlink
+     000000B7  G$P3_7$0$0                         LEDBlink
+     000000B7  G$RD$0$0                           LEDBlink
+     000000B7  _P3_7                              LEDBlink
+     000000B7  _RD                                LEDBlink
+     000000B8  G$IP$0$0                           LEDBlink
+     000000B8  G$PX0$0$0                          LEDBlink
+     000000B8  _IP                                LEDBlink
+     000000B8  _PX0                               LEDBlink
+     000000B9  G$PT0$0$0                          LEDBlink
+     000000B9  _PT0                               LEDBlink
+     000000BA  G$PX1$0$0                          LEDBlink
+     000000BA  _PX1                               LEDBlink
+     000000BB  G$PT1$0$0                          LEDBlink
+     000000BB  _PT1                               LEDBlink
+     000000BC  G$PS$0$0                           LEDBlink
+     000000BC  _PS                                LEDBlink
+     000000C9  G$P5M1$0$0                         LEDBlink
+     000000C9  _P5M1                              LEDBlink
+     000000CA  G$P5M0$0$0                         LEDBlink
+     000000CA  _P5M0                              LEDBlink
+     000000D0  G$P$0$0                            LEDBlink
+     000000D0  G$PSW$0$0                          LEDBlink
+     000000D0  _P                                 LEDBlink
+     000000D0  _PSW                               LEDBlink
+     000000D1  G$F1$0$0                           LEDBlink
+     000000D1  _F1                                LEDBlink
+     000000D2  G$OV$0$0                           LEDBlink
+ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000D2  _OV                                LEDBlink
+     000000D3  G$RS0$0$0                          LEDBlink
+     000000D3  _RS0                               LEDBlink
+     000000D4  G$RS1$0$0                          LEDBlink
+     000000D4  _RS1                               LEDBlink
+     000000D5  G$F0$0$0                           LEDBlink
+     000000D5  _F0                                LEDBlink
+     000000D6  G$AC$0$0                           LEDBlink
+     000000D6  _AC                                LEDBlink
+     000000D7  G$CY$0$0                           LEDBlink
+     000000D7  _CY                                LEDBlink
+     000000E0  G$ACC$0$0                          LEDBlink
+     000000E0  _ACC                               LEDBlink
+     000000F0  G$B$0$0                            LEDBlink
+     000000F0  _B                                 LEDBlink
+     000000F5  _B_5                               _gptrget
+     000000F6  _B_6                               _gptrget
+     000000F7  _B_7                               _gptrget
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 8.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+REG_BANK_0                          00000000    00000008 =           8. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 9.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+DSEG                                00000000    00000080 =         128. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000008  FLEDBlink$LCD_PINS_SHIFT_REG_VAL   LEDBlink
+     00000009  LLEDBlink.LCD_SEND_8BITS$isComma   LEDBlink
+     00000009  _LCD_SEND_8BITS_PARM_2             LEDBlink
+     0000000A  LLEDBlink.LCD_CMD_SET_CURSOR$row   LEDBlink
+     0000000A  _LCD_CMD_SET_CURSOR_PARM_2         LEDBlink
+     0000000B  LLEDBlink.LCD_CMD_UPLOAD_CUSTOM_   LEDBlink
+     0000000B  _LCD_CMD_UPLOAD_CUSTOM_CHAR_PARM   LEDBlink
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 10.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+SSEG                                0000000E    00000072 =         114. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000000E  __start__stack                     LEDBlink
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 11.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+HOME                                00000000    00000006 =           6. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000000  A$LEDBlink$441                     LEDBlink
+C:   00000003  A$LEDBlink$466                     LEDBlink
+C:   00000003  __sdcc_program_startup             LEDBlink
+ASxxxx Linker V03.00 + NoICE + sdld,  page 12.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT0                             00000006    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000006  __sdcc_gsinit_startup              
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 13.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT2                             00000009    0000000A =          10. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 14.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT3                             00000013    00000022 =          34. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000013  __mcs51_genXINIT                   
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 15.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT4                             00000035    0000002A =          42. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000035  __mcs51_genRAMCLEAR                
+C:   0000003B  __mcs51_genXRAMCLEAR               
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 16.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT                              0000005F    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000005F  A$LEDBlink$457                     LEDBlink
+C:   0000005F  C$LCDInterface.c$6$1$74            LEDBlink
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 17.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSFINAL                             00000062    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000062  A$LEDBlink$459                     LEDBlink
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 18.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000065    00000381 =         897. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000065  A$LEDBlink$494                     LEDBlink
+C:   00000065  C$Timing.c$10$1$2                  LEDBlink
+C:   00000065  C$Timing.c$7$0$0                   LEDBlink
+C:   00000065  G$Delay1ms$0$0                     LEDBlink
+C:   00000065  _Delay1ms                          LEDBlink
+C:   00000067  A$LEDBlink$495                     LEDBlink
+C:   00000069  A$LEDBlink$499                     LEDBlink
+C:   00000069  C$Timing.c$13$2$3                  LEDBlink
+C:   0000006A  A$LEDBlink$502                     LEDBlink
+C:   0000006A  C$Timing.c$14$2$3                  LEDBlink
+C:   0000006B  A$LEDBlink$505                     LEDBlink
+C:   0000006B  C$Timing.c$15$2$3                  LEDBlink
+C:   0000006C  A$LEDBlink$508                     LEDBlink
+C:   0000006C  C$Timing.c$16$2$3                  LEDBlink
+C:   0000006D  A$LEDBlink$511                     LEDBlink
+C:   0000006D  C$Timing.c$17$2$3                  LEDBlink
+C:   0000006E  A$LEDBlink$514                     LEDBlink
+C:   0000006E  C$Timing.c$18$2$3                  LEDBlink
+C:   0000006F  A$LEDBlink$517                     LEDBlink
+C:   0000006F  C$Timing.c$19$2$3                  LEDBlink
+C:   00000070  A$LEDBlink$520                     LEDBlink
+C:   00000070  C$Timing.c$20$2$3                  LEDBlink
+C:   00000071  A$LEDBlink$523                     LEDBlink
+C:   00000071  C$Timing.c$21$2$3                  LEDBlink
+C:   00000072  A$LEDBlink$526                     LEDBlink
+C:   00000072  C$Timing.c$22$2$3                  LEDBlink
+C:   00000073  A$LEDBlink$529                     LEDBlink
+C:   00000073  C$Timing.c$23$2$3                  LEDBlink
+C:   00000074  A$LEDBlink$532                     LEDBlink
+C:   00000074  C$Timing.c$24$2$3                  LEDBlink
+C:   00000075  A$LEDBlink$535                     LEDBlink
+C:   00000075  C$Timing.c$25$2$3                  LEDBlink
+C:   00000076  A$LEDBlink$538                     LEDBlink
+C:   00000076  C$Timing.c$26$2$3                  LEDBlink
+C:   00000077  A$LEDBlink$541                     LEDBlink
+C:   00000077  C$Timing.c$27$2$3                  LEDBlink
+C:   00000078  A$LEDBlink$544                     LEDBlink
+C:   00000078  C$Timing.c$28$2$3                  LEDBlink
+C:   00000079  A$LEDBlink$547                     LEDBlink
+C:   00000079  C$Timing.c$29$2$3                  LEDBlink
+C:   0000007A  A$LEDBlink$550                     LEDBlink
+C:   0000007A  C$Timing.c$30$2$3                  LEDBlink
+C:   0000007B  A$LEDBlink$553                     LEDBlink
+C:   0000007B  C$Timing.c$31$2$3                  LEDBlink
+C:   0000007C  A$LEDBlink$556                     LEDBlink
+C:   0000007C  C$Timing.c$32$2$3                  LEDBlink
+C:   0000007D  A$LEDBlink$559                     LEDBlink
+C:   0000007D  C$Timing.c$33$2$3                  LEDBlink
+C:   0000007E  A$LEDBlink$562                     LEDBlink
+C:   0000007E  C$Timing.c$34$2$3                  LEDBlink
+ASxxxx Linker V03.00 + NoICE + sdld,  page 19.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000065    00000381 =         897. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000007F  A$LEDBlink$565                     LEDBlink
+C:   0000007F  C$Timing.c$35$2$3                  LEDBlink
+C:   00000080  A$LEDBlink$568                     LEDBlink
+C:   00000080  C$Timing.c$36$2$3                  LEDBlink
+C:   00000081  A$LEDBlink$571                     LEDBlink
+C:   00000081  C$Timing.c$37$2$3                  LEDBlink
+C:   00000082  A$LEDBlink$574                     LEDBlink
+C:   00000082  C$Timing.c$38$2$3                  LEDBlink
+C:   00000083  A$LEDBlink$577                     LEDBlink
+C:   00000083  C$Timing.c$39$2$3                  LEDBlink
+C:   00000084  A$LEDBlink$580                     LEDBlink
+C:   00000084  C$Timing.c$40$2$3                  LEDBlink
+C:   00000085  A$LEDBlink$583                     LEDBlink
+C:   00000085  C$Timing.c$41$2$3                  LEDBlink
+C:   00000086  A$LEDBlink$586                     LEDBlink
+C:   00000086  C$Timing.c$42$2$3                  LEDBlink
+C:   00000087  A$LEDBlink$589                     LEDBlink
+C:   00000087  C$Timing.c$43$2$3                  LEDBlink
+C:   00000088  A$LEDBlink$592                     LEDBlink
+C:   00000088  C$Timing.c$44$2$3                  LEDBlink
+C:   00000089  A$LEDBlink$595                     LEDBlink
+C:   00000089  C$Timing.c$45$2$3                  LEDBlink
+C:   0000008A  A$LEDBlink$598                     LEDBlink
+C:   0000008A  C$Timing.c$46$2$3                  LEDBlink
+C:   0000008B  A$LEDBlink$601                     LEDBlink
+C:   0000008B  C$Timing.c$47$2$3                  LEDBlink
+C:   0000008C  A$LEDBlink$604                     LEDBlink
+C:   0000008C  C$Timing.c$48$2$3                  LEDBlink
+C:   0000008D  A$LEDBlink$607                     LEDBlink
+C:   0000008D  C$Timing.c$49$2$3                  LEDBlink
+C:   0000008E  A$LEDBlink$610                     LEDBlink
+C:   0000008E  C$Timing.c$50$2$3                  LEDBlink
+C:   0000008F  A$LEDBlink$613                     LEDBlink
+C:   0000008F  C$Timing.c$51$2$3                  LEDBlink
+C:   00000090  A$LEDBlink$616                     LEDBlink
+C:   00000090  C$Timing.c$52$2$3                  LEDBlink
+C:   00000091  A$LEDBlink$619                     LEDBlink
+C:   00000091  C$Timing.c$53$2$3                  LEDBlink
+C:   00000092  A$LEDBlink$622                     LEDBlink
+C:   00000092  C$Timing.c$54$2$3                  LEDBlink
+C:   00000093  A$LEDBlink$625                     LEDBlink
+C:   00000093  C$Timing.c$55$2$3                  LEDBlink
+C:   00000094  A$LEDBlink$628                     LEDBlink
+C:   00000094  C$Timing.c$56$2$3                  LEDBlink
+C:   00000095  A$LEDBlink$631                     LEDBlink
+C:   00000095  C$Timing.c$57$2$3                  LEDBlink
+C:   00000096  A$LEDBlink$634                     LEDBlink
+C:   00000096  C$Timing.c$58$2$3                  LEDBlink
+C:   00000097  A$LEDBlink$637                     LEDBlink
+C:   00000097  C$Timing.c$59$2$3                  LEDBlink
+C:   00000098  A$LEDBlink$640                     LEDBlink
+ASxxxx Linker V03.00 + NoICE + sdld,  page 20.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000065    00000381 =         897. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000098  C$Timing.c$60$2$3                  LEDBlink
+C:   00000099  A$LEDBlink$643                     LEDBlink
+C:   00000099  C$Timing.c$61$2$3                  LEDBlink
+C:   0000009A  A$LEDBlink$646                     LEDBlink
+C:   0000009A  C$Timing.c$62$2$3                  LEDBlink
+C:   0000009B  A$LEDBlink$649                     LEDBlink
+C:   0000009B  C$Timing.c$63$2$3                  LEDBlink
+C:   0000009C  A$LEDBlink$652                     LEDBlink
+C:   0000009C  C$Timing.c$64$2$3                  LEDBlink
+C:   0000009D  A$LEDBlink$655                     LEDBlink
+C:   0000009D  C$Timing.c$65$2$3                  LEDBlink
+C:   0000009E  A$LEDBlink$658                     LEDBlink
+C:   0000009E  C$Timing.c$66$2$3                  LEDBlink
+C:   0000009F  A$LEDBlink$661                     LEDBlink
+C:   0000009F  C$Timing.c$67$2$3                  LEDBlink
+C:   000000A0  A$LEDBlink$664                     LEDBlink
+C:   000000A0  C$Timing.c$68$2$3                  LEDBlink
+C:   000000A1  A$LEDBlink$667                     LEDBlink
+C:   000000A1  C$Timing.c$69$2$3                  LEDBlink
+C:   000000A2  A$LEDBlink$670                     LEDBlink
+C:   000000A2  C$Timing.c$70$2$3                  LEDBlink
+C:   000000A3  A$LEDBlink$673                     LEDBlink
+C:   000000A3  C$Timing.c$71$2$3                  LEDBlink
+C:   000000A4  A$LEDBlink$676                     LEDBlink
+C:   000000A4  C$Timing.c$72$2$3                  LEDBlink
+C:   000000A5  A$LEDBlink$679                     LEDBlink
+C:   000000A5  C$Timing.c$73$2$3                  LEDBlink
+C:   000000A6  A$LEDBlink$682                     LEDBlink
+C:   000000A6  C$Timing.c$74$2$3                  LEDBlink
+C:   000000A7  A$LEDBlink$685                     LEDBlink
+C:   000000A7  C$Timing.c$75$2$3                  LEDBlink
+C:   000000A8  A$LEDBlink$688                     LEDBlink
+C:   000000A8  C$Timing.c$76$2$3                  LEDBlink
+C:   000000A9  A$LEDBlink$691                     LEDBlink
+C:   000000A9  C$Timing.c$77$2$3                  LEDBlink
+C:   000000AA  A$LEDBlink$694                     LEDBlink
+C:   000000AA  C$Timing.c$78$2$3                  LEDBlink
+C:   000000AB  A$LEDBlink$697                     LEDBlink
+C:   000000AB  C$Timing.c$79$2$3                  LEDBlink
+C:   000000AC  A$LEDBlink$700                     LEDBlink
+C:   000000AC  C$Timing.c$80$2$3                  LEDBlink
+C:   000000AD  A$LEDBlink$703                     LEDBlink
+C:   000000AD  C$Timing.c$81$2$3                  LEDBlink
+C:   000000AE  A$LEDBlink$706                     LEDBlink
+C:   000000AE  C$Timing.c$82$2$3                  LEDBlink
+C:   000000AF  A$LEDBlink$709                     LEDBlink
+C:   000000AF  C$Timing.c$83$2$3                  LEDBlink
+C:   000000B0  A$LEDBlink$712                     LEDBlink
+C:   000000B0  C$Timing.c$84$2$3                  LEDBlink
+C:   000000B1  A$LEDBlink$715                     LEDBlink
+C:   000000B1  C$Timing.c$85$2$3                  LEDBlink
+ASxxxx Linker V03.00 + NoICE + sdld,  page 21.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000065    00000381 =         897. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000000B2  A$LEDBlink$718                     LEDBlink
+C:   000000B2  C$Timing.c$86$2$3                  LEDBlink
+C:   000000B3  A$LEDBlink$721                     LEDBlink
+C:   000000B3  C$Timing.c$87$2$3                  LEDBlink
+C:   000000B4  A$LEDBlink$724                     LEDBlink
+C:   000000B4  C$Timing.c$88$2$3                  LEDBlink
+C:   000000B5  A$LEDBlink$727                     LEDBlink
+C:   000000B5  C$Timing.c$89$2$3                  LEDBlink
+C:   000000B6  A$LEDBlink$730                     LEDBlink
+C:   000000B6  C$Timing.c$90$2$3                  LEDBlink
+C:   000000B7  A$LEDBlink$733                     LEDBlink
+C:   000000B7  C$Timing.c$91$2$3                  LEDBlink
+C:   000000B8  A$LEDBlink$736                     LEDBlink
+C:   000000B8  C$Timing.c$92$2$3                  LEDBlink
+C:   000000B9  A$LEDBlink$739                     LEDBlink
+C:   000000B9  C$Timing.c$93$2$3                  LEDBlink
+C:   000000BA  A$LEDBlink$742                     LEDBlink
+C:   000000BA  C$Timing.c$94$2$3                  LEDBlink
+C:   000000BB  A$LEDBlink$745                     LEDBlink
+C:   000000BB  C$Timing.c$95$2$3                  LEDBlink
+C:   000000BC  A$LEDBlink$748                     LEDBlink
+C:   000000BC  C$Timing.c$96$2$3                  LEDBlink
+C:   000000BD  A$LEDBlink$751                     LEDBlink
+C:   000000BD  C$Timing.c$97$2$3                  LEDBlink
+C:   000000BE  A$LEDBlink$754                     LEDBlink
+C:   000000BE  C$Timing.c$98$2$3                  LEDBlink
+C:   000000BF  A$LEDBlink$757                     LEDBlink
+C:   000000BF  C$Timing.c$99$2$3                  LEDBlink
+C:   000000C0  A$LEDBlink$760                     LEDBlink
+C:   000000C0  C$Timing.c$100$2$3                 LEDBlink
+C:   000000C1  A$LEDBlink$763                     LEDBlink
+C:   000000C1  C$Timing.c$101$2$3                 LEDBlink
+C:   000000C2  A$LEDBlink$766                     LEDBlink
+C:   000000C2  C$Timing.c$102$2$3                 LEDBlink
+C:   000000C3  A$LEDBlink$769                     LEDBlink
+C:   000000C3  C$Timing.c$103$2$3                 LEDBlink
+C:   000000C4  A$LEDBlink$772                     LEDBlink
+C:   000000C4  C$Timing.c$104$2$3                 LEDBlink
+C:   000000C5  A$LEDBlink$775                     LEDBlink
+C:   000000C5  C$Timing.c$105$2$3                 LEDBlink
+C:   000000C6  A$LEDBlink$778                     LEDBlink
+C:   000000C6  C$Timing.c$106$2$3                 LEDBlink
+C:   000000C7  A$LEDBlink$781                     LEDBlink
+C:   000000C7  C$Timing.c$107$2$3                 LEDBlink
+C:   000000C8  A$LEDBlink$784                     LEDBlink
+C:   000000C8  C$Timing.c$108$2$3                 LEDBlink
+C:   000000C9  A$LEDBlink$787                     LEDBlink
+C:   000000C9  C$Timing.c$109$2$3                 LEDBlink
+C:   000000CA  A$LEDBlink$790                     LEDBlink
+C:   000000CA  C$Timing.c$110$2$3                 LEDBlink
+C:   000000CB  A$LEDBlink$793                     LEDBlink
+ASxxxx Linker V03.00 + NoICE + sdld,  page 22.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000065    00000381 =         897. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000000CB  C$Timing.c$111$2$3                 LEDBlink
+C:   000000CC  A$LEDBlink$796                     LEDBlink
+C:   000000CC  C$Timing.c$112$2$3                 LEDBlink
+C:   000000CD  A$LEDBlink$799                     LEDBlink
+C:   000000CD  C$Timing.c$113$2$3                 LEDBlink
+C:   000000CE  A$LEDBlink$802                     LEDBlink
+C:   000000CE  C$Timing.c$114$2$3                 LEDBlink
+C:   000000CF  A$LEDBlink$805                     LEDBlink
+C:   000000CF  C$Timing.c$115$2$3                 LEDBlink
+C:   000000D0  A$LEDBlink$808                     LEDBlink
+C:   000000D0  C$Timing.c$116$2$3                 LEDBlink
+C:   000000D1  A$LEDBlink$811                     LEDBlink
+C:   000000D1  C$Timing.c$117$2$3                 LEDBlink
+C:   000000D2  A$LEDBlink$814                     LEDBlink
+C:   000000D2  C$Timing.c$118$2$3                 LEDBlink
+C:   000000D3  A$LEDBlink$817                     LEDBlink
+C:   000000D3  C$Timing.c$119$2$3                 LEDBlink
+C:   000000D4  A$LEDBlink$820                     LEDBlink
+C:   000000D4  C$Timing.c$120$2$3                 LEDBlink
+C:   000000D5  A$LEDBlink$823                     LEDBlink
+C:   000000D5  C$Timing.c$121$2$3                 LEDBlink
+C:   000000D6  A$LEDBlink$826                     LEDBlink
+C:   000000D6  C$Timing.c$122$2$3                 LEDBlink
+C:   000000D7  A$LEDBlink$829                     LEDBlink
+C:   000000D7  C$Timing.c$123$2$3                 LEDBlink
+C:   000000D8  A$LEDBlink$832                     LEDBlink
+C:   000000D8  C$Timing.c$124$2$3                 LEDBlink
+C:   000000D9  A$LEDBlink$835                     LEDBlink
+C:   000000D9  C$Timing.c$125$2$3                 LEDBlink
+C:   000000DA  A$LEDBlink$838                     LEDBlink
+C:   000000DA  C$Timing.c$126$2$3                 LEDBlink
+C:   000000DB  A$LEDBlink$841                     LEDBlink
+C:   000000DB  C$Timing.c$127$2$3                 LEDBlink
+C:   000000DC  A$LEDBlink$842                     LEDBlink
+C:   000000DD  A$LEDBlink$843                     LEDBlink
+C:   000000E0  A$LEDBlink$844                     LEDBlink
+C:   000000E1  A$LEDBlink$848                     LEDBlink
+C:   000000E1  C$Timing.c$10$2$3                  LEDBlink
+C:   000000E2  A$LEDBlink$849                     LEDBlink
+C:   000000E3  A$LEDBlink$850                     LEDBlink
+C:   000000E5  A$LEDBlink$853                     LEDBlink
+C:   000000E5  C$Timing.c$129$1$2                 LEDBlink
+C:   000000E5  XG$Delay1ms$0$0                    LEDBlink
+C:   000000E6  A$LEDBlink$879                     LEDBlink
+C:   000000E6  C$ShiftRegister.c$13$1$2           LEDBlink
+C:   000000E6  C$ShiftRegister.c$15$2$5           LEDBlink
+C:   000000E6  G$ShiftRegisterInit$0$0            LEDBlink
+C:   000000E6  _ShiftRegisterInit                 LEDBlink
+C:   000000E8  A$LEDBlink$880                     LEDBlink
+C:   000000EA  A$LEDBlink$881                     LEDBlink
+C:   000000EC  A$LEDBlink$882                     LEDBlink
+ASxxxx Linker V03.00 + NoICE + sdld,  page 23.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000065    00000381 =         897. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000000ED  A$LEDBlink$883                     LEDBlink
+C:   000000EF  A$LEDBlink$884                     LEDBlink
+C:   000000F1  A$LEDBlink$885                     LEDBlink
+C:   000000F3  A$LEDBlink$886                     LEDBlink
+C:   000000F4  A$LEDBlink$887                     LEDBlink
+C:   000000F5  A$LEDBlink$888                     LEDBlink
+C:   000000F7  A$LEDBlink$889                     LEDBlink
+C:   000000F8  A$LEDBlink$890                     LEDBlink
+C:   000000FA  A$LEDBlink$893                     LEDBlink
+C:   000000FA  C$ShiftRegister.c$16$2$5           LEDBlink
+C:   000000FC  A$LEDBlink$894                     LEDBlink
+C:   000000FE  A$LEDBlink$895                     LEDBlink
+C:   00000100  A$LEDBlink$896                     LEDBlink
+C:   00000101  A$LEDBlink$897                     LEDBlink
+C:   00000103  A$LEDBlink$898                     LEDBlink
+C:   00000105  A$LEDBlink$899                     LEDBlink
+C:   00000107  A$LEDBlink$900                     LEDBlink
+C:   00000108  A$LEDBlink$901                     LEDBlink
+C:   00000109  A$LEDBlink$902                     LEDBlink
+C:   0000010B  A$LEDBlink$903                     LEDBlink
+C:   0000010C  A$LEDBlink$904                     LEDBlink
+C:   0000010E  A$LEDBlink$907                     LEDBlink
+C:   0000010E  C$ShiftRegister.c$17$2$5           LEDBlink
+C:   00000110  A$LEDBlink$908                     LEDBlink
+C:   00000112  A$LEDBlink$909                     LEDBlink
+C:   00000114  A$LEDBlink$910                     LEDBlink
+C:   00000115  A$LEDBlink$911                     LEDBlink
+C:   00000117  A$LEDBlink$912                     LEDBlink
+C:   00000119  A$LEDBlink$913                     LEDBlink
+C:   0000011B  A$LEDBlink$914                     LEDBlink
+C:   0000011C  A$LEDBlink$915                     LEDBlink
+C:   0000011D  A$LEDBlink$916                     LEDBlink
+C:   0000011F  A$LEDBlink$917                     LEDBlink
+C:   00000120  A$LEDBlink$918                     LEDBlink
+C:   00000122  A$LEDBlink$921                     LEDBlink
+C:   00000122  C$ShiftRegister.c$18$2$5           LEDBlink
+C:   00000124  A$LEDBlink$922                     LEDBlink
+C:   00000126  A$LEDBlink$923                     LEDBlink
+C:   00000128  A$LEDBlink$924                     LEDBlink
+C:   0000012A  A$LEDBlink$925                     LEDBlink
+C:   0000012B  A$LEDBlink$926                     LEDBlink
+C:   0000012C  A$LEDBlink$927                     LEDBlink
+C:   0000012E  A$LEDBlink$928                     LEDBlink
+C:   0000012F  A$LEDBlink$929                     LEDBlink
+C:   00000131  A$LEDBlink$930                     LEDBlink
+C:   00000133  A$LEDBlink$931                     LEDBlink
+C:   00000134  A$LEDBlink$932                     LEDBlink
+C:   00000136  A$LEDBlink$935                     LEDBlink
+C:   00000136  C$ShiftRegister.c$19$2$5           LEDBlink
+C:   00000138  A$LEDBlink$936                     LEDBlink
+C:   0000013A  A$LEDBlink$937                     LEDBlink
+ASxxxx Linker V03.00 + NoICE + sdld,  page 24.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000065    00000381 =         897. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000013C  A$LEDBlink$938                     LEDBlink
+C:   0000013E  A$LEDBlink$939                     LEDBlink
+C:   0000013F  A$LEDBlink$940                     LEDBlink
+C:   00000140  A$LEDBlink$941                     LEDBlink
+C:   00000142  A$LEDBlink$942                     LEDBlink
+C:   00000143  A$LEDBlink$943                     LEDBlink
+C:   00000145  A$LEDBlink$944                     LEDBlink
+C:   00000147  A$LEDBlink$945                     LEDBlink
+C:   00000148  A$LEDBlink$946                     LEDBlink
+C:   0000014A  A$LEDBlink$949                     LEDBlink
+C:   0000014A  C$ShiftRegister.c$20$2$5           LEDBlink
+C:   0000014C  A$LEDBlink$950                     LEDBlink
+C:   0000014E  A$LEDBlink$951                     LEDBlink
+C:   00000150  A$LEDBlink$952                     LEDBlink
+C:   00000152  A$LEDBlink$953                     LEDBlink
+C:   00000153  A$LEDBlink$954                     LEDBlink
+C:   00000154  A$LEDBlink$955                     LEDBlink
+C:   00000156  A$LEDBlink$956                     LEDBlink
+C:   00000157  A$LEDBlink$957                     LEDBlink
+C:   00000159  A$LEDBlink$958                     LEDBlink
+C:   0000015B  A$LEDBlink$959                     LEDBlink
+C:   0000015C  A$LEDBlink$960                     LEDBlink
+C:   0000015E  A$LEDBlink$963                     LEDBlink
+C:   0000015E  C$ShiftRegister.c$22$2$12          LEDBlink
+C:   00000160  A$LEDBlink$964                     LEDBlink
+C:   00000161  A$LEDBlink$965                     LEDBlink
+C:   00000162  A$LEDBlink$966                     LEDBlink
+C:   00000163  A$LEDBlink$967                     LEDBlink
+C:   00000164  A$LEDBlink$968                     LEDBlink
+C:   00000165  A$LEDBlink$971                     LEDBlink
+C:   00000165  C$ShiftRegister.c$23$2$14          LEDBlink
+C:   00000167  A$LEDBlink$972                     LEDBlink
+C:   00000168  A$LEDBlink$973                     LEDBlink
+C:   00000169  A$LEDBlink$974                     LEDBlink
+C:   0000016A  A$LEDBlink$975                     LEDBlink
+C:   0000016B  A$LEDBlink$976                     LEDBlink
+C:   0000016C  A$LEDBlink$979                     LEDBlink
+C:   0000016C  C$ShiftRegister.c$24$2$16          LEDBlink
+C:   0000016E  A$LEDBlink$980                     LEDBlink
+C:   0000016F  A$LEDBlink$981                     LEDBlink
+C:   00000170  A$LEDBlink$982                     LEDBlink
+C:   00000171  A$LEDBlink$983                     LEDBlink
+C:   00000172  A$LEDBlink$984                     LEDBlink
+C:   00000173  A$LEDBlink$987                     LEDBlink
+C:   00000173  C$ShiftRegister.c$26$1$5           LEDBlink
+C:   00000176  A$LEDBlink$988                     LEDBlink
+C:   00000179  A$LEDBlink$991                     LEDBlink
+C:   00000179  C$ShiftRegister.c$27$1$5           LEDBlink
+C:   0000017C  A$LEDBlink$994                     LEDBlink
+C:   0000017C  C$ShiftRegister.c$28$1$5           LEDBlink
+C:   0000017C  XG$ShiftRegisterInit$0$0           LEDBlink
+ASxxxx Linker V03.00 + NoICE + sdld,  page 25.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000065    00000381 =         897. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000017D  A$LEDBlink$1008                    LEDBlink
+C:   0000017D  C$ShiftRegister.c$30$1$5           LEDBlink
+C:   0000017D  G$ShiftRegisterChangePinState$0$   LEDBlink
+C:   0000017D  _ShiftRegisterChangePinState       LEDBlink
+C:   0000017F  A$LEDBlink$1011                    LEDBlink
+C:   00000181  A$LEDBlink$1015                    LEDBlink
+C:   00000181  C$ShiftRegister.c$36$2$20          LEDBlink
+C:   00000183  A$LEDBlink$1016                    LEDBlink
+C:   00000185  A$LEDBlink$1017                    LEDBlink
+C:   00000187  A$LEDBlink$1018                    LEDBlink
+C:   00000188  A$LEDBlink$1019                    LEDBlink
+C:   00000189  A$LEDBlink$1020                    LEDBlink
+C:   0000018A  A$LEDBlink$1021                    LEDBlink
+C:   0000018B  A$LEDBlink$1022                    LEDBlink
+C:   0000018C  A$LEDBlink$1023                    LEDBlink
+C:   0000018D  A$LEDBlink$1024                    LEDBlink
+C:   0000018F  A$LEDBlink$1025                    LEDBlink
+C:   00000191  A$LEDBlink$1026                    LEDBlink
+C:   00000192  A$LEDBlink$1027                    LEDBlink
+C:   00000194  A$LEDBlink$1029                    LEDBlink
+C:   00000195  A$LEDBlink$1030                    LEDBlink
+C:   00000196  A$LEDBlink$1032                    LEDBlink
+C:   00000199  A$LEDBlink$1033                    LEDBlink
+C:   0000019C  A$LEDBlink$1036                    LEDBlink
+C:   0000019C  C$ShiftRegister.c$38$4$22          LEDBlink
+C:   0000019E  A$LEDBlink$1037                    LEDBlink
+C:   0000019F  A$LEDBlink$1038                    LEDBlink
+C:   000001A0  A$LEDBlink$1039                    LEDBlink
+C:   000001A1  A$LEDBlink$1040                    LEDBlink
+C:   000001A2  A$LEDBlink$1041                    LEDBlink
+C:   000001A3  A$LEDBlink$1042                    LEDBlink
+C:   000001A4  A$LEDBlink$1043                    LEDBlink
+C:   000001A5  A$LEDBlink$1044                    LEDBlink
+C:   000001A6  A$LEDBlink$1045                    LEDBlink
+C:   000001A7  A$LEDBlink$1046                    LEDBlink
+C:   000001A9  A$LEDBlink$1050                    LEDBlink
+C:   000001A9  C$ShiftRegister.c$42$4$24          LEDBlink
+C:   000001AB  A$LEDBlink$1051                    LEDBlink
+C:   000001AC  A$LEDBlink$1052                    LEDBlink
+C:   000001AD  A$LEDBlink$1053                    LEDBlink
+C:   000001AE  A$LEDBlink$1054                    LEDBlink
+C:   000001AF  A$LEDBlink$1055                    LEDBlink
+C:   000001B0  A$LEDBlink$1059                    LEDBlink
+C:   000001B0  C$ShiftRegister.c$46$3$26          LEDBlink
+C:   000001B2  A$LEDBlink$1060                    LEDBlink
+C:   000001B3  A$LEDBlink$1061                    LEDBlink
+C:   000001B4  A$LEDBlink$1062                    LEDBlink
+C:   000001B5  A$LEDBlink$1063                    LEDBlink
+C:   000001B6  A$LEDBlink$1064                    LEDBlink
+C:   000001B7  A$LEDBlink$1065                    LEDBlink
+C:   000001B8  A$LEDBlink$1066                    LEDBlink
+ASxxxx Linker V03.00 + NoICE + sdld,  page 26.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000065    00000381 =         897. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000001B9  A$LEDBlink$1067                    LEDBlink
+C:   000001BA  A$LEDBlink$1068                    LEDBlink
+C:   000001BB  A$LEDBlink$1071                    LEDBlink
+C:   000001BB  C$ShiftRegister.c$47$3$27          LEDBlink
+C:   000001BD  A$LEDBlink$1072                    LEDBlink
+C:   000001BE  A$LEDBlink$1073                    LEDBlink
+C:   000001BF  A$LEDBlink$1074                    LEDBlink
+C:   000001C0  A$LEDBlink$1075                    LEDBlink
+C:   000001C1  A$LEDBlink$1076                    LEDBlink
+C:   000001C2  A$LEDBlink$1079                    LEDBlink
+C:   000001C2  C$ShiftRegister.c$33$1$19          LEDBlink
+C:   000001C3  A$LEDBlink$1080                    LEDBlink
+C:   000001C6  A$LEDBlink$1082                    LEDBlink
+C:   000001C8  A$LEDBlink$1085                    LEDBlink
+C:   000001C8  C$ShiftRegister.c$50$2$29          LEDBlink
+C:   000001CA  A$LEDBlink$1086                    LEDBlink
+C:   000001CB  A$LEDBlink$1087                    LEDBlink
+C:   000001CC  A$LEDBlink$1088                    LEDBlink
+C:   000001CD  A$LEDBlink$1089                    LEDBlink
+C:   000001CE  A$LEDBlink$1090                    LEDBlink
+C:   000001CF  A$LEDBlink$1093                    LEDBlink
+C:   000001CF  C$ShiftRegister.c$53$2$31          LEDBlink
+C:   000001D1  A$LEDBlink$1094                    LEDBlink
+C:   000001D2  A$LEDBlink$1095                    LEDBlink
+C:   000001D3  A$LEDBlink$1096                    LEDBlink
+C:   000001D4  A$LEDBlink$1097                    LEDBlink
+C:   000001D5  A$LEDBlink$1098                    LEDBlink
+C:   000001D6  A$LEDBlink$1099                    LEDBlink
+C:   000001D7  A$LEDBlink$1100                    LEDBlink
+C:   000001D8  A$LEDBlink$1101                    LEDBlink
+C:   000001D9  A$LEDBlink$1102                    LEDBlink
+C:   000001DA  A$LEDBlink$1105                    LEDBlink
+C:   000001DA  C$ShiftRegister.c$54$2$32          LEDBlink
+C:   000001DC  A$LEDBlink$1106                    LEDBlink
+C:   000001DD  A$LEDBlink$1107                    LEDBlink
+C:   000001DE  A$LEDBlink$1108                    LEDBlink
+C:   000001DF  A$LEDBlink$1109                    LEDBlink
+C:   000001E0  A$LEDBlink$1110                    LEDBlink
+C:   000001E1  A$LEDBlink$1113                    LEDBlink
+C:   000001E1  C$ShiftRegister.c$55$3$33          LEDBlink
+C:   000001E1  XG$ShiftRegisterChangePinState$0   LEDBlink
+C:   000001E2  A$LEDBlink$1126                    LEDBlink
+C:   000001E2  C$LCDInterface.c$35$3$33           LEDBlink
+C:   000001E2  C$LCDInterface.c$37$1$38           LEDBlink
+C:   000001E2  FLEDBlink$LCD_PULSE_ENABLE_PIN$0   LEDBlink
+C:   000001E4  A$LEDBlink$1127                    LEDBlink
+C:   000001E6  A$LEDBlink$1128                    LEDBlink
+C:   000001E7  A$LEDBlink$1129                    LEDBlink
+C:   000001E9  A$LEDBlink$1132                    LEDBlink
+C:   000001E9  C$LCDInterface.c$38$1$38           LEDBlink
+C:   000001EC  A$LEDBlink$1133                    LEDBlink
+ASxxxx Linker V03.00 + NoICE + sdld,  page 27.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000065    00000381 =         897. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000001EF  A$LEDBlink$1136                    LEDBlink
+C:   000001EF  C$LCDInterface.c$39$2$39           LEDBlink
+C:   000001F0  A$LEDBlink$1137                    LEDBlink
+C:   000001F1  A$LEDBlink$1138                    LEDBlink
+C:   000001F2  A$LEDBlink$1139                    LEDBlink
+C:   000001F3  A$LEDBlink$1140                    LEDBlink
+C:   000001F4  A$LEDBlink$1143                    LEDBlink
+C:   000001F4  C$LCDInterface.c$41$1$38           LEDBlink
+C:   000001F7  A$LEDBlink$1146                    LEDBlink
+C:   000001F7  C$LCDInterface.c$42$1$38           LEDBlink
+C:   000001FA  A$LEDBlink$1147                    LEDBlink
+C:   000001FD  A$LEDBlink$1150                    LEDBlink
+C:   000001FD  C$LCDInterface.c$43$2$40           LEDBlink
+C:   000001FE  A$LEDBlink$1151                    LEDBlink
+C:   000001FF  A$LEDBlink$1152                    LEDBlink
+C:   00000200  A$LEDBlink$1153                    LEDBlink
+C:   00000201  A$LEDBlink$1154                    LEDBlink
+C:   00000202  A$LEDBlink$1157                    LEDBlink
+C:   00000202  C$LCDInterface.c$45$1$38           LEDBlink
+C:   00000204  A$LEDBlink$1158                    LEDBlink
+C:   00000206  A$LEDBlink$1159                    LEDBlink
+C:   00000207  A$LEDBlink$1160                    LEDBlink
+C:   00000209  A$LEDBlink$1163                    LEDBlink
+C:   00000209  C$LCDInterface.c$46$1$38           LEDBlink
+C:   0000020C  A$LEDBlink$1164                    LEDBlink
+C:   0000020F  A$LEDBlink$1167                    LEDBlink
+C:   0000020F  C$LCDInterface.c$47$2$41           LEDBlink
+C:   00000210  A$LEDBlink$1168                    LEDBlink
+C:   00000211  A$LEDBlink$1169                    LEDBlink
+C:   00000212  A$LEDBlink$1170                    LEDBlink
+C:   00000213  A$LEDBlink$1171                    LEDBlink
+C:   00000214  A$LEDBlink$1174                    LEDBlink
+C:   00000214  C$LCDInterface.c$48$2$41           LEDBlink
+C:   00000214  XFLEDBlink$LCD_PULSE_ENABLE_PIN$   LEDBlink
+C:   00000215  A$LEDBlink$1189                    LEDBlink
+C:   00000215  C$LCDInterface.c$50$2$41           LEDBlink
+C:   00000215  C$LCDInterface.c$52$1$43           LEDBlink
+C:   00000215  G$LCD_SEND_4BITS$0$0               LEDBlink
+C:   00000215  _LCD_SEND_4BITS                    LEDBlink
+C:   00000217  A$LEDBlink$1190                    LEDBlink
+C:   00000218  A$LEDBlink$1191                    LEDBlink
+C:   0000021B  A$LEDBlink$1194                    LEDBlink
+C:   0000021B  C$LCDInterface.c$54$2$44           LEDBlink
+C:   0000021E  A$LEDBlink$1195                    LEDBlink
+C:   00000220  A$LEDBlink$1199                    LEDBlink
+C:   00000220  C$LCDInterface.c$58$2$45           LEDBlink
+C:   00000222  A$LEDBlink$1200                    LEDBlink
+C:   00000224  A$LEDBlink$1201                    LEDBlink
+C:   00000225  A$LEDBlink$1202                    LEDBlink
+C:   00000227  A$LEDBlink$1206                    LEDBlink
+C:   00000227  C$LCDInterface.c$61$1$43           LEDBlink
+ASxxxx Linker V03.00 + NoICE + sdld,  page 28.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000065    00000381 =         897. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000228  A$LEDBlink$1207                    LEDBlink
+C:   0000022B  A$LEDBlink$1210                    LEDBlink
+C:   0000022B  C$LCDInterface.c$63$2$46           LEDBlink
+C:   0000022E  A$LEDBlink$1211                    LEDBlink
+C:   00000230  A$LEDBlink$1215                    LEDBlink
+C:   00000230  C$LCDInterface.c$67$2$47           LEDBlink
+C:   00000232  A$LEDBlink$1216                    LEDBlink
+C:   00000234  A$LEDBlink$1217                    LEDBlink
+C:   00000235  A$LEDBlink$1218                    LEDBlink
+C:   00000237  A$LEDBlink$1222                    LEDBlink
+C:   00000237  C$LCDInterface.c$70$1$43           LEDBlink
+C:   00000238  A$LEDBlink$1223                    LEDBlink
+C:   0000023B  A$LEDBlink$1226                    LEDBlink
+C:   0000023B  C$LCDInterface.c$72$2$48           LEDBlink
+C:   0000023E  A$LEDBlink$1227                    LEDBlink
+C:   00000240  A$LEDBlink$1231                    LEDBlink
+C:   00000240  C$LCDInterface.c$76$2$49           LEDBlink
+C:   00000242  A$LEDBlink$1232                    LEDBlink
+C:   00000244  A$LEDBlink$1233                    LEDBlink
+C:   00000245  A$LEDBlink$1234                    LEDBlink
+C:   00000247  A$LEDBlink$1238                    LEDBlink
+C:   00000247  C$LCDInterface.c$79$1$43           LEDBlink
+C:   00000248  A$LEDBlink$1239                    LEDBlink
+C:   0000024B  A$LEDBlink$1242                    LEDBlink
+C:   0000024B  C$LCDInterface.c$81$2$50           LEDBlink
+C:   0000024E  A$LEDBlink$1243                    LEDBlink
+C:   00000250  A$LEDBlink$1247                    LEDBlink
+C:   00000250  C$LCDInterface.c$85$2$51           LEDBlink
+C:   00000252  A$LEDBlink$1248                    LEDBlink
+C:   00000254  A$LEDBlink$1249                    LEDBlink
+C:   00000255  A$LEDBlink$1250                    LEDBlink
+C:   00000257  A$LEDBlink$1254                    LEDBlink
+C:   00000257  C$LCDInterface.c$88$1$43           LEDBlink
+C:   0000025A  A$LEDBlink$1255                    LEDBlink
+C:   0000025D  A$LEDBlink$1258                    LEDBlink
+C:   0000025D  C$LCDInterface.c$89$1$43           LEDBlink
+C:   00000260  A$LEDBlink$1261                    LEDBlink
+C:   00000260  C$LCDInterface.c$90$1$43           LEDBlink
+C:   00000260  XG$LCD_SEND_4BITS$0$0              LEDBlink
+C:   00000261  A$LEDBlink$1275                    LEDBlink
+C:   00000261  C$LCDInterface.c$92$1$43           LEDBlink
+C:   00000261  G$LCD_SEND_8BITS$0$0               LEDBlink
+C:   00000261  _LCD_SEND_8BITS                    LEDBlink
+C:   00000263  A$LEDBlink$1278                    LEDBlink
+C:   00000263  C$LCDInterface.c$94$1$53           LEDBlink
+C:   00000265  A$LEDBlink$1279                    LEDBlink
+C:   00000267  A$LEDBlink$1282                    LEDBlink
+C:   00000267  C$LCDInterface.c$96$2$54           LEDBlink
+C:   00000269  A$LEDBlink$1283                    LEDBlink
+C:   0000026B  A$LEDBlink$1284                    LEDBlink
+C:   0000026C  A$LEDBlink$1285                    LEDBlink
+ASxxxx Linker V03.00 + NoICE + sdld,  page 29.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000065    00000381 =         897. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000026E  A$LEDBlink$1286                    LEDBlink
+C:   00000270  A$LEDBlink$1290                    LEDBlink
+C:   00000270  C$LCDInterface.c$100$2$55          LEDBlink
+C:   00000273  A$LEDBlink$1294                    LEDBlink
+C:   00000273  C$LCDInterface.c$102$1$53          LEDBlink
+C:   00000274  A$LEDBlink$1295                    LEDBlink
+C:   00000275  A$LEDBlink$1296                    LEDBlink
+C:   00000277  A$LEDBlink$1297                    LEDBlink
+C:   00000278  A$LEDBlink$1298                    LEDBlink
+C:   0000027A  A$LEDBlink$1299                    LEDBlink
+C:   0000027B  A$LEDBlink$1300                    LEDBlink
+C:   0000027D  A$LEDBlink$1301                    LEDBlink
+C:   0000027F  A$LEDBlink$1302                    LEDBlink
+C:   00000282  A$LEDBlink$1303                    LEDBlink
+C:   00000284  A$LEDBlink$1306                    LEDBlink
+C:   00000284  C$LCDInterface.c$103$1$53          LEDBlink
+C:   00000286  A$LEDBlink$1307                    LEDBlink
+C:   00000287  A$LEDBlink$1308                    LEDBlink
+C:   00000289  A$LEDBlink$1309                    LEDBlink
+C:   0000028C  A$LEDBlink$1312                    LEDBlink
+C:   0000028C  C$LCDInterface.c$104$1$53          LEDBlink
+C:   0000028C  XG$LCD_SEND_8BITS$0$0              LEDBlink
+C:   0000028D  A$LEDBlink$1327                    LEDBlink
+C:   0000028D  C$LCDInterface.c$106$1$53          LEDBlink
+C:   0000028D  C$LCDInterface.c$108$1$56          LEDBlink
+C:   0000028D  G$LCD_CMD_CLEAR$0$0                LEDBlink
+C:   0000028D  _LCD_CMD_CLEAR                     LEDBlink
+C:   00000290  A$LEDBlink$1328                    LEDBlink
+C:   00000293  A$LEDBlink$1329                    LEDBlink
+C:   00000296  A$LEDBlink$1332                    LEDBlink
+C:   00000296  C$LCDInterface.c$110$2$57          LEDBlink
+C:   00000298  A$LEDBlink$1333                    LEDBlink
+C:   0000029A  A$LEDBlink$1335                    LEDBlink
+C:   0000029C  A$LEDBlink$1336                    LEDBlink
+C:   0000029E  A$LEDBlink$1337                    LEDBlink
+C:   000002A1  A$LEDBlink$1338                    LEDBlink
+C:   000002A3  A$LEDBlink$1339                    LEDBlink
+C:   000002A5  A$LEDBlink$1340                    LEDBlink
+C:   000002A6  A$LEDBlink$1341                    LEDBlink
+C:   000002A9  A$LEDBlink$1342                    LEDBlink
+C:   000002AA  A$LEDBlink$1344                    LEDBlink
+C:   000002AB  A$LEDBlink$1345                    LEDBlink
+C:   000002AC  A$LEDBlink$1346                    LEDBlink
+C:   000002AE  A$LEDBlink$1349                    LEDBlink
+C:   000002AE  C$LCDInterface.c$111$2$57          LEDBlink
+C:   000002AE  XG$LCD_CMD_CLEAR$0$0               LEDBlink
+C:   000002AF  A$LEDBlink$1363                    LEDBlink
+C:   000002AF  C$LCDInterface.c$113$2$57          LEDBlink
+C:   000002AF  G$LCD_CMD_SET_CURSOR$0$0           LEDBlink
+C:   000002AF  _LCD_CMD_SET_CURSOR                LEDBlink
+C:   000002B1  A$LEDBlink$1366                    LEDBlink
+ASxxxx Linker V03.00 + NoICE + sdld,  page 30.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000065    00000381 =         897. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000002B1  C$LCDInterface.c$115$1$60          LEDBlink
+C:   000002B3  A$LEDBlink$1367                    LEDBlink
+C:   000002B5  A$LEDBlink$1368                    LEDBlink
+C:   000002B7  A$LEDBlink$1371                    LEDBlink
+C:   000002B7  C$LCDInterface.c$117$2$61          LEDBlink
+C:   000002BA  A$LEDBlink$1375                    LEDBlink
+C:   000002BA  C$LCDInterface.c$120$1$60          LEDBlink
+C:   000002BC  A$LEDBlink$1376                    LEDBlink
+C:   000002BF  A$LEDBlink$1377                    LEDBlink
+C:   000002C0  A$LEDBlink$1378                    LEDBlink
+C:   000002C1  A$LEDBlink$1379                    LEDBlink
+C:   000002C3  A$LEDBlink$1380                    LEDBlink
+C:   000002C5  A$LEDBlink$1381                    LEDBlink
+C:   000002C8  A$LEDBlink$1382                    LEDBlink
+C:   000002CB  A$LEDBlink$1385                    LEDBlink
+C:   000002CB  C$LCDInterface.c$121$1$60          LEDBlink
+C:   000002CB  XG$LCD_CMD_SET_CURSOR$0$0          LEDBlink
+C:   000002CC  A$LEDBlink$1404                    LEDBlink
+C:   000002CC  C$LCDInterface.c$125$1$60          LEDBlink
+C:   000002CC  C$LCDInterface.c$128$1$63          LEDBlink
+C:   000002CC  C$LCDInterface.c$129$1$63          LEDBlink
+C:   000002CC  G$LCD_CMD_UPLOAD_CUSTOM_CHAR$0$0   LEDBlink
+C:   000002CC  _LCD_CMD_UPLOAD_CUSTOM_CHAR        LEDBlink
+C:   000002CE  A$LEDBlink$1405                    LEDBlink
+C:   000002D0  A$LEDBlink$1406                    LEDBlink
+C:   000002D1  A$LEDBlink$1407                    LEDBlink
+C:   000002D2  A$LEDBlink$1408                    LEDBlink
+C:   000002D4  A$LEDBlink$1409                    LEDBlink
+C:   000002D5  A$LEDBlink$1410                    LEDBlink
+C:   000002D7  A$LEDBlink$1411                    LEDBlink
+C:   000002D8  A$LEDBlink$1412                    LEDBlink
+C:   000002DA  A$LEDBlink$1413                    LEDBlink
+C:   000002DD  A$LEDBlink$1414                    LEDBlink
+C:   000002E0  A$LEDBlink$1417                    LEDBlink
+C:   000002E2  A$LEDBlink$1421                    LEDBlink
+C:   000002E2  C$LCDInterface.c$132$2$64          LEDBlink
+C:   000002E3  A$LEDBlink$1422                    LEDBlink
+C:   000002E5  A$LEDBlink$1423                    LEDBlink
+C:   000002E6  A$LEDBlink$1424                    LEDBlink
+C:   000002E7  A$LEDBlink$1425                    LEDBlink
+C:   000002E9  A$LEDBlink$1426                    LEDBlink
+C:   000002EA  A$LEDBlink$1427                    LEDBlink
+C:   000002EC  A$LEDBlink$1428                    LEDBlink
+C:   000002EE  A$LEDBlink$1429                    LEDBlink
+C:   000002F0  A$LEDBlink$1430                    LEDBlink
+C:   000002F2  A$LEDBlink$1431                    LEDBlink
+C:   000002F5  A$LEDBlink$1432                    LEDBlink
+C:   000002F6  A$LEDBlink$1433                    LEDBlink
+C:   000002F9  A$LEDBlink$1434                    LEDBlink
+C:   000002FB  A$LEDBlink$1435                    LEDBlink
+C:   000002FD  A$LEDBlink$1436                    LEDBlink
+ASxxxx Linker V03.00 + NoICE + sdld,  page 31.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000065    00000381 =         897. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000300  A$LEDBlink$1437                    LEDBlink
+C:   00000302  A$LEDBlink$1440                    LEDBlink
+C:   00000302  C$LCDInterface.c$130$1$63          LEDBlink
+C:   00000303  A$LEDBlink$1441                    LEDBlink
+C:   00000306  A$LEDBlink$1443                    LEDBlink
+C:   00000308  A$LEDBlink$1446                    LEDBlink
+C:   00000308  C$LCDInterface.c$134$1$63          LEDBlink
+C:   00000308  XG$LCD_CMD_UPLOAD_CUSTOM_CHAR$0$   LEDBlink
+C:   00000309  A$LEDBlink$1462                    LEDBlink
+C:   00000309  C$LCDInterface.c$136$1$63          LEDBlink
+C:   00000309  C$LCDInterface.c$141$2$66          LEDBlink
+C:   00000309  G$LCD_INIT$0$0                     LEDBlink
+C:   00000309  _LCD_INIT                          LEDBlink
+C:   0000030B  A$LEDBlink$1463                    LEDBlink
+C:   0000030D  A$LEDBlink$1465                    LEDBlink
+C:   0000030F  A$LEDBlink$1466                    LEDBlink
+C:   00000311  A$LEDBlink$1467                    LEDBlink
+C:   00000314  A$LEDBlink$1468                    LEDBlink
+C:   00000316  A$LEDBlink$1469                    LEDBlink
+C:   00000318  A$LEDBlink$1470                    LEDBlink
+C:   00000319  A$LEDBlink$1471                    LEDBlink
+C:   0000031C  A$LEDBlink$1472                    LEDBlink
+C:   0000031D  A$LEDBlink$1474                    LEDBlink
+C:   0000031E  A$LEDBlink$1475                    LEDBlink
+C:   0000031F  A$LEDBlink$1480                    LEDBlink
+C:   0000031F  C$LCDInterface.c$147$1$65          LEDBlink
+C:   0000031F  C$LCDInterface.c$148$1$65          LEDBlink
+C:   00000321  A$LEDBlink$1481                    LEDBlink
+C:   00000323  A$LEDBlink$1482                    LEDBlink
+C:   00000325  A$LEDBlink$1483                    LEDBlink
+C:   00000328  A$LEDBlink$1486                    LEDBlink
+C:   00000328  C$LCDInterface.c$156$2$68          LEDBlink
+C:   0000032B  A$LEDBlink$1487                    LEDBlink
+C:   0000032E  A$LEDBlink$1490                    LEDBlink
+C:   0000032E  C$LCDInterface.c$157$3$69          LEDBlink
+C:   00000330  A$LEDBlink$1491                    LEDBlink
+C:   00000332  A$LEDBlink$1493                    LEDBlink
+C:   00000334  A$LEDBlink$1494                    LEDBlink
+C:   00000336  A$LEDBlink$1495                    LEDBlink
+C:   00000339  A$LEDBlink$1496                    LEDBlink
+C:   0000033B  A$LEDBlink$1497                    LEDBlink
+C:   0000033D  A$LEDBlink$1498                    LEDBlink
+C:   0000033E  A$LEDBlink$1499                    LEDBlink
+C:   00000341  A$LEDBlink$1500                    LEDBlink
+C:   00000342  A$LEDBlink$1502                    LEDBlink
+C:   00000343  A$LEDBlink$1503                    LEDBlink
+C:   00000344  A$LEDBlink$1504                    LEDBlink
+C:   00000346  A$LEDBlink$1507                    LEDBlink
+C:   00000346  C$LCDInterface.c$208$1$65          LEDBlink
+C:   00000349  A$LEDBlink$1508                    LEDBlink
+C:   0000034C  A$LEDBlink$1509                    LEDBlink
+ASxxxx Linker V03.00 + NoICE + sdld,  page 32.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000065    00000381 =         897. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000034F  A$LEDBlink$1512                    LEDBlink
+C:   0000034F  C$LCDInterface.c$209$1$65          LEDBlink
+C:   00000352  A$LEDBlink$1513                    LEDBlink
+C:   00000355  A$LEDBlink$1514                    LEDBlink
+C:   00000358  A$LEDBlink$1517                    LEDBlink
+C:   00000358  C$LCDInterface.c$212$1$65          LEDBlink
+C:   0000035B  A$LEDBlink$1518                    LEDBlink
+C:   0000035E  A$LEDBlink$1519                    LEDBlink
+C:   00000361  A$LEDBlink$1522                    LEDBlink
+C:   00000361  C$LCDInterface.c$214$1$65          LEDBlink
+C:   00000364  A$LEDBlink$1525                    LEDBlink
+C:   00000364  C$LCDInterface.c$217$1$65          LEDBlink
+C:   00000367  A$LEDBlink$1526                    LEDBlink
+C:   0000036A  A$LEDBlink$1527                    LEDBlink
+C:   0000036D  A$LEDBlink$1530                    LEDBlink
+C:   0000036D  C$LCDInterface.c$218$1$65          LEDBlink
+C:   0000036D  XG$LCD_INIT$0$0                    LEDBlink
+C:   0000036E  A$LEDBlink$1543                    LEDBlink
+C:   0000036E  C$LEDBlink.c$28$1$65               LEDBlink
+C:   0000036E  FLEDBlink$Print$0$0                LEDBlink
+C:   00000370  A$LEDBlink$1544                    LEDBlink
+C:   00000372  A$LEDBlink$1545                    LEDBlink
+C:   00000374  A$LEDBlink$1549                    LEDBlink
+C:   00000374  C$LEDBlink.c$30$1$72               LEDBlink
+C:   00000376  A$LEDBlink$1550                    LEDBlink
+C:   00000378  A$LEDBlink$1551                    LEDBlink
+C:   0000037A  A$LEDBlink$1552                    LEDBlink
+C:   0000037D  A$LEDBlink$1553                    LEDBlink
+C:   0000037E  A$LEDBlink$1554                    LEDBlink
+C:   00000380  A$LEDBlink$1557                    LEDBlink
+C:   00000380  C$LEDBlink.c$32$2$73               LEDBlink
+C:   00000383  A$LEDBlink$1558                    LEDBlink
+C:   00000385  A$LEDBlink$1559                    LEDBlink
+C:   00000387  A$LEDBlink$1560                    LEDBlink
+C:   00000389  A$LEDBlink$1561                    LEDBlink
+C:   0000038B  A$LEDBlink$1562                    LEDBlink
+C:   0000038E  A$LEDBlink$1563                    LEDBlink
+C:   00000390  A$LEDBlink$1564                    LEDBlink
+C:   00000392  A$LEDBlink$1565                    LEDBlink
+C:   00000394  A$LEDBlink$1568                    LEDBlink
+C:   00000394  C$LEDBlink.c$33$2$73               LEDBlink
+C:   00000395  A$LEDBlink$1569                    LEDBlink
+C:   00000398  A$LEDBlink$1570                    LEDBlink
+C:   00000399  A$LEDBlink$1571                    LEDBlink
+C:   0000039B  A$LEDBlink$1575                    LEDBlink
+C:   0000039B  C$LEDBlink.c$35$1$72               LEDBlink
+C:   0000039B  XFLEDBlink$Print$0$0               LEDBlink
+C:   0000039C  A$LEDBlink$1590                    LEDBlink
+C:   0000039C  C$LEDBlink.c$90$1$72               LEDBlink
+C:   0000039C  C$LEDBlink.c$97$1$74               LEDBlink
+C:   0000039C  G$main$0$0                         LEDBlink
+ASxxxx Linker V03.00 + NoICE + sdld,  page 33.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000065    00000381 =         897. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000039C  _main                              LEDBlink
+C:   0000039F  A$LEDBlink$1593                    LEDBlink
+C:   0000039F  C$LEDBlink.c$99$1$74               LEDBlink
+C:   000003A2  A$LEDBlink$1596                    LEDBlink
+C:   000003A2  C$LEDBlink.c$100$1$74              LEDBlink
+C:   000003A5  A$LEDBlink$1599                    LEDBlink
+C:   000003A5  C$LEDBlink.c$101$1$74              LEDBlink
+C:   000003A8  A$LEDBlink$1602                    LEDBlink
+C:   000003A8  C$LEDBlink.c$102$1$74              LEDBlink
+C:   000003AB  A$LEDBlink$1603                    LEDBlink
+C:   000003AE  A$LEDBlink$1604                    LEDBlink
+C:   000003B1  A$LEDBlink$1607                    LEDBlink
+C:   000003B1  C$LEDBlink.c$103$1$74              LEDBlink
+C:   000003B4  A$LEDBlink$1608                    LEDBlink
+C:   000003B7  A$LEDBlink$1609                    LEDBlink
+C:   000003BA  A$LEDBlink$1615                    LEDBlink
+C:   000003BA  C$LEDBlink.c$122$1$74              LEDBlink
+C:   000003BA  C$LEDBlink.c$137$2$75              LEDBlink
+C:   000003BD  A$LEDBlink$1618                    LEDBlink
+C:   000003BD  C$LEDBlink.c$164$2$75              LEDBlink
+C:   000003C0  A$LEDBlink$1621                    LEDBlink
+C:   000003C0  C$LEDBlink.c$166$3$77              LEDBlink
+C:   000003C3  A$LEDBlink$1624                    LEDBlink
+C:   000003C3  C$LEDBlink.c$185$1$74              LEDBlink
+C:   000003C5  A$LEDBlink$1627                    LEDBlink
+C:   000003C5  C$LEDBlink.c$186$1$74              LEDBlink
+C:   000003C5  XG$main$0$0                        LEDBlink
+C:   000003C6  __gptrget                          _gptrget
+C:   000003E2  __sdcc_external_startup            _startup
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 34.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CONST                               000003E6    00000034 =          52. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000003E6  G$LCD_ROW_OFFSETS$0$0              LEDBlink
+C:   000003E6  _LCD_ROW_OFFSETS                   LEDBlink
+C:   000003EA  G$LCDCharTopShapeData$0$0          LEDBlink
+C:   000003EA  _LCDCharTopShapeData               LEDBlink
+C:   000003F2  G$LCDCharMiddleShapeData$0$0       LEDBlink
+C:   000003F2  _LCDCharMiddleShapeData            LEDBlink
+C:   000003FA  G$LCDCharBottomShapeData$0$0       LEDBlink
+C:   000003FA  _LCDCharBottomShapeData            LEDBlink
+C:   00000402  G$LCDCharTopTwoShapeData$0$0       LEDBlink
+C:   00000402  _LCDCharTopTwoShapeData            LEDBlink
+C:   0000040A  G$LCDCharBottomTwoShapeData$0$0    LEDBlink
+C:   0000040A  _LCDCharBottomTwoShapeData         LEDBlink
+C:   00000412  G$LCDCharThreeShapeData$0$0        LEDBlink
+C:   00000412  _LCDCharThreeShapeData             LEDBlink
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 35.
+
+Files Linked                              [ module(s) ]
+
+LEDBlink.rel                              [  ]
+
+
+Libraries Linked                          [ object file ]
+
+/usr/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtclear.rel ]
+/usr/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtxinit.rel ]
+/usr/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtxclear.rel ]
+/usr/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtpagesfr.rel ]
+/usr/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtstart.rel ]
+/usr/bin/../share/sdcc/lib/small/libsdcc.lib
+                                          [ _gptrget.rel ]
+/usr/bin/../share/sdcc/lib/small/libsdcc.lib
+                                          [ _startup.rel ]
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 36.
+
+User Base Address Definitions
+
+HOME = 0x0000
+ISEG = 0x0000
+BSEG = 0x0000
+
+

@@ -1,0 +1,1546 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 1.
+
+Symbol Table
+
+    .__.$$$.                                                    =  2710 L
+    .__.ABS.                                                    =  0000 G
+    .__.CPU.                                                    =  0000 L
+    .__.H$L.                                                    =  0001 L
+    A                                                           =  00E0 L
+ 17 A$LEDBlink$1008                                                0118 GR
+ 17 A$LEDBlink$1011                                                011A GR
+ 17 A$LEDBlink$1015                                                011C GR
+ 17 A$LEDBlink$1016                                                011E GR
+ 17 A$LEDBlink$1017                                                0120 GR
+ 17 A$LEDBlink$1018                                                0122 GR
+ 17 A$LEDBlink$1019                                                0123 GR
+ 17 A$LEDBlink$1020                                                0124 GR
+ 17 A$LEDBlink$1021                                                0125 GR
+ 17 A$LEDBlink$1022                                                0126 GR
+ 17 A$LEDBlink$1023                                                0127 GR
+ 17 A$LEDBlink$1024                                                0128 GR
+ 17 A$LEDBlink$1025                                                012A GR
+ 17 A$LEDBlink$1026                                                012C GR
+ 17 A$LEDBlink$1027                                                012D GR
+ 17 A$LEDBlink$1029                                                012F GR
+ 17 A$LEDBlink$1030                                                0130 GR
+ 17 A$LEDBlink$1032                                                0131 GR
+ 17 A$LEDBlink$1033                                                0134 GR
+ 17 A$LEDBlink$1036                                                0137 GR
+ 17 A$LEDBlink$1037                                                0139 GR
+ 17 A$LEDBlink$1038                                                013A GR
+ 17 A$LEDBlink$1039                                                013B GR
+ 17 A$LEDBlink$1040                                                013C GR
+ 17 A$LEDBlink$1041                                                013D GR
+ 17 A$LEDBlink$1042                                                013E GR
+ 17 A$LEDBlink$1043                                                013F GR
+ 17 A$LEDBlink$1044                                                0140 GR
+ 17 A$LEDBlink$1045                                                0141 GR
+ 17 A$LEDBlink$1046                                                0142 GR
+ 17 A$LEDBlink$1050                                                0144 GR
+ 17 A$LEDBlink$1051                                                0146 GR
+ 17 A$LEDBlink$1052                                                0147 GR
+ 17 A$LEDBlink$1053                                                0148 GR
+ 17 A$LEDBlink$1054                                                0149 GR
+ 17 A$LEDBlink$1055                                                014A GR
+ 17 A$LEDBlink$1059                                                014B GR
+ 17 A$LEDBlink$1060                                                014D GR
+ 17 A$LEDBlink$1061                                                014E GR
+ 17 A$LEDBlink$1062                                                014F GR
+ 17 A$LEDBlink$1063                                                0150 GR
+ 17 A$LEDBlink$1064                                                0151 GR
+ 17 A$LEDBlink$1065                                                0152 GR
+ 17 A$LEDBlink$1066                                                0153 GR
+ 17 A$LEDBlink$1067                                                0154 GR
+ 17 A$LEDBlink$1068                                                0155 GR
+ 17 A$LEDBlink$1071                                                0156 GR
+ 17 A$LEDBlink$1072                                                0158 GR
+ 17 A$LEDBlink$1073                                                0159 GR
+ 17 A$LEDBlink$1074                                                015A GR
+ 17 A$LEDBlink$1075                                                015B GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 2.
+
+Symbol Table
+
+ 17 A$LEDBlink$1076                                                015C GR
+ 17 A$LEDBlink$1079                                                015D GR
+ 17 A$LEDBlink$1080                                                015E GR
+ 17 A$LEDBlink$1082                                                0161 GR
+ 17 A$LEDBlink$1085                                                0163 GR
+ 17 A$LEDBlink$1086                                                0165 GR
+ 17 A$LEDBlink$1087                                                0166 GR
+ 17 A$LEDBlink$1088                                                0167 GR
+ 17 A$LEDBlink$1089                                                0168 GR
+ 17 A$LEDBlink$1090                                                0169 GR
+ 17 A$LEDBlink$1093                                                016A GR
+ 17 A$LEDBlink$1094                                                016C GR
+ 17 A$LEDBlink$1095                                                016D GR
+ 17 A$LEDBlink$1096                                                016E GR
+ 17 A$LEDBlink$1097                                                016F GR
+ 17 A$LEDBlink$1098                                                0170 GR
+ 17 A$LEDBlink$1099                                                0171 GR
+ 17 A$LEDBlink$1100                                                0172 GR
+ 17 A$LEDBlink$1101                                                0173 GR
+ 17 A$LEDBlink$1102                                                0174 GR
+ 17 A$LEDBlink$1105                                                0175 GR
+ 17 A$LEDBlink$1106                                                0177 GR
+ 17 A$LEDBlink$1107                                                0178 GR
+ 17 A$LEDBlink$1108                                                0179 GR
+ 17 A$LEDBlink$1109                                                017A GR
+ 17 A$LEDBlink$1110                                                017B GR
+ 17 A$LEDBlink$1113                                                017C GR
+ 17 A$LEDBlink$1126                                                017D GR
+ 17 A$LEDBlink$1127                                                017F GR
+ 17 A$LEDBlink$1128                                                0181 GR
+ 17 A$LEDBlink$1129                                                0182 GR
+ 17 A$LEDBlink$1132                                                0184 GR
+ 17 A$LEDBlink$1133                                                0187 GR
+ 17 A$LEDBlink$1136                                                018A GR
+ 17 A$LEDBlink$1137                                                018B GR
+ 17 A$LEDBlink$1138                                                018C GR
+ 17 A$LEDBlink$1139                                                018D GR
+ 17 A$LEDBlink$1140                                                018E GR
+ 17 A$LEDBlink$1143                                                018F GR
+ 17 A$LEDBlink$1146                                                0192 GR
+ 17 A$LEDBlink$1147                                                0195 GR
+ 17 A$LEDBlink$1150                                                0198 GR
+ 17 A$LEDBlink$1151                                                0199 GR
+ 17 A$LEDBlink$1152                                                019A GR
+ 17 A$LEDBlink$1153                                                019B GR
+ 17 A$LEDBlink$1154                                                019C GR
+ 17 A$LEDBlink$1157                                                019D GR
+ 17 A$LEDBlink$1158                                                019F GR
+ 17 A$LEDBlink$1159                                                01A1 GR
+ 17 A$LEDBlink$1160                                                01A2 GR
+ 17 A$LEDBlink$1163                                                01A4 GR
+ 17 A$LEDBlink$1164                                                01A7 GR
+ 17 A$LEDBlink$1167                                                01AA GR
+ 17 A$LEDBlink$1168                                                01AB GR
+ 17 A$LEDBlink$1169                                                01AC GR
+ 17 A$LEDBlink$1170                                                01AD GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 3.
+
+Symbol Table
+
+ 17 A$LEDBlink$1171                                                01AE GR
+ 17 A$LEDBlink$1174                                                01AF GR
+ 17 A$LEDBlink$1189                                                01B0 GR
+ 17 A$LEDBlink$1190                                                01B2 GR
+ 17 A$LEDBlink$1191                                                01B3 GR
+ 17 A$LEDBlink$1194                                                01B6 GR
+ 17 A$LEDBlink$1195                                                01B9 GR
+ 17 A$LEDBlink$1199                                                01BB GR
+ 17 A$LEDBlink$1200                                                01BD GR
+ 17 A$LEDBlink$1201                                                01BF GR
+ 17 A$LEDBlink$1202                                                01C0 GR
+ 17 A$LEDBlink$1206                                                01C2 GR
+ 17 A$LEDBlink$1207                                                01C3 GR
+ 17 A$LEDBlink$1210                                                01C6 GR
+ 17 A$LEDBlink$1211                                                01C9 GR
+ 17 A$LEDBlink$1215                                                01CB GR
+ 17 A$LEDBlink$1216                                                01CD GR
+ 17 A$LEDBlink$1217                                                01CF GR
+ 17 A$LEDBlink$1218                                                01D0 GR
+ 17 A$LEDBlink$1222                                                01D2 GR
+ 17 A$LEDBlink$1223                                                01D3 GR
+ 17 A$LEDBlink$1226                                                01D6 GR
+ 17 A$LEDBlink$1227                                                01D9 GR
+ 17 A$LEDBlink$1231                                                01DB GR
+ 17 A$LEDBlink$1232                                                01DD GR
+ 17 A$LEDBlink$1233                                                01DF GR
+ 17 A$LEDBlink$1234                                                01E0 GR
+ 17 A$LEDBlink$1238                                                01E2 GR
+ 17 A$LEDBlink$1239                                                01E3 GR
+ 17 A$LEDBlink$1242                                                01E6 GR
+ 17 A$LEDBlink$1243                                                01E9 GR
+ 17 A$LEDBlink$1247                                                01EB GR
+ 17 A$LEDBlink$1248                                                01ED GR
+ 17 A$LEDBlink$1249                                                01EF GR
+ 17 A$LEDBlink$1250                                                01F0 GR
+ 17 A$LEDBlink$1254                                                01F2 GR
+ 17 A$LEDBlink$1255                                                01F5 GR
+ 17 A$LEDBlink$1258                                                01F8 GR
+ 17 A$LEDBlink$1261                                                01FB GR
+ 17 A$LEDBlink$1275                                                01FC GR
+ 17 A$LEDBlink$1278                                                01FE GR
+ 17 A$LEDBlink$1279                                                0200 GR
+ 17 A$LEDBlink$1282                                                0202 GR
+ 17 A$LEDBlink$1283                                                0204 GR
+ 17 A$LEDBlink$1284                                                0206 GR
+ 17 A$LEDBlink$1285                                                0207 GR
+ 17 A$LEDBlink$1286                                                0209 GR
+ 17 A$LEDBlink$1290                                                020B GR
+ 17 A$LEDBlink$1294                                                020E GR
+ 17 A$LEDBlink$1295                                                020F GR
+ 17 A$LEDBlink$1296                                                0210 GR
+ 17 A$LEDBlink$1297                                                0212 GR
+ 17 A$LEDBlink$1298                                                0213 GR
+ 17 A$LEDBlink$1299                                                0215 GR
+ 17 A$LEDBlink$1300                                                0216 GR
+ 17 A$LEDBlink$1301                                                0218 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 4.
+
+Symbol Table
+
+ 17 A$LEDBlink$1302                                                021A GR
+ 17 A$LEDBlink$1303                                                021D GR
+ 17 A$LEDBlink$1306                                                021F GR
+ 17 A$LEDBlink$1307                                                0221 GR
+ 17 A$LEDBlink$1308                                                0222 GR
+ 17 A$LEDBlink$1309                                                0224 GR
+ 17 A$LEDBlink$1312                                                0227 GR
+ 17 A$LEDBlink$1327                                                0228 GR
+ 17 A$LEDBlink$1328                                                022B GR
+ 17 A$LEDBlink$1329                                                022E GR
+ 17 A$LEDBlink$1332                                                0231 GR
+ 17 A$LEDBlink$1333                                                0233 GR
+ 17 A$LEDBlink$1335                                                0235 GR
+ 17 A$LEDBlink$1336                                                0237 GR
+ 17 A$LEDBlink$1337                                                0239 GR
+ 17 A$LEDBlink$1338                                                023C GR
+ 17 A$LEDBlink$1339                                                023E GR
+ 17 A$LEDBlink$1340                                                0240 GR
+ 17 A$LEDBlink$1341                                                0241 GR
+ 17 A$LEDBlink$1342                                                0244 GR
+ 17 A$LEDBlink$1344                                                0245 GR
+ 17 A$LEDBlink$1345                                                0246 GR
+ 17 A$LEDBlink$1346                                                0247 GR
+ 17 A$LEDBlink$1349                                                0249 GR
+ 17 A$LEDBlink$1363                                                024A GR
+ 17 A$LEDBlink$1366                                                024C GR
+ 17 A$LEDBlink$1367                                                024E GR
+ 17 A$LEDBlink$1368                                                0250 GR
+ 17 A$LEDBlink$1371                                                0252 GR
+ 17 A$LEDBlink$1375                                                0255 GR
+ 17 A$LEDBlink$1376                                                0257 GR
+ 17 A$LEDBlink$1377                                                025A GR
+ 17 A$LEDBlink$1378                                                025B GR
+ 17 A$LEDBlink$1379                                                025C GR
+ 17 A$LEDBlink$1380                                                025E GR
+ 17 A$LEDBlink$1381                                                0260 GR
+ 17 A$LEDBlink$1382                                                0263 GR
+ 17 A$LEDBlink$1385                                                0266 GR
+ 17 A$LEDBlink$1404                                                0267 GR
+ 17 A$LEDBlink$1405                                                0269 GR
+ 17 A$LEDBlink$1406                                                026B GR
+ 17 A$LEDBlink$1407                                                026C GR
+ 17 A$LEDBlink$1408                                                026D GR
+ 17 A$LEDBlink$1409                                                026F GR
+ 17 A$LEDBlink$1410                                                0270 GR
+ 17 A$LEDBlink$1411                                                0272 GR
+ 17 A$LEDBlink$1412                                                0273 GR
+ 17 A$LEDBlink$1413                                                0275 GR
+ 17 A$LEDBlink$1414                                                0278 GR
+ 17 A$LEDBlink$1417                                                027B GR
+ 17 A$LEDBlink$1421                                                027D GR
+ 17 A$LEDBlink$1422                                                027E GR
+ 17 A$LEDBlink$1423                                                0280 GR
+ 17 A$LEDBlink$1424                                                0281 GR
+ 17 A$LEDBlink$1425                                                0282 GR
+ 17 A$LEDBlink$1426                                                0284 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 5.
+
+Symbol Table
+
+ 17 A$LEDBlink$1427                                                0285 GR
+ 17 A$LEDBlink$1428                                                0287 GR
+ 17 A$LEDBlink$1429                                                0289 GR
+ 17 A$LEDBlink$1430                                                028B GR
+ 17 A$LEDBlink$1431                                                028D GR
+ 17 A$LEDBlink$1432                                                0290 GR
+ 17 A$LEDBlink$1433                                                0291 GR
+ 17 A$LEDBlink$1434                                                0294 GR
+ 17 A$LEDBlink$1435                                                0296 GR
+ 17 A$LEDBlink$1436                                                0298 GR
+ 17 A$LEDBlink$1437                                                029B GR
+ 17 A$LEDBlink$1440                                                029D GR
+ 17 A$LEDBlink$1441                                                029E GR
+ 17 A$LEDBlink$1443                                                02A1 GR
+ 17 A$LEDBlink$1446                                                02A3 GR
+ 17 A$LEDBlink$1462                                                02A4 GR
+ 17 A$LEDBlink$1463                                                02A6 GR
+ 17 A$LEDBlink$1465                                                02A8 GR
+ 17 A$LEDBlink$1466                                                02AA GR
+ 17 A$LEDBlink$1467                                                02AC GR
+ 17 A$LEDBlink$1468                                                02AF GR
+ 17 A$LEDBlink$1469                                                02B1 GR
+ 17 A$LEDBlink$1470                                                02B3 GR
+ 17 A$LEDBlink$1471                                                02B4 GR
+ 17 A$LEDBlink$1472                                                02B7 GR
+ 17 A$LEDBlink$1474                                                02B8 GR
+ 17 A$LEDBlink$1475                                                02B9 GR
+ 17 A$LEDBlink$1480                                                02BA GR
+ 17 A$LEDBlink$1481                                                02BC GR
+ 17 A$LEDBlink$1482                                                02BE GR
+ 17 A$LEDBlink$1483                                                02C0 GR
+ 17 A$LEDBlink$1486                                                02C3 GR
+ 17 A$LEDBlink$1487                                                02C6 GR
+ 17 A$LEDBlink$1490                                                02C9 GR
+ 17 A$LEDBlink$1491                                                02CB GR
+ 17 A$LEDBlink$1493                                                02CD GR
+ 17 A$LEDBlink$1494                                                02CF GR
+ 17 A$LEDBlink$1495                                                02D1 GR
+ 17 A$LEDBlink$1496                                                02D4 GR
+ 17 A$LEDBlink$1497                                                02D6 GR
+ 17 A$LEDBlink$1498                                                02D8 GR
+ 17 A$LEDBlink$1499                                                02D9 GR
+ 17 A$LEDBlink$1500                                                02DC GR
+ 17 A$LEDBlink$1502                                                02DD GR
+ 17 A$LEDBlink$1503                                                02DE GR
+ 17 A$LEDBlink$1504                                                02DF GR
+ 17 A$LEDBlink$1507                                                02E1 GR
+ 17 A$LEDBlink$1508                                                02E4 GR
+ 17 A$LEDBlink$1509                                                02E7 GR
+ 17 A$LEDBlink$1512                                                02EA GR
+ 17 A$LEDBlink$1513                                                02ED GR
+ 17 A$LEDBlink$1514                                                02F0 GR
+ 17 A$LEDBlink$1517                                                02F3 GR
+ 17 A$LEDBlink$1518                                                02F6 GR
+ 17 A$LEDBlink$1519                                                02F9 GR
+ 17 A$LEDBlink$1522                                                02FC GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 6.
+
+Symbol Table
+
+ 17 A$LEDBlink$1525                                                02FF GR
+ 17 A$LEDBlink$1526                                                0302 GR
+ 17 A$LEDBlink$1527                                                0305 GR
+ 17 A$LEDBlink$1530                                                0308 GR
+ 17 A$LEDBlink$1543                                                0309 GR
+ 17 A$LEDBlink$1544                                                030B GR
+ 17 A$LEDBlink$1545                                                030D GR
+ 17 A$LEDBlink$1549                                                030F GR
+ 17 A$LEDBlink$1550                                                0311 GR
+ 17 A$LEDBlink$1551                                                0313 GR
+ 17 A$LEDBlink$1552                                                0315 GR
+ 17 A$LEDBlink$1553                                                0318 GR
+ 17 A$LEDBlink$1554                                                0319 GR
+ 17 A$LEDBlink$1557                                                031B GR
+ 17 A$LEDBlink$1558                                                031E GR
+ 17 A$LEDBlink$1559                                                0320 GR
+ 17 A$LEDBlink$1560                                                0322 GR
+ 17 A$LEDBlink$1561                                                0324 GR
+ 17 A$LEDBlink$1562                                                0326 GR
+ 17 A$LEDBlink$1563                                                0329 GR
+ 17 A$LEDBlink$1564                                                032B GR
+ 17 A$LEDBlink$1565                                                032D GR
+ 17 A$LEDBlink$1568                                                032F GR
+ 17 A$LEDBlink$1569                                                0330 GR
+ 17 A$LEDBlink$1570                                                0333 GR
+ 17 A$LEDBlink$1571                                                0334 GR
+ 17 A$LEDBlink$1575                                                0336 GR
+ 17 A$LEDBlink$1590                                                0337 GR
+ 17 A$LEDBlink$1593                                                033A GR
+ 17 A$LEDBlink$1596                                                033D GR
+ 17 A$LEDBlink$1599                                                0340 GR
+ 17 A$LEDBlink$1602                                                0343 GR
+ 17 A$LEDBlink$1603                                                0346 GR
+ 17 A$LEDBlink$1604                                                0349 GR
+ 17 A$LEDBlink$1607                                                034C GR
+ 17 A$LEDBlink$1608                                                034F GR
+ 17 A$LEDBlink$1609                                                0352 GR
+ 17 A$LEDBlink$1615                                                0355 GR
+ 17 A$LEDBlink$1618                                                0358 GR
+ 17 A$LEDBlink$1621                                                035B GR
+ 17 A$LEDBlink$1624                                                035E GR
+ 17 A$LEDBlink$1627                                                0360 GR
+  E A$LEDBlink$441                                                 0000 GR
+ 15 A$LEDBlink$457                                                 0000 GR
+ 16 A$LEDBlink$459                                                 0000 GR
+  E A$LEDBlink$466                                                 0003 GR
+ 17 A$LEDBlink$494                                                 0000 GR
+ 17 A$LEDBlink$495                                                 0002 GR
+ 17 A$LEDBlink$499                                                 0004 GR
+ 17 A$LEDBlink$502                                                 0005 GR
+ 17 A$LEDBlink$505                                                 0006 GR
+ 17 A$LEDBlink$508                                                 0007 GR
+ 17 A$LEDBlink$511                                                 0008 GR
+ 17 A$LEDBlink$514                                                 0009 GR
+ 17 A$LEDBlink$517                                                 000A GR
+ 17 A$LEDBlink$520                                                 000B GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 7.
+
+Symbol Table
+
+ 17 A$LEDBlink$523                                                 000C GR
+ 17 A$LEDBlink$526                                                 000D GR
+ 17 A$LEDBlink$529                                                 000E GR
+ 17 A$LEDBlink$532                                                 000F GR
+ 17 A$LEDBlink$535                                                 0010 GR
+ 17 A$LEDBlink$538                                                 0011 GR
+ 17 A$LEDBlink$541                                                 0012 GR
+ 17 A$LEDBlink$544                                                 0013 GR
+ 17 A$LEDBlink$547                                                 0014 GR
+ 17 A$LEDBlink$550                                                 0015 GR
+ 17 A$LEDBlink$553                                                 0016 GR
+ 17 A$LEDBlink$556                                                 0017 GR
+ 17 A$LEDBlink$559                                                 0018 GR
+ 17 A$LEDBlink$562                                                 0019 GR
+ 17 A$LEDBlink$565                                                 001A GR
+ 17 A$LEDBlink$568                                                 001B GR
+ 17 A$LEDBlink$571                                                 001C GR
+ 17 A$LEDBlink$574                                                 001D GR
+ 17 A$LEDBlink$577                                                 001E GR
+ 17 A$LEDBlink$580                                                 001F GR
+ 17 A$LEDBlink$583                                                 0020 GR
+ 17 A$LEDBlink$586                                                 0021 GR
+ 17 A$LEDBlink$589                                                 0022 GR
+ 17 A$LEDBlink$592                                                 0023 GR
+ 17 A$LEDBlink$595                                                 0024 GR
+ 17 A$LEDBlink$598                                                 0025 GR
+ 17 A$LEDBlink$601                                                 0026 GR
+ 17 A$LEDBlink$604                                                 0027 GR
+ 17 A$LEDBlink$607                                                 0028 GR
+ 17 A$LEDBlink$610                                                 0029 GR
+ 17 A$LEDBlink$613                                                 002A GR
+ 17 A$LEDBlink$616                                                 002B GR
+ 17 A$LEDBlink$619                                                 002C GR
+ 17 A$LEDBlink$622                                                 002D GR
+ 17 A$LEDBlink$625                                                 002E GR
+ 17 A$LEDBlink$628                                                 002F GR
+ 17 A$LEDBlink$631                                                 0030 GR
+ 17 A$LEDBlink$634                                                 0031 GR
+ 17 A$LEDBlink$637                                                 0032 GR
+ 17 A$LEDBlink$640                                                 0033 GR
+ 17 A$LEDBlink$643                                                 0034 GR
+ 17 A$LEDBlink$646                                                 0035 GR
+ 17 A$LEDBlink$649                                                 0036 GR
+ 17 A$LEDBlink$652                                                 0037 GR
+ 17 A$LEDBlink$655                                                 0038 GR
+ 17 A$LEDBlink$658                                                 0039 GR
+ 17 A$LEDBlink$661                                                 003A GR
+ 17 A$LEDBlink$664                                                 003B GR
+ 17 A$LEDBlink$667                                                 003C GR
+ 17 A$LEDBlink$670                                                 003D GR
+ 17 A$LEDBlink$673                                                 003E GR
+ 17 A$LEDBlink$676                                                 003F GR
+ 17 A$LEDBlink$679                                                 0040 GR
+ 17 A$LEDBlink$682                                                 0041 GR
+ 17 A$LEDBlink$685                                                 0042 GR
+ 17 A$LEDBlink$688                                                 0043 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 8.
+
+Symbol Table
+
+ 17 A$LEDBlink$691                                                 0044 GR
+ 17 A$LEDBlink$694                                                 0045 GR
+ 17 A$LEDBlink$697                                                 0046 GR
+ 17 A$LEDBlink$700                                                 0047 GR
+ 17 A$LEDBlink$703                                                 0048 GR
+ 17 A$LEDBlink$706                                                 0049 GR
+ 17 A$LEDBlink$709                                                 004A GR
+ 17 A$LEDBlink$712                                                 004B GR
+ 17 A$LEDBlink$715                                                 004C GR
+ 17 A$LEDBlink$718                                                 004D GR
+ 17 A$LEDBlink$721                                                 004E GR
+ 17 A$LEDBlink$724                                                 004F GR
+ 17 A$LEDBlink$727                                                 0050 GR
+ 17 A$LEDBlink$730                                                 0051 GR
+ 17 A$LEDBlink$733                                                 0052 GR
+ 17 A$LEDBlink$736                                                 0053 GR
+ 17 A$LEDBlink$739                                                 0054 GR
+ 17 A$LEDBlink$742                                                 0055 GR
+ 17 A$LEDBlink$745                                                 0056 GR
+ 17 A$LEDBlink$748                                                 0057 GR
+ 17 A$LEDBlink$751                                                 0058 GR
+ 17 A$LEDBlink$754                                                 0059 GR
+ 17 A$LEDBlink$757                                                 005A GR
+ 17 A$LEDBlink$760                                                 005B GR
+ 17 A$LEDBlink$763                                                 005C GR
+ 17 A$LEDBlink$766                                                 005D GR
+ 17 A$LEDBlink$769                                                 005E GR
+ 17 A$LEDBlink$772                                                 005F GR
+ 17 A$LEDBlink$775                                                 0060 GR
+ 17 A$LEDBlink$778                                                 0061 GR
+ 17 A$LEDBlink$781                                                 0062 GR
+ 17 A$LEDBlink$784                                                 0063 GR
+ 17 A$LEDBlink$787                                                 0064 GR
+ 17 A$LEDBlink$790                                                 0065 GR
+ 17 A$LEDBlink$793                                                 0066 GR
+ 17 A$LEDBlink$796                                                 0067 GR
+ 17 A$LEDBlink$799                                                 0068 GR
+ 17 A$LEDBlink$802                                                 0069 GR
+ 17 A$LEDBlink$805                                                 006A GR
+ 17 A$LEDBlink$808                                                 006B GR
+ 17 A$LEDBlink$811                                                 006C GR
+ 17 A$LEDBlink$814                                                 006D GR
+ 17 A$LEDBlink$817                                                 006E GR
+ 17 A$LEDBlink$820                                                 006F GR
+ 17 A$LEDBlink$823                                                 0070 GR
+ 17 A$LEDBlink$826                                                 0071 GR
+ 17 A$LEDBlink$829                                                 0072 GR
+ 17 A$LEDBlink$832                                                 0073 GR
+ 17 A$LEDBlink$835                                                 0074 GR
+ 17 A$LEDBlink$838                                                 0075 GR
+ 17 A$LEDBlink$841                                                 0076 GR
+ 17 A$LEDBlink$842                                                 0077 GR
+ 17 A$LEDBlink$843                                                 0078 GR
+ 17 A$LEDBlink$844                                                 007B GR
+ 17 A$LEDBlink$848                                                 007C GR
+ 17 A$LEDBlink$849                                                 007D GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 9.
+
+Symbol Table
+
+ 17 A$LEDBlink$850                                                 007E GR
+ 17 A$LEDBlink$853                                                 0080 GR
+ 17 A$LEDBlink$879                                                 0081 GR
+ 17 A$LEDBlink$880                                                 0083 GR
+ 17 A$LEDBlink$881                                                 0085 GR
+ 17 A$LEDBlink$882                                                 0087 GR
+ 17 A$LEDBlink$883                                                 0088 GR
+ 17 A$LEDBlink$884                                                 008A GR
+ 17 A$LEDBlink$885                                                 008C GR
+ 17 A$LEDBlink$886                                                 008E GR
+ 17 A$LEDBlink$887                                                 008F GR
+ 17 A$LEDBlink$888                                                 0090 GR
+ 17 A$LEDBlink$889                                                 0092 GR
+ 17 A$LEDBlink$890                                                 0093 GR
+ 17 A$LEDBlink$893                                                 0095 GR
+ 17 A$LEDBlink$894                                                 0097 GR
+ 17 A$LEDBlink$895                                                 0099 GR
+ 17 A$LEDBlink$896                                                 009B GR
+ 17 A$LEDBlink$897                                                 009C GR
+ 17 A$LEDBlink$898                                                 009E GR
+ 17 A$LEDBlink$899                                                 00A0 GR
+ 17 A$LEDBlink$900                                                 00A2 GR
+ 17 A$LEDBlink$901                                                 00A3 GR
+ 17 A$LEDBlink$902                                                 00A4 GR
+ 17 A$LEDBlink$903                                                 00A6 GR
+ 17 A$LEDBlink$904                                                 00A7 GR
+ 17 A$LEDBlink$907                                                 00A9 GR
+ 17 A$LEDBlink$908                                                 00AB GR
+ 17 A$LEDBlink$909                                                 00AD GR
+ 17 A$LEDBlink$910                                                 00AF GR
+ 17 A$LEDBlink$911                                                 00B0 GR
+ 17 A$LEDBlink$912                                                 00B2 GR
+ 17 A$LEDBlink$913                                                 00B4 GR
+ 17 A$LEDBlink$914                                                 00B6 GR
+ 17 A$LEDBlink$915                                                 00B7 GR
+ 17 A$LEDBlink$916                                                 00B8 GR
+ 17 A$LEDBlink$917                                                 00BA GR
+ 17 A$LEDBlink$918                                                 00BB GR
+ 17 A$LEDBlink$921                                                 00BD GR
+ 17 A$LEDBlink$922                                                 00BF GR
+ 17 A$LEDBlink$923                                                 00C1 GR
+ 17 A$LEDBlink$924                                                 00C3 GR
+ 17 A$LEDBlink$925                                                 00C5 GR
+ 17 A$LEDBlink$926                                                 00C6 GR
+ 17 A$LEDBlink$927                                                 00C7 GR
+ 17 A$LEDBlink$928                                                 00C9 GR
+ 17 A$LEDBlink$929                                                 00CA GR
+ 17 A$LEDBlink$930                                                 00CC GR
+ 17 A$LEDBlink$931                                                 00CE GR
+ 17 A$LEDBlink$932                                                 00CF GR
+ 17 A$LEDBlink$935                                                 00D1 GR
+ 17 A$LEDBlink$936                                                 00D3 GR
+ 17 A$LEDBlink$937                                                 00D5 GR
+ 17 A$LEDBlink$938                                                 00D7 GR
+ 17 A$LEDBlink$939                                                 00D9 GR
+ 17 A$LEDBlink$940                                                 00DA GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 10.
+
+Symbol Table
+
+ 17 A$LEDBlink$941                                                 00DB GR
+ 17 A$LEDBlink$942                                                 00DD GR
+ 17 A$LEDBlink$943                                                 00DE GR
+ 17 A$LEDBlink$944                                                 00E0 GR
+ 17 A$LEDBlink$945                                                 00E2 GR
+ 17 A$LEDBlink$946                                                 00E3 GR
+ 17 A$LEDBlink$949                                                 00E5 GR
+ 17 A$LEDBlink$950                                                 00E7 GR
+ 17 A$LEDBlink$951                                                 00E9 GR
+ 17 A$LEDBlink$952                                                 00EB GR
+ 17 A$LEDBlink$953                                                 00ED GR
+ 17 A$LEDBlink$954                                                 00EE GR
+ 17 A$LEDBlink$955                                                 00EF GR
+ 17 A$LEDBlink$956                                                 00F1 GR
+ 17 A$LEDBlink$957                                                 00F2 GR
+ 17 A$LEDBlink$958                                                 00F4 GR
+ 17 A$LEDBlink$959                                                 00F6 GR
+ 17 A$LEDBlink$960                                                 00F7 GR
+ 17 A$LEDBlink$963                                                 00F9 GR
+ 17 A$LEDBlink$964                                                 00FB GR
+ 17 A$LEDBlink$965                                                 00FC GR
+ 17 A$LEDBlink$966                                                 00FD GR
+ 17 A$LEDBlink$967                                                 00FE GR
+ 17 A$LEDBlink$968                                                 00FF GR
+ 17 A$LEDBlink$971                                                 0100 GR
+ 17 A$LEDBlink$972                                                 0102 GR
+ 17 A$LEDBlink$973                                                 0103 GR
+ 17 A$LEDBlink$974                                                 0104 GR
+ 17 A$LEDBlink$975                                                 0105 GR
+ 17 A$LEDBlink$976                                                 0106 GR
+ 17 A$LEDBlink$979                                                 0107 GR
+ 17 A$LEDBlink$980                                                 0109 GR
+ 17 A$LEDBlink$981                                                 010A GR
+ 17 A$LEDBlink$982                                                 010B GR
+ 17 A$LEDBlink$983                                                 010C GR
+ 17 A$LEDBlink$984                                                 010D GR
+ 17 A$LEDBlink$987                                                 010E GR
+ 17 A$LEDBlink$988                                                 0111 GR
+ 17 A$LEDBlink$991                                                 0114 GR
+ 17 A$LEDBlink$994                                                 0117 GR
+    A.0                                                         =  00E0 L
+    A.1                                                         =  00E1 L
+    A.2                                                         =  00E2 L
+    A.3                                                         =  00E3 L
+    A.4                                                         =  00E4 L
+    A.5                                                         =  00E5 L
+    A.6                                                         =  00E6 L
+    A.7                                                         =  00E7 L
+    AC                                                          =  00D6 L
+    ACC                                                         =  00E0 L
+    ACC.0                                                       =  00E0 L
+    ACC.1                                                       =  00E1 L
+    ACC.2                                                       =  00E2 L
+    ACC.3                                                       =  00E3 L
+    ACC.4                                                       =  00E4 L
+    ACC.5                                                       =  00E5 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 11.
+
+Symbol Table
+
+    ACC.6                                                       =  00E6 L
+    ACC.7                                                       =  00E7 L
+    B                                                           =  00F0 L
+    B.0                                                         =  00F0 L
+    B.1                                                         =  00F1 L
+    B.2                                                         =  00F2 L
+    B.3                                                         =  00F3 L
+    B.4                                                         =  00F4 L
+    B.5                                                         =  00F5 L
+    B.6                                                         =  00F6 L
+    B.7                                                         =  00F7 L
+ 17 C$LCDInterface.c$100$2$55                                   =  020B GR
+ 17 C$LCDInterface.c$102$1$53                                   =  020E GR
+ 17 C$LCDInterface.c$103$1$53                                   =  021F GR
+ 17 C$LCDInterface.c$104$1$53                                   =  0227 GR
+ 17 C$LCDInterface.c$106$1$53                                   =  0228 GR
+ 17 C$LCDInterface.c$108$1$56                                   =  0228 GR
+ 17 C$LCDInterface.c$110$2$57                                   =  0231 GR
+ 17 C$LCDInterface.c$111$2$57                                   =  0249 GR
+ 17 C$LCDInterface.c$113$2$57                                   =  024A GR
+ 17 C$LCDInterface.c$115$1$60                                   =  024C GR
+ 17 C$LCDInterface.c$117$2$61                                   =  0252 GR
+ 17 C$LCDInterface.c$120$1$60                                   =  0255 GR
+ 17 C$LCDInterface.c$121$1$60                                   =  0266 GR
+ 17 C$LCDInterface.c$125$1$60                                   =  0267 GR
+ 17 C$LCDInterface.c$128$1$63                                   =  0267 GR
+ 17 C$LCDInterface.c$129$1$63                                   =  0267 GR
+ 17 C$LCDInterface.c$130$1$63                                   =  029D GR
+ 17 C$LCDInterface.c$132$2$64                                   =  027D GR
+ 17 C$LCDInterface.c$134$1$63                                   =  02A3 GR
+ 17 C$LCDInterface.c$136$1$63                                   =  02A4 GR
+ 17 C$LCDInterface.c$141$2$66                                   =  02A4 GR
+ 17 C$LCDInterface.c$147$1$65                                   =  02BA GR
+ 17 C$LCDInterface.c$148$1$65                                   =  02BA GR
+ 17 C$LCDInterface.c$156$2$68                                   =  02C3 GR
+ 17 C$LCDInterface.c$157$3$69                                   =  02C9 GR
+ 17 C$LCDInterface.c$208$1$65                                   =  02E1 GR
+ 17 C$LCDInterface.c$209$1$65                                   =  02EA GR
+ 17 C$LCDInterface.c$212$1$65                                   =  02F3 GR
+ 17 C$LCDInterface.c$214$1$65                                   =  02FC GR
+ 17 C$LCDInterface.c$217$1$65                                   =  02FF GR
+ 17 C$LCDInterface.c$218$1$65                                   =  0308 GR
+ 17 C$LCDInterface.c$35$3$33                                    =  017D GR
+ 17 C$LCDInterface.c$37$1$38                                    =  017D GR
+ 17 C$LCDInterface.c$38$1$38                                    =  0184 GR
+ 17 C$LCDInterface.c$39$2$39                                    =  018A GR
+ 17 C$LCDInterface.c$41$1$38                                    =  018F GR
+ 17 C$LCDInterface.c$42$1$38                                    =  0192 GR
+ 17 C$LCDInterface.c$43$2$40                                    =  0198 GR
+ 17 C$LCDInterface.c$45$1$38                                    =  019D GR
+ 17 C$LCDInterface.c$46$1$38                                    =  01A4 GR
+ 17 C$LCDInterface.c$47$2$41                                    =  01AA GR
+ 17 C$LCDInterface.c$48$2$41                                    =  01AF GR
+ 17 C$LCDInterface.c$50$2$41                                    =  01B0 GR
+ 17 C$LCDInterface.c$52$1$43                                    =  01B0 GR
+ 17 C$LCDInterface.c$54$2$44                                    =  01B6 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 12.
+
+Symbol Table
+
+ 17 C$LCDInterface.c$58$2$45                                    =  01BB GR
+ 15 C$LCDInterface.c$6$1$74                                     =  0000 GR
+ 17 C$LCDInterface.c$61$1$43                                    =  01C2 GR
+ 17 C$LCDInterface.c$63$2$46                                    =  01C6 GR
+ 17 C$LCDInterface.c$67$2$47                                    =  01CB GR
+ 17 C$LCDInterface.c$70$1$43                                    =  01D2 GR
+ 17 C$LCDInterface.c$72$2$48                                    =  01D6 GR
+ 17 C$LCDInterface.c$76$2$49                                    =  01DB GR
+ 17 C$LCDInterface.c$79$1$43                                    =  01E2 GR
+ 17 C$LCDInterface.c$81$2$50                                    =  01E6 GR
+ 17 C$LCDInterface.c$85$2$51                                    =  01EB GR
+ 17 C$LCDInterface.c$88$1$43                                    =  01F2 GR
+ 17 C$LCDInterface.c$89$1$43                                    =  01F8 GR
+ 17 C$LCDInterface.c$90$1$43                                    =  01FB GR
+ 17 C$LCDInterface.c$92$1$43                                    =  01FC GR
+ 17 C$LCDInterface.c$94$1$53                                    =  01FE GR
+ 17 C$LCDInterface.c$96$2$54                                    =  0202 GR
+ 17 C$LEDBlink.c$100$1$74                                       =  033D GR
+ 17 C$LEDBlink.c$101$1$74                                       =  0340 GR
+ 17 C$LEDBlink.c$102$1$74                                       =  0343 GR
+ 17 C$LEDBlink.c$103$1$74                                       =  034C GR
+ 17 C$LEDBlink.c$122$1$74                                       =  0355 GR
+ 17 C$LEDBlink.c$137$2$75                                       =  0355 GR
+ 17 C$LEDBlink.c$164$2$75                                       =  0358 GR
+ 17 C$LEDBlink.c$166$3$77                                       =  035B GR
+ 17 C$LEDBlink.c$185$1$74                                       =  035E GR
+ 17 C$LEDBlink.c$186$1$74                                       =  0360 GR
+ 17 C$LEDBlink.c$28$1$65                                        =  0309 GR
+ 17 C$LEDBlink.c$30$1$72                                        =  030F GR
+ 17 C$LEDBlink.c$32$2$73                                        =  031B GR
+ 17 C$LEDBlink.c$33$2$73                                        =  032F GR
+ 17 C$LEDBlink.c$35$1$72                                        =  0336 GR
+ 17 C$LEDBlink.c$90$1$72                                        =  0337 GR
+ 17 C$LEDBlink.c$97$1$74                                        =  0337 GR
+ 17 C$LEDBlink.c$99$1$74                                        =  033A GR
+ 17 C$ShiftRegister.c$13$1$2                                    =  0081 GR
+ 17 C$ShiftRegister.c$15$2$5                                    =  0081 GR
+ 17 C$ShiftRegister.c$16$2$5                                    =  0095 GR
+ 17 C$ShiftRegister.c$17$2$5                                    =  00A9 GR
+ 17 C$ShiftRegister.c$18$2$5                                    =  00BD GR
+ 17 C$ShiftRegister.c$19$2$5                                    =  00D1 GR
+ 17 C$ShiftRegister.c$20$2$5                                    =  00E5 GR
+ 17 C$ShiftRegister.c$22$2$12                                   =  00F9 GR
+ 17 C$ShiftRegister.c$23$2$14                                   =  0100 GR
+ 17 C$ShiftRegister.c$24$2$16                                   =  0107 GR
+ 17 C$ShiftRegister.c$26$1$5                                    =  010E GR
+ 17 C$ShiftRegister.c$27$1$5                                    =  0114 GR
+ 17 C$ShiftRegister.c$28$1$5                                    =  0117 GR
+ 17 C$ShiftRegister.c$30$1$5                                    =  0118 GR
+ 17 C$ShiftRegister.c$33$1$19                                   =  015D GR
+ 17 C$ShiftRegister.c$36$2$20                                   =  011C GR
+ 17 C$ShiftRegister.c$38$4$22                                   =  0137 GR
+ 17 C$ShiftRegister.c$42$4$24                                   =  0144 GR
+ 17 C$ShiftRegister.c$46$3$26                                   =  014B GR
+ 17 C$ShiftRegister.c$47$3$27                                   =  0156 GR
+ 17 C$ShiftRegister.c$50$2$29                                   =  0163 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 13.
+
+Symbol Table
+
+ 17 C$ShiftRegister.c$53$2$31                                   =  016A GR
+ 17 C$ShiftRegister.c$54$2$32                                   =  0175 GR
+ 17 C$ShiftRegister.c$55$3$33                                   =  017C GR
+ 17 C$Timing.c$10$1$2                                           =  0000 GR
+ 17 C$Timing.c$10$2$3                                           =  007C GR
+ 17 C$Timing.c$100$2$3                                          =  005B GR
+ 17 C$Timing.c$101$2$3                                          =  005C GR
+ 17 C$Timing.c$102$2$3                                          =  005D GR
+ 17 C$Timing.c$103$2$3                                          =  005E GR
+ 17 C$Timing.c$104$2$3                                          =  005F GR
+ 17 C$Timing.c$105$2$3                                          =  0060 GR
+ 17 C$Timing.c$106$2$3                                          =  0061 GR
+ 17 C$Timing.c$107$2$3                                          =  0062 GR
+ 17 C$Timing.c$108$2$3                                          =  0063 GR
+ 17 C$Timing.c$109$2$3                                          =  0064 GR
+ 17 C$Timing.c$110$2$3                                          =  0065 GR
+ 17 C$Timing.c$111$2$3                                          =  0066 GR
+ 17 C$Timing.c$112$2$3                                          =  0067 GR
+ 17 C$Timing.c$113$2$3                                          =  0068 GR
+ 17 C$Timing.c$114$2$3                                          =  0069 GR
+ 17 C$Timing.c$115$2$3                                          =  006A GR
+ 17 C$Timing.c$116$2$3                                          =  006B GR
+ 17 C$Timing.c$117$2$3                                          =  006C GR
+ 17 C$Timing.c$118$2$3                                          =  006D GR
+ 17 C$Timing.c$119$2$3                                          =  006E GR
+ 17 C$Timing.c$120$2$3                                          =  006F GR
+ 17 C$Timing.c$121$2$3                                          =  0070 GR
+ 17 C$Timing.c$122$2$3                                          =  0071 GR
+ 17 C$Timing.c$123$2$3                                          =  0072 GR
+ 17 C$Timing.c$124$2$3                                          =  0073 GR
+ 17 C$Timing.c$125$2$3                                          =  0074 GR
+ 17 C$Timing.c$126$2$3                                          =  0075 GR
+ 17 C$Timing.c$127$2$3                                          =  0076 GR
+ 17 C$Timing.c$129$1$2                                          =  0080 GR
+ 17 C$Timing.c$13$2$3                                           =  0004 GR
+ 17 C$Timing.c$14$2$3                                           =  0005 GR
+ 17 C$Timing.c$15$2$3                                           =  0006 GR
+ 17 C$Timing.c$16$2$3                                           =  0007 GR
+ 17 C$Timing.c$17$2$3                                           =  0008 GR
+ 17 C$Timing.c$18$2$3                                           =  0009 GR
+ 17 C$Timing.c$19$2$3                                           =  000A GR
+ 17 C$Timing.c$20$2$3                                           =  000B GR
+ 17 C$Timing.c$21$2$3                                           =  000C GR
+ 17 C$Timing.c$22$2$3                                           =  000D GR
+ 17 C$Timing.c$23$2$3                                           =  000E GR
+ 17 C$Timing.c$24$2$3                                           =  000F GR
+ 17 C$Timing.c$25$2$3                                           =  0010 GR
+ 17 C$Timing.c$26$2$3                                           =  0011 GR
+ 17 C$Timing.c$27$2$3                                           =  0012 GR
+ 17 C$Timing.c$28$2$3                                           =  0013 GR
+ 17 C$Timing.c$29$2$3                                           =  0014 GR
+ 17 C$Timing.c$30$2$3                                           =  0015 GR
+ 17 C$Timing.c$31$2$3                                           =  0016 GR
+ 17 C$Timing.c$32$2$3                                           =  0017 GR
+ 17 C$Timing.c$33$2$3                                           =  0018 GR
+ 17 C$Timing.c$34$2$3                                           =  0019 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 14.
+
+Symbol Table
+
+ 17 C$Timing.c$35$2$3                                           =  001A GR
+ 17 C$Timing.c$36$2$3                                           =  001B GR
+ 17 C$Timing.c$37$2$3                                           =  001C GR
+ 17 C$Timing.c$38$2$3                                           =  001D GR
+ 17 C$Timing.c$39$2$3                                           =  001E GR
+ 17 C$Timing.c$40$2$3                                           =  001F GR
+ 17 C$Timing.c$41$2$3                                           =  0020 GR
+ 17 C$Timing.c$42$2$3                                           =  0021 GR
+ 17 C$Timing.c$43$2$3                                           =  0022 GR
+ 17 C$Timing.c$44$2$3                                           =  0023 GR
+ 17 C$Timing.c$45$2$3                                           =  0024 GR
+ 17 C$Timing.c$46$2$3                                           =  0025 GR
+ 17 C$Timing.c$47$2$3                                           =  0026 GR
+ 17 C$Timing.c$48$2$3                                           =  0027 GR
+ 17 C$Timing.c$49$2$3                                           =  0028 GR
+ 17 C$Timing.c$50$2$3                                           =  0029 GR
+ 17 C$Timing.c$51$2$3                                           =  002A GR
+ 17 C$Timing.c$52$2$3                                           =  002B GR
+ 17 C$Timing.c$53$2$3                                           =  002C GR
+ 17 C$Timing.c$54$2$3                                           =  002D GR
+ 17 C$Timing.c$55$2$3                                           =  002E GR
+ 17 C$Timing.c$56$2$3                                           =  002F GR
+ 17 C$Timing.c$57$2$3                                           =  0030 GR
+ 17 C$Timing.c$58$2$3                                           =  0031 GR
+ 17 C$Timing.c$59$2$3                                           =  0032 GR
+ 17 C$Timing.c$60$2$3                                           =  0033 GR
+ 17 C$Timing.c$61$2$3                                           =  0034 GR
+ 17 C$Timing.c$62$2$3                                           =  0035 GR
+ 17 C$Timing.c$63$2$3                                           =  0036 GR
+ 17 C$Timing.c$64$2$3                                           =  0037 GR
+ 17 C$Timing.c$65$2$3                                           =  0038 GR
+ 17 C$Timing.c$66$2$3                                           =  0039 GR
+ 17 C$Timing.c$67$2$3                                           =  003A GR
+ 17 C$Timing.c$68$2$3                                           =  003B GR
+ 17 C$Timing.c$69$2$3                                           =  003C GR
+ 17 C$Timing.c$7$0$0                                            =  0000 GR
+ 17 C$Timing.c$70$2$3                                           =  003D GR
+ 17 C$Timing.c$71$2$3                                           =  003E GR
+ 17 C$Timing.c$72$2$3                                           =  003F GR
+ 17 C$Timing.c$73$2$3                                           =  0040 GR
+ 17 C$Timing.c$74$2$3                                           =  0041 GR
+ 17 C$Timing.c$75$2$3                                           =  0042 GR
+ 17 C$Timing.c$76$2$3                                           =  0043 GR
+ 17 C$Timing.c$77$2$3                                           =  0044 GR
+ 17 C$Timing.c$78$2$3                                           =  0045 GR
+ 17 C$Timing.c$79$2$3                                           =  0046 GR
+ 17 C$Timing.c$80$2$3                                           =  0047 GR
+ 17 C$Timing.c$81$2$3                                           =  0048 GR
+ 17 C$Timing.c$82$2$3                                           =  0049 GR
+ 17 C$Timing.c$83$2$3                                           =  004A GR
+ 17 C$Timing.c$84$2$3                                           =  004B GR
+ 17 C$Timing.c$85$2$3                                           =  004C GR
+ 17 C$Timing.c$86$2$3                                           =  004D GR
+ 17 C$Timing.c$87$2$3                                           =  004E GR
+ 17 C$Timing.c$88$2$3                                           =  004F GR
+ 17 C$Timing.c$89$2$3                                           =  0050 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 15.
+
+Symbol Table
+
+ 17 C$Timing.c$90$2$3                                           =  0051 GR
+ 17 C$Timing.c$91$2$3                                           =  0052 GR
+ 17 C$Timing.c$92$2$3                                           =  0053 GR
+ 17 C$Timing.c$93$2$3                                           =  0054 GR
+ 17 C$Timing.c$94$2$3                                           =  0055 GR
+ 17 C$Timing.c$95$2$3                                           =  0056 GR
+ 17 C$Timing.c$96$2$3                                           =  0057 GR
+ 17 C$Timing.c$97$2$3                                           =  0058 GR
+ 17 C$Timing.c$98$2$3                                           =  0059 GR
+ 17 C$Timing.c$99$2$3                                           =  005A GR
+    CPRL2                                                       =  00C8 L
+    CT2                                                         =  00C9 L
+    CY                                                          =  00D7 L
+    DPH                                                         =  0083 L
+    DPL                                                         =  0082 L
+    EA                                                          =  00AF L
+    ES                                                          =  00AC L
+    ET0                                                         =  00A9 L
+    ET1                                                         =  00AB L
+    ET2                                                         =  00AD L
+    EX0                                                         =  00A8 L
+    EX1                                                         =  00AA L
+    EXEN2                                                       =  00CB L
+    EXF2                                                        =  00CE L
+    F0                                                          =  00D5 L
+  5 FLEDBlink$LCD_PINS_SHIFT_REG_VALUES$0$0                     =  0000 GR
+ 17 FLEDBlink$LCD_PULSE_ENABLE_PIN$0$0                          =  017D GR
+ 17 FLEDBlink$Print$0$0                                         =  0309 GR
+    G$AC$0$0                                                    =  00D6 G
+    G$ACC$0$0                                                   =  00E0 G
+    G$B$0$0                                                     =  00F0 G
+    G$CY$0$0                                                    =  00D7 G
+    G$DPH$0$0                                                   =  0083 G
+    G$DPL$0$0                                                   =  0082 G
+ 17 G$Delay1ms$0$0                                              =  0000 GR
+    G$EA$0$0                                                    =  00AF G
+    G$ES$0$0                                                    =  00AC G
+    G$ET0$0$0                                                   =  00A9 G
+    G$ET1$0$0                                                   =  00AB G
+    G$EX0$0$0                                                   =  00A8 G
+    G$EX1$0$0                                                   =  00AA G
+    G$F0$0$0                                                    =  00D5 G
+    G$F1$0$0                                                    =  00D1 G
+    G$IE$0$0                                                    =  00A8 G
+    G$IE0$0$0                                                   =  0089 G
+    G$IE1$0$0                                                   =  008B G
+    G$INT0$0$0                                                  =  00B2 G
+    G$INT1$0$0                                                  =  00B3 G
+    G$IP$0$0                                                    =  00B8 G
+    G$IT0$0$0                                                   =  0088 G
+    G$IT1$0$0                                                   =  008A G
+ 18 G$LCDCharBottomShapeData$0$0                                =  0014 GR
+ 18 G$LCDCharBottomTwoShapeData$0$0                             =  0024 GR
+ 18 G$LCDCharMiddleShapeData$0$0                                =  000C GR
+ 18 G$LCDCharThreeShapeData$0$0                                 =  002C GR
+ 18 G$LCDCharTopShapeData$0$0                                   =  0004 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 16.
+
+Symbol Table
+
+ 18 G$LCDCharTopTwoShapeData$0$0                                =  001C GR
+ 17 G$LCD_CMD_CLEAR$0$0                                         =  0228 GR
+ 17 G$LCD_CMD_SET_CURSOR$0$0                                    =  024A GR
+ 17 G$LCD_CMD_UPLOAD_CUSTOM_CHAR$0$0                            =  0267 GR
+ 17 G$LCD_INIT$0$0                                              =  02A4 GR
+ 18 G$LCD_ROW_OFFSETS$0$0                                       =  0000 GR
+ 17 G$LCD_SEND_4BITS$0$0                                        =  01B0 GR
+ 17 G$LCD_SEND_8BITS$0$0                                        =  01FC GR
+    G$OV$0$0                                                    =  00D2 G
+    G$P$0$0                                                     =  00D0 G
+    G$P0$0$0                                                    =  0080 G
+    G$P0M0$0$0                                                  =  0094 G
+    G$P0M1$0$0                                                  =  0093 G
+    G$P0_0$0$0                                                  =  0080 G
+    G$P0_1$0$0                                                  =  0081 G
+    G$P0_2$0$0                                                  =  0082 G
+    G$P0_3$0$0                                                  =  0083 G
+    G$P0_4$0$0                                                  =  0084 G
+    G$P0_5$0$0                                                  =  0085 G
+    G$P0_6$0$0                                                  =  0086 G
+    G$P0_7$0$0                                                  =  0087 G
+    G$P1$0$0                                                    =  0090 G
+    G$P1M0$0$0                                                  =  0092 G
+    G$P1M1$0$0                                                  =  0091 G
+    G$P1_0$0$0                                                  =  0090 G
+    G$P1_1$0$0                                                  =  0091 G
+    G$P1_2$0$0                                                  =  0092 G
+    G$P1_3$0$0                                                  =  0093 G
+    G$P1_4$0$0                                                  =  0094 G
+    G$P1_5$0$0                                                  =  0095 G
+    G$P1_6$0$0                                                  =  0096 G
+    G$P1_7$0$0                                                  =  0097 G
+    G$P2$0$0                                                    =  00A0 G
+    G$P2M0$0$0                                                  =  0096 G
+    G$P2M1$0$0                                                  =  0095 G
+    G$P2_0$0$0                                                  =  00A0 G
+    G$P2_1$0$0                                                  =  00A1 G
+    G$P2_2$0$0                                                  =  00A2 G
+    G$P2_3$0$0                                                  =  00A3 G
+    G$P2_4$0$0                                                  =  00A4 G
+    G$P2_5$0$0                                                  =  00A5 G
+    G$P2_6$0$0                                                  =  00A6 G
+    G$P2_7$0$0                                                  =  00A7 G
+    G$P3$0$0                                                    =  00B0 G
+    G$P3M0$0$0                                                  =  00B2 G
+    G$P3M1$0$0                                                  =  00B1 G
+    G$P3_0$0$0                                                  =  00B0 G
+    G$P3_1$0$0                                                  =  00B1 G
+    G$P3_2$0$0                                                  =  00B2 G
+    G$P3_3$0$0                                                  =  00B3 G
+    G$P3_4$0$0                                                  =  00B4 G
+    G$P3_5$0$0                                                  =  00B5 G
+    G$P3_6$0$0                                                  =  00B6 G
+    G$P3_7$0$0                                                  =  00B7 G
+    G$P4M0$0$0                                                  =  00B4 G
+    G$P4M1$0$0                                                  =  00B3 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 17.
+
+Symbol Table
+
+    G$P5M0$0$0                                                  =  00CA G
+    G$P5M1$0$0                                                  =  00C9 G
+    G$PCON$0$0                                                  =  0087 G
+    G$PS$0$0                                                    =  00BC G
+    G$PSW$0$0                                                   =  00D0 G
+    G$PT0$0$0                                                   =  00B9 G
+    G$PT1$0$0                                                   =  00BB G
+    G$PX0$0$0                                                   =  00B8 G
+    G$PX1$0$0                                                   =  00BA G
+    G$RB8$0$0                                                   =  009A G
+    G$RD$0$0                                                    =  00B7 G
+    G$REN$0$0                                                   =  009C G
+    G$RI$0$0                                                    =  0098 G
+    G$RS0$0$0                                                   =  00D3 G
+    G$RS1$0$0                                                   =  00D4 G
+    G$RXD$0$0                                                   =  00B0 G
+    G$SBUF$0$0                                                  =  0099 G
+    G$SCON$0$0                                                  =  0098 G
+    G$SM0$0$0                                                   =  009F G
+    G$SM1$0$0                                                   =  009E G
+    G$SM2$0$0                                                   =  009D G
+    G$SP$0$0                                                    =  0081 G
+ 17 G$ShiftRegisterChangePinState$0$0                           =  0118 GR
+ 17 G$ShiftRegisterInit$0$0                                     =  0081 GR
+    G$T0$0$0                                                    =  00B4 G
+    G$T1$0$0                                                    =  00B5 G
+    G$TB8$0$0                                                   =  009B G
+    G$TCON$0$0                                                  =  0088 G
+    G$TF0$0$0                                                   =  008D G
+    G$TF1$0$0                                                   =  008F G
+    G$TH0$0$0                                                   =  008C G
+    G$TH1$0$0                                                   =  008D G
+    G$TI$0$0                                                    =  0099 G
+    G$TL0$0$0                                                   =  008A G
+    G$TL1$0$0                                                   =  008B G
+    G$TMOD$0$0                                                  =  0089 G
+    G$TR0$0$0                                                   =  008C G
+    G$TR1$0$0                                                   =  008E G
+    G$TXD$0$0                                                   =  00B1 G
+    G$WR$0$0                                                    =  00B6 G
+ 17 G$main$0$0                                                  =  0337 GR
+    IE                                                          =  00A8 L
+    IE.0                                                        =  00A8 L
+    IE.1                                                        =  00A9 L
+    IE.2                                                        =  00AA L
+    IE.3                                                        =  00AB L
+    IE.4                                                        =  00AC L
+    IE.5                                                        =  00AD L
+    IE.7                                                        =  00AF L
+    IE0                                                         =  0089 L
+    IE1                                                         =  008B L
+    INT0                                                        =  00B2 L
+    INT1                                                        =  00B3 L
+    IP                                                          =  00B8 L
+    IP.0                                                        =  00B8 L
+    IP.1                                                        =  00B9 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 18.
+
+Symbol Table
+
+    IP.2                                                        =  00BA L
+    IP.3                                                        =  00BB L
+    IP.4                                                        =  00BC L
+    IP.5                                                        =  00BD L
+    IT0                                                         =  0088 L
+    IT1                                                         =  008A L
+  5 LLEDBlink.LCD_CMD_SET_CURSOR$row$1$59                       =  0002 GR
+  5 LLEDBlink.LCD_CMD_UPLOAD_CUSTOM_CHAR$charmap$1$62           =  0003 GR
+  5 LLEDBlink.LCD_SEND_8BITS$isCommand$1$52                     =  0001 GR
+    OV                                                          =  00D2 L
+    P                                                           =  00D0 L
+    P0                                                          =  0080 L
+    P0.0                                                        =  0080 L
+    P0.1                                                        =  0081 L
+    P0.2                                                        =  0082 L
+    P0.3                                                        =  0083 L
+    P0.4                                                        =  0084 L
+    P0.5                                                        =  0085 L
+    P0.6                                                        =  0086 L
+    P0.7                                                        =  0087 L
+    P1                                                          =  0090 L
+    P1.0                                                        =  0090 L
+    P1.1                                                        =  0091 L
+    P1.2                                                        =  0092 L
+    P1.3                                                        =  0093 L
+    P1.4                                                        =  0094 L
+    P1.5                                                        =  0095 L
+    P1.6                                                        =  0096 L
+    P1.7                                                        =  0097 L
+    P2                                                          =  00A0 L
+    P2.0                                                        =  00A0 L
+    P2.1                                                        =  00A1 L
+    P2.2                                                        =  00A2 L
+    P2.3                                                        =  00A3 L
+    P2.4                                                        =  00A4 L
+    P2.5                                                        =  00A5 L
+    P2.6                                                        =  00A6 L
+    P2.7                                                        =  00A7 L
+    P3                                                          =  00B0 L
+    P3.0                                                        =  00B0 L
+    P3.1                                                        =  00B1 L
+    P3.2                                                        =  00B2 L
+    P3.3                                                        =  00B3 L
+    P3.4                                                        =  00B4 L
+    P3.5                                                        =  00B5 L
+    P3.6                                                        =  00B6 L
+    P3.7                                                        =  00B7 L
+    PCON                                                        =  0087 L
+    PS                                                          =  00BC L
+    PSW                                                         =  00D0 L
+    PSW.0                                                       =  00D0 L
+    PSW.1                                                       =  00D1 L
+    PSW.2                                                       =  00D2 L
+    PSW.3                                                       =  00D3 L
+    PSW.4                                                       =  00D4 L
+    PSW.5                                                       =  00D5 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 19.
+
+Symbol Table
+
+    PSW.6                                                       =  00D6 L
+    PSW.7                                                       =  00D7 L
+    PT0                                                         =  00B9 L
+    PT1                                                         =  00BB L
+    PT2                                                         =  00BD L
+    PX0                                                         =  00B8 L
+    PX1                                                         =  00BA L
+    RB8                                                         =  009A L
+    RCAP2H                                                      =  00CB L
+    RCAP2L                                                      =  00CA L
+    RCLK                                                        =  00CD L
+    REN                                                         =  009C L
+    RI                                                          =  0098 L
+    RS0                                                         =  00D3 L
+    RS1                                                         =  00D4 L
+    RXD                                                         =  00B0 L
+    SBUF                                                        =  0099 L
+    SCON                                                        =  0098 L
+    SCON.0                                                      =  0098 L
+    SCON.1                                                      =  0099 L
+    SCON.2                                                      =  009A L
+    SCON.3                                                      =  009B L
+    SCON.4                                                      =  009C L
+    SCON.5                                                      =  009D L
+    SCON.6                                                      =  009E L
+    SCON.7                                                      =  009F L
+    SM0                                                         =  009F L
+    SM1                                                         =  009E L
+    SM2                                                         =  009D L
+    SP                                                          =  0081 L
+    T2CON                                                       =  00C8 L
+    T2CON.0                                                     =  00C8 L
+    T2CON.1                                                     =  00C9 L
+    T2CON.2                                                     =  00CA L
+    T2CON.3                                                     =  00CB L
+    T2CON.4                                                     =  00CC L
+    T2CON.5                                                     =  00CD L
+    T2CON.6                                                     =  00CE L
+    T2CON.7                                                     =  00CF L
+    TB8                                                         =  009B L
+    TCLK                                                        =  00CC L
+    TCON                                                        =  0088 L
+    TCON.0                                                      =  0088 L
+    TCON.1                                                      =  0089 L
+    TCON.2                                                      =  008A L
+    TCON.3                                                      =  008B L
+    TCON.4                                                      =  008C L
+    TCON.5                                                      =  008D L
+    TCON.6                                                      =  008E L
+    TCON.7                                                      =  008F L
+    TF0                                                         =  008D L
+    TF1                                                         =  008F L
+    TF2                                                         =  00CF L
+    TH0                                                         =  008C L
+    TH1                                                         =  008D L
+    TH2                                                         =  00CD L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 20.
+
+Symbol Table
+
+    TI                                                          =  0099 L
+    TL0                                                         =  008A L
+    TL1                                                         =  008B L
+    TL2                                                         =  00CC L
+    TMOD                                                        =  0089 L
+    TR0                                                         =  008C L
+    TR1                                                         =  008E L
+    TR2                                                         =  00CA L
+    TXD                                                         =  00B1 L
+ 17 XFLEDBlink$LCD_PULSE_ENABLE_PIN$0$0                         =  01AF GR
+ 17 XFLEDBlink$Print$0$0                                        =  0336 GR
+ 17 XG$Delay1ms$0$0                                             =  0080 GR
+ 17 XG$LCD_CMD_CLEAR$0$0                                        =  0249 GR
+ 17 XG$LCD_CMD_SET_CURSOR$0$0                                   =  0266 GR
+ 17 XG$LCD_CMD_UPLOAD_CUSTOM_CHAR$0$0                           =  02A3 GR
+ 17 XG$LCD_INIT$0$0                                             =  0308 GR
+ 17 XG$LCD_SEND_4BITS$0$0                                       =  01FB GR
+ 17 XG$LCD_SEND_8BITS$0$0                                       =  0227 GR
+ 17 XG$ShiftRegisterChangePinState$0$0                          =  017C GR
+ 17 XG$ShiftRegisterInit$0$0                                    =  0117 GR
+ 17 XG$main$0$0                                                 =  0360 GR
+    _AC                                                         =  00D6 G
+    _ACC                                                        =  00E0 G
+    _B                                                          =  00F0 G
+    _CY                                                         =  00D7 G
+    _DPH                                                        =  0083 G
+    _DPL                                                        =  0082 G
+ 17 _Delay1ms                                                      0000 GR
+    _EA                                                         =  00AF G
+    _ES                                                         =  00AC G
+    _ET0                                                        =  00A9 G
+    _ET1                                                        =  00AB G
+    _EX0                                                        =  00A8 G
+    _EX1                                                        =  00AA G
+    _F0                                                         =  00D5 G
+    _F1                                                         =  00D1 G
+    _IE                                                         =  00A8 G
+    _IE0                                                        =  0089 G
+    _IE1                                                        =  008B G
+    _INT0                                                       =  00B2 G
+    _INT1                                                       =  00B3 G
+    _IP                                                         =  00B8 G
+    _IT0                                                        =  0088 G
+    _IT1                                                        =  008A G
+ 18 _LCDCharBottomShapeData                                        0014 GR
+ 18 _LCDCharBottomTwoShapeData                                     0024 GR
+ 18 _LCDCharMiddleShapeData                                        000C GR
+ 18 _LCDCharThreeShapeData                                         002C GR
+ 18 _LCDCharTopShapeData                                           0004 GR
+ 18 _LCDCharTopTwoShapeData                                        001C GR
+ 17 _LCD_CMD_CLEAR                                                 0228 GR
+ 17 _LCD_CMD_SET_CURSOR                                            024A GR
+  5 _LCD_CMD_SET_CURSOR_PARM_2                                     0002 GR
+ 17 _LCD_CMD_UPLOAD_CUSTOM_CHAR                                    0267 GR
+  5 _LCD_CMD_UPLOAD_CUSTOM_CHAR_PARM_2                             0003 GR
+ 17 _LCD_INIT                                                      02A4 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 21.
+
+Symbol Table
+
+  5 _LCD_PINS_SHIFT_REG_VALUES                                     0000 R
+ 17 _LCD_PULSE_ENABLE_PIN                                          017D R
+ 18 _LCD_ROW_OFFSETS                                               0000 GR
+ 17 _LCD_SEND_4BITS                                                01B0 GR
+ 17 _LCD_SEND_8BITS                                                01FC GR
+  5 _LCD_SEND_8BITS_PARM_2                                         0001 GR
+    _OV                                                         =  00D2 G
+    _P                                                          =  00D0 G
+    _P0                                                         =  0080 G
+    _P0M0                                                       =  0094 G
+    _P0M1                                                       =  0093 G
+    _P0_0                                                       =  0080 G
+    _P0_1                                                       =  0081 G
+    _P0_2                                                       =  0082 G
+    _P0_3                                                       =  0083 G
+    _P0_4                                                       =  0084 G
+    _P0_5                                                       =  0085 G
+    _P0_6                                                       =  0086 G
+    _P0_7                                                       =  0087 G
+    _P1                                                         =  0090 G
+    _P1M0                                                       =  0092 G
+    _P1M1                                                       =  0091 G
+    _P1_0                                                       =  0090 G
+    _P1_1                                                       =  0091 G
+    _P1_2                                                       =  0092 G
+    _P1_3                                                       =  0093 G
+    _P1_4                                                       =  0094 G
+    _P1_5                                                       =  0095 G
+    _P1_6                                                       =  0096 G
+    _P1_7                                                       =  0097 G
+    _P2                                                         =  00A0 G
+    _P2M0                                                       =  0096 G
+    _P2M1                                                       =  0095 G
+    _P2_0                                                       =  00A0 G
+    _P2_1                                                       =  00A1 G
+    _P2_2                                                       =  00A2 G
+    _P2_3                                                       =  00A3 G
+    _P2_4                                                       =  00A4 G
+    _P2_5                                                       =  00A5 G
+    _P2_6                                                       =  00A6 G
+    _P2_7                                                       =  00A7 G
+    _P3                                                         =  00B0 G
+    _P3M0                                                       =  00B2 G
+    _P3M1                                                       =  00B1 G
+    _P3_0                                                       =  00B0 G
+    _P3_1                                                       =  00B1 G
+    _P3_2                                                       =  00B2 G
+    _P3_3                                                       =  00B3 G
+    _P3_4                                                       =  00B4 G
+    _P3_5                                                       =  00B5 G
+    _P3_6                                                       =  00B6 G
+    _P3_7                                                       =  00B7 G
+    _P4M0                                                       =  00B4 G
+    _P4M1                                                       =  00B3 G
+    _P5M0                                                       =  00CA G
+    _P5M1                                                       =  00C9 G
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 22.
+
+Symbol Table
+
+    _PCON                                                       =  0087 G
+    _PS                                                         =  00BC G
+    _PSW                                                        =  00D0 G
+    _PT0                                                        =  00B9 G
+    _PT1                                                        =  00BB G
+    _PX0                                                        =  00B8 G
+    _PX1                                                        =  00BA G
+ 17 _Print                                                         0309 R
+    _RB8                                                        =  009A G
+    _RD                                                         =  00B7 G
+    _REN                                                        =  009C G
+    _RI                                                         =  0098 G
+    _RS0                                                        =  00D3 G
+    _RS1                                                        =  00D4 G
+    _RXD                                                        =  00B0 G
+    _SBUF                                                       =  0099 G
+    _SCON                                                       =  0098 G
+    _SM0                                                        =  009F G
+    _SM1                                                        =  009E G
+    _SM2                                                        =  009D G
+    _SP                                                         =  0081 G
+ 17 _ShiftRegisterChangePinState                                   0118 GR
+ 17 _ShiftRegisterInit                                             0081 GR
+    _T0                                                         =  00B4 G
+    _T1                                                         =  00B5 G
+    _TB8                                                        =  009B G
+    _TCON                                                       =  0088 G
+    _TF0                                                        =  008D G
+    _TF1                                                        =  008F G
+    _TH0                                                        =  008C G
+    _TH1                                                        =  008D G
+    _TI                                                         =  0099 G
+    _TL0                                                        =  008A G
+    _TL1                                                        =  008B G
+    _TMOD                                                       =  0089 G
+    _TR0                                                        =  008C G
+    _TR1                                                        =  008E G
+    _TXD                                                        =  00B1 G
+    _WR                                                         =  00B6 G
+    __gptrget                                                      **** GX
+  E __interrupt_vect                                               0000 R
+    __mcs51_genRAMCLEAR                                            **** GX
+    __mcs51_genXINIT                                               **** GX
+    __mcs51_genXRAMCLEAR                                           **** GX
+    __sdcc_gsinit_startup                                          **** GX
+  E __sdcc_program_startup                                         0003 GR
+  6 __start__stack                                                 0000 GR
+ 17 _main                                                          0337 GR
+    a                                                           =  00E0 L
+    a.0                                                         =  00E0 L
+    a.1                                                         =  00E1 L
+    a.2                                                         =  00E2 L
+    a.3                                                         =  00E3 L
+    a.4                                                         =  00E4 L
+    a.5                                                         =  00E5 L
+    a.6                                                         =  00E6 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 23.
+
+Symbol Table
+
+    a.7                                                         =  00E7 L
+    ac                                                          =  00D6 L
+    acc                                                         =  00E0 L
+    acc.0                                                       =  00E0 L
+    acc.1                                                       =  00E1 L
+    acc.2                                                       =  00E2 L
+    acc.3                                                       =  00E3 L
+    acc.4                                                       =  00E4 L
+    acc.5                                                       =  00E5 L
+    acc.6                                                       =  00E6 L
+    acc.7                                                       =  00E7 L
+    ar0                                                         =  0000 
+    ar1                                                         =  0001 
+    ar2                                                         =  0002 
+    ar3                                                         =  0003 
+    ar4                                                         =  0004 
+    ar5                                                         =  0005 
+    ar6                                                         =  0006 
+    ar7                                                         =  0007 
+    b                                                           =  00F0 L
+    b.0                                                         =  00F0 L
+    b.1                                                         =  00F1 L
+    b.2                                                         =  00F2 L
+    b.3                                                         =  00F3 L
+    b.4                                                         =  00F4 L
+    b.5                                                         =  00F5 L
+    b.6                                                         =  00F6 L
+    b.7                                                         =  00F7 L
+    cprl2                                                       =  00C8 L
+    ct2                                                         =  00C9 L
+    cy                                                          =  00D7 L
+    dph                                                         =  0083 L
+    dpl                                                         =  0082 L
+    ea                                                          =  00AF L
+    es                                                          =  00AC L
+    et0                                                         =  00A9 L
+    et1                                                         =  00AB L
+    et2                                                         =  00AD L
+    ex0                                                         =  00A8 L
+    ex1                                                         =  00AA L
+    exen2                                                       =  00CB L
+    exf2                                                        =  00CE L
+    f0                                                          =  00D5 L
+    ie                                                          =  00A8 L
+    ie.0                                                        =  00A8 L
+    ie.1                                                        =  00A9 L
+    ie.2                                                        =  00AA L
+    ie.3                                                        =  00AB L
+    ie.4                                                        =  00AC L
+    ie.5                                                        =  00AD L
+    ie.7                                                        =  00AF L
+    ie0                                                         =  0089 L
+    ie1                                                         =  008B L
+    int0                                                        =  00B2 L
+    int1                                                        =  00B3 L
+    ip                                                          =  00B8 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 24.
+
+Symbol Table
+
+    ip.0                                                        =  00B8 L
+    ip.1                                                        =  00B9 L
+    ip.2                                                        =  00BA L
+    ip.3                                                        =  00BB L
+    ip.4                                                        =  00BC L
+    ip.5                                                        =  00BD L
+    it0                                                         =  0088 L
+    it1                                                         =  008A L
+    ov                                                          =  00D2 L
+    p                                                           =  00D0 L
+    p0                                                          =  0080 L
+    p0.0                                                        =  0080 L
+    p0.1                                                        =  0081 L
+    p0.2                                                        =  0082 L
+    p0.3                                                        =  0083 L
+    p0.4                                                        =  0084 L
+    p0.5                                                        =  0085 L
+    p0.6                                                        =  0086 L
+    p0.7                                                        =  0087 L
+    p1                                                          =  0090 L
+    p1.0                                                        =  0090 L
+    p1.1                                                        =  0091 L
+    p1.2                                                        =  0092 L
+    p1.3                                                        =  0093 L
+    p1.4                                                        =  0094 L
+    p1.5                                                        =  0095 L
+    p1.6                                                        =  0096 L
+    p1.7                                                        =  0097 L
+    p2                                                          =  00A0 L
+    p2.0                                                        =  00A0 L
+    p2.1                                                        =  00A1 L
+    p2.2                                                        =  00A2 L
+    p2.3                                                        =  00A3 L
+    p2.4                                                        =  00A4 L
+    p2.5                                                        =  00A5 L
+    p2.6                                                        =  00A6 L
+    p2.7                                                        =  00A7 L
+    p3                                                          =  00B0 L
+    p3.0                                                        =  00B0 L
+    p3.1                                                        =  00B1 L
+    p3.2                                                        =  00B2 L
+    p3.3                                                        =  00B3 L
+    p3.4                                                        =  00B4 L
+    p3.5                                                        =  00B5 L
+    p3.6                                                        =  00B6 L
+    p3.7                                                        =  00B7 L
+    pcon                                                        =  0087 L
+    ps                                                          =  00BC L
+    psw                                                         =  00D0 L
+    psw.0                                                       =  00D0 L
+    psw.1                                                       =  00D1 L
+    psw.2                                                       =  00D2 L
+    psw.3                                                       =  00D3 L
+    psw.4                                                       =  00D4 L
+    psw.5                                                       =  00D5 L
+    psw.6                                                       =  00D6 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 25.
+
+Symbol Table
+
+    psw.7                                                       =  00D7 L
+    pt0                                                         =  00B9 L
+    pt1                                                         =  00BB L
+    pt2                                                         =  00BD L
+    px0                                                         =  00B8 L
+    px1                                                         =  00BA L
+    rb8                                                         =  009A L
+    rcap2h                                                      =  00CB L
+    rcap2l                                                      =  00CA L
+    rclk                                                        =  00CD L
+    ren                                                         =  009C L
+    ri                                                          =  0098 L
+    rs0                                                         =  00D3 L
+    rs1                                                         =  00D4 L
+    rxd                                                         =  00B0 L
+    sbuf                                                        =  0099 L
+    scon                                                        =  0098 L
+    scon.0                                                      =  0098 L
+    scon.1                                                      =  0099 L
+    scon.2                                                      =  009A L
+    scon.3                                                      =  009B L
+    scon.4                                                      =  009C L
+    scon.5                                                      =  009D L
+    scon.6                                                      =  009E L
+    scon.7                                                      =  009F L
+    sm0                                                         =  009F L
+    sm1                                                         =  009E L
+    sm2                                                         =  009D L
+    sp                                                          =  0081 L
+    t2con                                                       =  00C8 L
+    t2con.0                                                     =  00C8 L
+    t2con.1                                                     =  00C9 L
+    t2con.2                                                     =  00CA L
+    t2con.3                                                     =  00CB L
+    t2con.4                                                     =  00CC L
+    t2con.5                                                     =  00CD L
+    t2con.6                                                     =  00CE L
+    t2con.7                                                     =  00CF L
+    tb8                                                         =  009B L
+    tclk                                                        =  00CC L
+    tcon                                                        =  0088 L
+    tcon.0                                                      =  0088 L
+    tcon.1                                                      =  0089 L
+    tcon.2                                                      =  008A L
+    tcon.3                                                      =  008B L
+    tcon.4                                                      =  008C L
+    tcon.5                                                      =  008D L
+    tcon.6                                                      =  008E L
+    tcon.7                                                      =  008F L
+    tf0                                                         =  008D L
+    tf1                                                         =  008F L
+    tf2                                                         =  00CF L
+    th0                                                         =  008C L
+    th1                                                         =  008D L
+    th2                                                         =  00CD L
+    ti                                                          =  0099 L
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 26.
+
+Symbol Table
+
+    tl0                                                         =  008A L
+    tl1                                                         =  008B L
+    tl2                                                         =  00CC L
+    tmod                                                        =  0089 L
+    tr0                                                         =  008C L
+    tr1                                                         =  008E L
+    tr2                                                         =  00CA L
+    txd                                                         =  00B1 L
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Intel 8051), page 27.
+
+Area Table
+
+   0 _CODE                                      size    0   flags    0
+   1 RSEG                                       size    0   flags    8
+   2 RSEG0                                      size    0   flags    8
+   3 RSEG1                                      size    0   flags    8
+   4 REG_BANK_0                                 size    8   flags    4
+   5 DSEG                                       size    6   flags    0
+   6 SSEG                                       size    1   flags    0
+   7 ISEG                                       size    0   flags    0
+   8 IABS                                       size    0   flags    8
+   9 BSEG                                       size    0   flags   80
+   A PSEG                                       size    0   flags   50
+   B XSEG                                       size    0   flags   40
+   C XABS                                       size    0   flags   48
+   D XISEG                                      size    0   flags   40
+   E HOME                                       size    6   flags   20
+   F GSINIT0                                    size    0   flags   20
+  10 GSINIT1                                    size    0   flags   20
+  11 GSINIT2                                    size    0   flags   20
+  12 GSINIT3                                    size    0   flags   20
+  13 GSINIT4                                    size    0   flags   20
+  14 GSINIT5                                    size    0   flags   20
+  15 GSINIT                                     size    3   flags   20
+  16 GSFINAL                                    size    3   flags   20
+  17 CSEG                                       size  361   flags   20
+  18 CONST                                      size   34   flags   20
+  19 XINIT                                      size    0   flags   20
+  1A CABS                                       size    0   flags   28
+

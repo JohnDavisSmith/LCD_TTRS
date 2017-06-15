@@ -1,0 +1,218 @@
+#include "LCDInterface.h"
+#include "ShiftRegister.h"
+#include "GlobalParameters.h"
+#include "Timing.h"
+
+static unsigned char LCD_PINS_SHIFT_REG_VALUES = 0x00;
+
+//////////////////////////////////////////////////////////
+//             LCD Pins on a Shift Register             //
+//////////////////////////////////////////////////////////
+#define LCD_SET_RS() LCD_PINS_SHIFT_REG_VALUES = (LCD_PINS_SHIFT_REG_VALUES | (1 << 1))
+#define LCD_SET_E()  LCD_PINS_SHIFT_REG_VALUES = (LCD_PINS_SHIFT_REG_VALUES | (1 << 2))
+#define LCD_SET_D4() LCD_PINS_SHIFT_REG_VALUES = (LCD_PINS_SHIFT_REG_VALUES | (1 << 3))
+#define LCD_SET_D5() LCD_PINS_SHIFT_REG_VALUES = (LCD_PINS_SHIFT_REG_VALUES | (1 << 4))
+#define LCD_SET_D6() LCD_PINS_SHIFT_REG_VALUES = (LCD_PINS_SHIFT_REG_VALUES | (1 << 5))
+#define LCD_SET_D7() LCD_PINS_SHIFT_REG_VALUES = (LCD_PINS_SHIFT_REG_VALUES | (1 << 6))
+
+#define LCD_CLEAR_RS() LCD_PINS_SHIFT_REG_VALUES = (LCD_PINS_SHIFT_REG_VALUES & ~(1 << 1))
+#define LCD_CLEAR_E()  LCD_PINS_SHIFT_REG_VALUES = (LCD_PINS_SHIFT_REG_VALUES & ~(1 << 2))
+#define LCD_CLEAR_D4() LCD_PINS_SHIFT_REG_VALUES = (LCD_PINS_SHIFT_REG_VALUES & ~(1 << 3))
+#define LCD_CLEAR_D5() LCD_PINS_SHIFT_REG_VALUES = (LCD_PINS_SHIFT_REG_VALUES & ~(1 << 4))
+#define LCD_CLEAR_D6() LCD_PINS_SHIFT_REG_VALUES = (LCD_PINS_SHIFT_REG_VALUES & ~(1 << 5))
+#define LCD_CLEAR_D7() LCD_PINS_SHIFT_REG_VALUES = (LCD_PINS_SHIFT_REG_VALUES & ~(1 << 6))
+//////////////////////////////////////////////////////////
+
+
+const unsigned char LCD_ROW_OFFSETS[LCD_MAX_ROW_COUNT] =
+{
+    0x00,
+    0x40,
+    (0x00 + LCD_COLLUMN_COUNT),
+    (0x40 + LCD_COLLUMN_COUNT)
+};
+
+static void LCD_PULSE_ENABLE_PIN()
+{
+    LCD_CLEAR_E();
+    ShiftRegisterChangePinState(LCD_PINS_SHIFT_REG_VALUES);
+    Delay1us();
+
+    LCD_SET_E();
+    ShiftRegisterChangePinState(LCD_PINS_SHIFT_REG_VALUES);
+    Delay1us();
+
+    LCD_CLEAR_E();
+    ShiftRegisterChangePinState(LCD_PINS_SHIFT_REG_VALUES);
+    Delay1us();
+}
+
+void LCD_SEND_4BITS(unsigned char value)
+{
+    if ((value) & 0x01)
+    {
+        LCD_SET_D4();
+    }
+    else
+    {
+        LCD_CLEAR_D4();
+    }
+
+    if ((value) & 0x02)
+    {
+        LCD_SET_D5();
+    }
+    else
+    {
+        LCD_CLEAR_D5();
+    }
+ 
+    if ((value) & 0x04)
+    {
+        LCD_SET_D6();
+    }
+    else
+    {
+        LCD_CLEAR_D6();
+    }
+
+    if ((value) & 0x08)
+    {
+        LCD_SET_D7();
+    }
+    else
+    {
+        LCD_CLEAR_D7();
+    }
+
+    ShiftRegisterChangePinState(LCD_PINS_SHIFT_REG_VALUES);
+    LCD_PULSE_ENABLE_PIN();
+}
+
+void LCD_SEND_8BITS(unsigned char value, unsigned char isCommand)
+{
+    if (isCommand)
+    {
+        LCD_CLEAR_RS();
+    }
+    else
+    {
+        LCD_SET_RS();
+    }
+    LCD_SEND_4BITS((unsigned char)(((value) >> 4) & 0x0F));
+    LCD_SEND_4BITS((unsigned char)((value) & 0x0F));
+}
+
+void LCD_CMD_CLEAR()
+{
+    LCD_SEND_COMMAND(LCD_CLEARDISPLAY);
+    // this can take a while, hence wait
+    DelayMilliseconds(5);
+}
+
+void LCD_CMD_SET_CURSOR(unsigned char col, unsigned char row)
+{
+    if (row >= LCD_MAX_ROW_COUNT)
+    {
+        row = (LCD_MAX_ROW_COUNT - 1);
+    }
+
+    LCD_SEND_COMMAND(LCD_SETDDRAMADDR | (col + LCD_ROW_OFFSETS[row]));
+}
+
+// Allows us to fill the first 8 CGRAM locations
+// with custom characters
+void LCD_CMD_UPLOAD_CUSTOM_CHAR(unsigned char location, unsigned char charmap[])
+{
+    unsigned char i;
+    location &= 0x7; // we only have 8 locations 0-7
+    LCD_SEND_COMMAND(LCD_SETCGRAMADDR | (location << 3));
+    for (i=0; i<8; i++)
+    {
+        LCD_SEND_DATA(charmap[i]);
+    }
+}
+
+void LCD_INIT()
+{
+    // SEE PAGE 45/46 FOR INITIALIZATION SPECIFICATION!
+    // according to datasheet, we need at least 40ms after power rises above 2.7V
+    // before sending commands. Just in case the MCU turns on way before that we will wait 50ms
+    DelayMilliseconds(50)
+
+    LCD_PINS_SHIFT_REG_VALUES = 0;
+
+    // Now we pull both RS and R/W low to begin commands
+    LCD_CLEAR_RS();
+    LCD_CLEAR_E();
+    ShiftRegisterChangePinState(LCD_PINS_SHIFT_REG_VALUES);
+
+    // this is according to the hitachi HD44780 datasheet
+    // figure 24, pg 46
+    {
+    
+    
+        // we start in 8bit mode, try to set 4 bit mode
+        LCD_SEND_4BITS(0x02);
+        DelayMilliseconds(5); // wait min 4.1ms
+
+/*         LCD_SEND_COMMAND(0x28);
+        Delay1ms();
+        LCD_SEND_COMMAND(0x28);
+        Delay1ms();
+
+        LCD_SEND_COMMAND(0x0F);
+        Delay1ms();
+
+        LCD_SEND_COMMAND(0x01);
+        Delay1ms();
+
+        LCD_SEND_COMMAND(0x06);
+        Delay1ms(); */
+
+        // second try
+        //LCD_SEND_4BITS(0x02);
+        //DelayMilliseconds(5); // wait min 4.1ms
+
+        //LCD_SEND_4BITS(0x02);
+        //DelayMilliseconds(5); // wait min 4.1ms
+
+        // third go!
+        //LCD_SEND_4BITS(0x02);
+        //DelayMilliseconds(5); // wait min 4.1ms
+
+        // finally, set to 4-bit interface
+        //LCD_SEND_4BITS(0x00);
+
+        //LCD_SEND_4BITS(0x00);
+
+        //LCD_SEND_4BITS(0x00);
+    
+/*         // we start in 8bit mode, try to set 4 bit mode
+        LCD_SEND_4BITS(0x03);
+        DelayMilliseconds(5); // wait min 4.1ms
+
+        // second try
+        LCD_SEND_4BITS(0x03);
+        DelayMilliseconds(5); // wait min 4.1ms
+
+        // third go!
+        LCD_SEND_4BITS(0x03);
+        Delay1ms();
+
+        // finally, set to 4-bit interface
+        LCD_SEND_4BITS(0x02); */
+    }
+
+    // finally, set # lines, font size, etc.
+    LCD_SEND_COMMAND(LCD_FUNCTIONSET | LCD_4BITMODE | LCD_2LINE | LCD_5x8DOTS);
+    LCD_SEND_COMMAND(LCD_FUNCTIONSET | LCD_4BITMODE | LCD_2LINE | LCD_5x8DOTS);
+
+    // turn the display on with no cursor or blinking default
+    LCD_SEND_COMMAND(LCD_DISPLAYCONTROL | LCD_DISPLAYON | LCD_CURSOROFF | LCD_BLINKOFF);
+
+    LCD_CMD_CLEAR();
+
+    // Initialize to default text direction (for romance languages)
+    LCD_SEND_COMMAND(LCD_ENTRYMODESET | LCD_ENTRYLEFT | LCD_ENTRYSHIFTDECREMENT);
+}

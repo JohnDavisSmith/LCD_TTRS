@@ -1,0 +1,15 @@
+.ELL6UH470M :1 ;Fixed Inductors 47uH 20% 160mohm 900mA
+INDM6460X500N
+*STM L
+*NGS
+*PLB 1="1" 2="2"
+*MXP 2
+*DFN ELL6UH470M
+~!Supplier_Name (RS)
+~!RS Part Number (9202980)
+~!Manufacturer_Name (Panasonic)
+~!Manufacturer_Part_Number (ELL6UH470M)
+~!Link Datasheet (http://industrial.panasonic.com/cdbs/www-data/pdf/AGM0000/AGM0000CE9.pdf)
+~!Height (5mm)
+ELL6UH470M
+1.1!U 2.1!U 
