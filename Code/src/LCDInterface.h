@@ -62,6 +62,8 @@ void LCD_CMD_SET_CURSOR(unsigned char col, unsigned char row);
 // with custom characters
 void LCD_CMD_UPLOAD_CUSTOM_CHAR(unsigned char location, unsigned char charmap[]);
 
+void LCD_PRINT(unsigned char* str, unsigned char col, unsigned char row);
+
 #define LCD_CMD_SCROLL_DISPLAY_LEFT()  LCD_SEND_COMMAND(LCD_CURSORSHIFT | LCD_DISPLAYMOVE | LCD_MOVELEFT);
 #define LCD_CMD_SCROLL_DISPLAY_RIGHT() LCD_SEND_COMMAND(LCD_CURSORSHIFT | LCD_DISPLAYMOVE | LCD_MOVERIGHT);
 

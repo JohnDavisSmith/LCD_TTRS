@@ -1,0 +1,193 @@
+;--------------------------------------------------------
+; File Created by SDCC : free open source ANSI-C Compiler
+; Version 3.3.0 #8604 (Dec 30 2013) (Linux)
+; This file was generated Fri Apr 14 13:37:55 2017
+;--------------------------------------------------------
+	.module TetrisLogic
+	.optsdcc -mmcs51 --model-small
+	
+;--------------------------------------------------------
+; Public variables in this module
+;--------------------------------------------------------
+	.globl _TetrisLogic_SetBoardField
+	.globl _TetrisLogic_SetBoardField_PARM_3
+	.globl _TetrisLogic_SetBoardField_PARM_2
+;--------------------------------------------------------
+; special function registers
+;--------------------------------------------------------
+	.area RSEG    (ABS,DATA)
+	.org 0x0000
+;--------------------------------------------------------
+; special function bits
+;--------------------------------------------------------
+	.area RSEG    (ABS,DATA)
+	.org 0x0000
+;--------------------------------------------------------
+; overlayable register banks
+;--------------------------------------------------------
+	.area REG_BANK_0	(REL,OVR,DATA)
+	.ds 8
+;--------------------------------------------------------
+; internal ram data
+;--------------------------------------------------------
+	.area DSEG    (DATA)
+FTetrisLogic$g_BoardData$0$0==.
+_g_BoardData:
+	.ds 12
+LTetrisLogic.TetrisLogic_SetBoardField$y$1$1==.
+_TetrisLogic_SetBoardField_PARM_2:
+	.ds 1
+;--------------------------------------------------------
+; overlayable items in internal ram 
+;--------------------------------------------------------
+;--------------------------------------------------------
+; indirectly addressable internal ram data
+;--------------------------------------------------------
+	.area ISEG    (DATA)
+;--------------------------------------------------------
+; absolute internal ram data
+;--------------------------------------------------------
+	.area IABS    (ABS,DATA)
+	.area IABS    (ABS,DATA)
+;--------------------------------------------------------
+; bit data
+;--------------------------------------------------------
+	.area BSEG    (BIT)
+LTetrisLogic.TetrisLogic_SetBoardField$value$1$1==.
+_TetrisLogic_SetBoardField_PARM_3:
+	.ds 1
+;--------------------------------------------------------
+; paged external ram data
+;--------------------------------------------------------
+	.area PSEG    (PAG,XDATA)
+;--------------------------------------------------------
+; external ram data
+;--------------------------------------------------------
+	.area XSEG    (XDATA)
+;--------------------------------------------------------
+; absolute external ram data
+;--------------------------------------------------------
+	.area XABS    (ABS,XDATA)
+;--------------------------------------------------------
+; external initialized ram data
+;--------------------------------------------------------
+	.area XISEG   (XDATA)
+	.area HOME    (CODE)
+	.area GSINIT0 (CODE)
+	.area GSINIT1 (CODE)
+	.area GSINIT2 (CODE)
+	.area GSINIT3 (CODE)
+	.area GSINIT4 (CODE)
+	.area GSINIT5 (CODE)
+	.area GSINIT  (CODE)
+	.area GSFINAL (CODE)
+	.area CSEG    (CODE)
+;--------------------------------------------------------
+; global & static initialisations
+;--------------------------------------------------------
+	.area HOME    (CODE)
+	.area GSINIT  (CODE)
+	.area GSFINAL (CODE)
+	.area GSINIT  (CODE)
+	C$TetrisLogic.c$4$1$2 ==.
+;	TetrisLogic.c:4: static unsigned char g_BoardData[(TETRIS_BOARD_WIDTH * TETRIS_BOARD_HEIGHT) / 8] = { 0 }; // One bit per board data field
+	mov	_g_BoardData,#0x00
+;--------------------------------------------------------
+; Home
+;--------------------------------------------------------
+	.area HOME    (CODE)
+	.area HOME    (CODE)
+;--------------------------------------------------------
+; code
+;--------------------------------------------------------
+	.area CSEG    (CODE)
+;------------------------------------------------------------
+;Allocation info for local variables in function 'TetrisLogic_SetBoardField'
+;------------------------------------------------------------
+;y                         Allocated with name '_TetrisLogic_SetBoardField_PARM_2'
+;x                         Allocated to registers r7 
+;TotalBitCount             Allocated to registers r7 
+;ByteIndex                 Allocated to registers r6 
+;BitIndex                  Allocated to registers r7 
+;------------------------------------------------------------
+	G$TetrisLogic_SetBoardField$0$0 ==.
+	C$TetrisLogic.c$6$0$0 ==.
+;	TetrisLogic.c:6: void TetrisLogic_SetBoardField(unsigned char x, unsigned char y, __bit value)
+;	-----------------------------------------
+;	 function TetrisLogic_SetBoardField
+;	-----------------------------------------
+_TetrisLogic_SetBoardField:
+	ar7 = 0x07
+	ar6 = 0x06
+	ar5 = 0x05
+	ar4 = 0x04
+	ar3 = 0x03
+	ar2 = 0x02
+	ar1 = 0x01
+	ar0 = 0x00
+	mov	r7,dpl
+	C$TetrisLogic.c$8$1$2 ==.
+;	TetrisLogic.c:8: const unsigned char TotalBitCount = ((y * TETRIS_BOARD_WIDTH) + x);
+	mov	a,_TetrisLogic_SetBoardField_PARM_2
+	mov	b,#0x06
+	mul	ab
+	add	a,r7
+	mov	r7,a
+	C$TetrisLogic.c$9$1$2 ==.
+;	TetrisLogic.c:9: const unsigned char ByteIndex = ((TotalBitCount & ((unsigned char)~(8-1))) / 8);
+	mov	a,#0xF8
+	anl	a,r7
+	swap	a
+	rl	a
+	anl	a,#0x1F
+	C$TetrisLogic.c$10$1$2 ==.
+;	TetrisLogic.c:10: const unsigned char BitIndex = (TotalBitCount - (ByteIndex * 8));
+	mov	r6,a
+	swap	a
+	rr	a
+	anl	a,#0xF8
+	mov	r5,a
+	mov	a,r7
+	clr	c
+	subb	a,r5
+	mov	r7,a
+	C$TetrisLogic.c$11$1$2 ==.
+;	TetrisLogic.c:11: g_BoardData[ByteIndex] &= ~((unsigned char)0x01 << BitIndex);
+	mov	a,r6
+	add	a,#_g_BoardData
+	mov	r1,a
+	mov	ar6,@r1
+	mov	b,r7
+	inc	b
+	mov	a,#0x01
+	sjmp	00105$
+00103$:
+	add	a,acc
+00105$:
+	djnz	b,00103$
+	cpl	a
+	anl	ar6,a
+	mov	@r1,ar6
+	C$TetrisLogic.c$12$1$2 ==.
+;	TetrisLogic.c:12: g_BoardData[ByteIndex] |= ((unsigned char)value << BitIndex);
+	mov	c,_TetrisLogic_SetBoardField_PARM_3
+	clr	a
+	rlc	a
+	mov	r5,a
+	mov	b,r7
+	inc	b
+	mov	a,r5
+	sjmp	00108$
+00106$:
+	add	a,acc
+00108$:
+	djnz	b,00106$
+	orl	a,r6
+	mov	@r1,a
+	C$TetrisLogic.c$13$1$2 ==.
+	XG$TetrisLogic_SetBoardField$0$0 ==.
+	ret
+	.area CSEG    (CODE)
+	.area CONST   (CODE)
+	.area XINIT   (CODE)
+	.area CABS    (ABS,CODE)

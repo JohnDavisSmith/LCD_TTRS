@@ -1,0 +1,594 @@
+#include "TetrisLogic.h"
+
+
+static unsigned char g_BoardData[(TETRIS_BOARD_WIDTH * TETRIS_BOARD_HEIGHT) / 8] = { 0 }; // One bit per board data field
+
+void TetrisLogic_SetBoardField(unsigned char x, unsigned char y, __bit value)
+{
+    const unsigned char TotalBitCount = ((y * TETRIS_BOARD_WIDTH) + x);
+    const unsigned char ByteIndex = ((TotalBitCount & ((unsigned char)~(8-1))) / 8);
+    const unsigned char BitIndex = (TotalBitCount - (ByteIndex * 8));
+    g_BoardData[ByteIndex] &= ~((unsigned char)0x01 << BitIndex);
+    g_BoardData[ByteIndex] |= ((unsigned char)value << BitIndex);
+}
+
+__bit TetrisLogic_GetBoardField(unsigned char x, unsigned char y)
+{
+    const unsigned char TotalBitCount = ((y * TETRIS_BOARD_WIDTH) + x);
+    const unsigned char ByteIndex = ((TotalBitCount & ((unsigned char)~(8-1))) / 8);
+    const unsigned char BitIndex = (TotalBitCount - (ByteIndex * 8));
+    return (__bit)((g_BoardData[ByteIndex] >> BitIndex) & (unsigned char)0x01);
+}
+
+static void TetrisLogic_BoardClear(void)
+{
+    unsigned char i;
+    for(i = 0; i < sizeof(g_BoardData); i++)
+    {
+        g_BoardData[i] = (unsigned char)0x00;
+    }
+}
+
+
+typedef struct
+{
+    unsigned char dataStartIndex : 5;
+    unsigned char rotationCount : 3;
+} TetrisShapeDescriptor;
+
+typedef unsigned char TetrisSchape;
+#define e_TetrisSchape_I ((TetrisSchape)0)
+#define e_TetrisSchape_T ((TetrisSchape)1)
+#define e_TetrisSchape_J ((TetrisSchape)2)
+#define e_TetrisSchape_L ((TetrisSchape)3)
+#define e_TetrisSchape_Z ((TetrisSchape)4)
+#define e_TetrisSchape_S ((TetrisSchape)5)
+#define e_TetrisSchape_O ((TetrisSchape)6)
+#define e_TetrisSchape_Count ((unsigned char)7) // Not a shape used for counting
+
+static const TetrisShapeDescriptor g_TetrisShapeDescriptor[e_TetrisSchape_Count] =
+{
+    { 0,  2 }, // I
+    { 2,  4 }, // T
+    { 6,  4 }, // J
+    { 10, 4 }, // L
+    { 14, 2 }, // Z
+    { 16, 2 }, // S
+    { 18, 1 }  // O
+};
+
+static const unsigned char g_TetrisSchapesData[19][2] =
+{
+/*--------------------
+TetrisChape_I
+
+# # # #
+@ @ @ @ 
+# # # #
+# # # #
+
+# @ # #
+# @ # # 
+# @ # #
+# @ # #
+--------------------*/
+    { 0b11110000, 0b00000000 }, // 0
+    { 0b01000100, 0b01000100 }, // 1
+
+
+/*--------------------
+TetrisChape_T
+
+# # # #
+@ @ @ # 
+# @ # #
+# # # #
+
+# @ # #
+@ @ # # 
+# @ # #
+# # # #
+
+# @ # #
+@ @ @ # 
+# # # #
+# # # #
+
+# @ # #
+# @ @ # 
+# @ # #
+# # # #
+--------------------*/
+    { 0b11100000, 0b00000100 }, // 2
+    { 0b11000100, 0b00000100 }, // 3
+    { 0b11100100, 0b00000000 }, // 4
+    { 0b01100100, 0b00000000 }, // 5
+
+/*--------------------
+TetrisChape_J
+
+# # # #
+@ @ @ # 
+@ # # #
+# # # #
+
+@ @ # #
+# @ # # 
+# @ # #
+# # # #
+
+# # @ #
+@ @ @ # 
+# # # #
+# # # #
+
+# @ # #
+# @ # # 
+# @ @ #
+# # # #
+--------------------*/
+    { 0b11100000, 0b00001000 }, // 6
+    { 0b01001100, 0b00000100 }, // 7
+    { 0b11100010, 0b00000000 }, // 8
+    { 0b01000100, 0b00000110 }, // 9
+
+/*--------------------
+TetrisChape_L
+
+@ # # #
+@ @ @ # 
+# # # #
+# # # #
+
+# @ @ #
+# @ # # 
+# @ # #
+# # # #
+
+# # # #
+@ @ @ # 
+# # @ #
+# # # #
+
+# @ # #
+# @ # # 
+@ @ # #
+# # # #
+--------------------*/
+    { 0b10001110, 0b00000000 }, // 10
+    { 0b01000110, 0b00000100 }, // 11
+    { 0b11100000, 0b00000010 }, // 12
+    { 0b01000100, 0b00001100 }, // 13
+
+/*--------------------
+TetrisChape_Z
+
+# # # #
+@ @ # # 
+# @ @ #
+# # # #
+
+# # @ #
+# @ @ # 
+# @ # #
+# # # #
+--------------------*/
+    { 0b11000000, 0b00000110 }, // 14
+    { 0b01100010, 0b00000100 }, // 15
+
+/*--------------------
+TetrisChape_S
+
+# # # #
+# @ @ # 
+@ @ # #
+# # # #
+
+# @ # #
+# @ @ # 
+# # @ #
+# # # #
+--------------------*/
+    { 0b01100000, 0b00001100 }, // 16
+    { 0b01100100, 0b00000010 }, // 17
+
+/*--------------------
+TetrisChape_O
+
+# @ @ #
+# @ @ # 
+# # # #
+# # # #
+--------------------*/
+    { 0b01100110, 0b00000000 } // 18
+};
+
+/*
+Origin of a space
+   
+   (x,y)
+   (0,0) (1,0) (2,0)
+#    #    #    #
+   (x,y)
+   (0,1) (1,1) (2,1)
+#    #    #    #
+   (x,y)
+   (0,2) (1,2) (2,2)
+#    #    #    #
+   (x,y)
+   (0,3) (1,3) (2,3)
+#    #    #    #
+*/
+
+
+////////////////////////////////////////////////
+//             Tetris Logic State             //
+////////////////////////////////////////////////
+typedef struct 
+{
+    unsigned char currentActiveShape : 3;
+    unsigned char currentActiveShapeRotation : 2;
+    unsigned char nextShape : 3;
+
+    unsigned char currentActiveShapePosX : 5;
+    unsigned char currentActiveShapePosY : 5;
+} TetrisState;
+
+static TetrisState g_State;
+static __bit g_ButtonPressedMoveLeft;
+static __bit g_ButtonPressedMoveRight;
+static __bit g_ButtonPressedRotate;
+////////////////////////////////////////////////
+
+#define NEW_SHAPE_START_POS_X ((TETRIS_BOARD_WIDTH / 2) - 1)
+#define NEW_SHAPE_START_POS_Y (TETRIS_BOARD_HEIGHT - 1)
+
+static TetrisSchape NextRandomShape()
+{
+    unsigned char newIndex = (g_State.currentActiveShape + 1);
+    
+    if (g_ButtonPressedMoveLeft)
+    {
+        newIndex++;
+    }
+
+    if (g_ButtonPressedMoveRight)
+    {
+        newIndex++;
+    }
+
+    if (g_ButtonPressedRotate)
+    {
+        newIndex++;
+    }
+
+    return (newIndex % e_TetrisSchape_Count);
+}
+
+static void TetrisLogic_NextShape()
+{
+    g_State.currentActiveShape = g_State.nextShape;
+    g_State.nextShape = NextRandomShape();
+    g_State.currentActiveShapeRotation = 0;
+    g_State.currentActiveShapePosX = NEW_SHAPE_START_POS_X;
+    g_State.currentActiveShapePosY = NEW_SHAPE_START_POS_Y;
+}
+
+void TetrisLogic_Initialise()
+{
+    TetrisLogic_BoardClear();
+
+    g_State.currentActiveShape = e_TetrisSchape_I;
+    g_State.nextShape = NextRandomShape();
+    g_State.currentActiveShapeRotation = 0;
+    g_State.currentActiveShapePosX = NEW_SHAPE_START_POS_X;
+    g_State.currentActiveShapePosY = NEW_SHAPE_START_POS_Y;
+}
+
+#define GET_SHAPE_DATA_CELL(shapeData, x,y) (__bit)((*(shapeData + ((y << 2 /* Same as mult. by 4*/) >> 3 /*Same as div. by 8*/ )) >> (((y & (unsigned char)0x01) << 2 /* Same as mult. by 4*/) + (3 - x)) ) & (unsigned char)0x01)
+
+static __bit TetrisLogic_CheckForCollisionOnTheLeft(const unsigned char* shapeData)
+{
+    if (g_State.currentActiveShapePosX == 0)
+    {
+        return GET_SHAPE_DATA_CELL(shapeData, 0, 0) ||
+               GET_SHAPE_DATA_CELL(shapeData, 0, 1) ||
+               GET_SHAPE_DATA_CELL(shapeData, 0, 2) ||
+               GET_SHAPE_DATA_CELL(shapeData, 0, 3);
+    }
+    else
+    {
+        __bit retVal = 0;
+        if ((TETRIS_BOARD_HEIGHT - g_State.currentActiveShapePosY) < 2)
+        {
+            retVal |= (TetrisLogic_GetBoardField(g_State.currentActiveShapePosX, g_State.currentActiveShapePosY) && GET_SHAPE_DATA_CELL(shapeData, 0, 0));
+        }
+        if ((TETRIS_BOARD_HEIGHT - g_State.currentActiveShapePosY) < 3)
+        {
+            retVal |= (TetrisLogic_GetBoardField(g_State.currentActiveShapePosX, g_State.currentActiveShapePosY + 1) && GET_SHAPE_DATA_CELL(shapeData, 0, 1));
+        }
+        if ((TETRIS_BOARD_HEIGHT - g_State.currentActiveShapePosY) < 4)
+        {
+            retVal |= (TetrisLogic_GetBoardField(g_State.currentActiveShapePosX, g_State.currentActiveShapePosY + 2) && GET_SHAPE_DATA_CELL(shapeData, 0, 2));
+        }
+        if ((TETRIS_BOARD_HEIGHT - g_State.currentActiveShapePosY) < 5)
+        {
+            retVal |= (TetrisLogic_GetBoardField(g_State.currentActiveShapePosX, g_State.currentActiveShapePosY + 3) && GET_SHAPE_DATA_CELL(shapeData, 0, 3));
+        }
+
+        return retVal;
+    }    
+}
+
+static __bit TetrisLogic_CheckForCollisionOnTheRight(const unsigned char* shapeData)
+{
+    __bit retVal = 0;
+    const unsigned char shapeCenterToWallDist = (TETRIS_BOARD_WIDTH - g_State.currentActiveShapePosX);
+    unsigned char shapeXCoordToCheckAgainst = 3;
+    
+    if (shapeCenterToWallDist < 4)
+    {
+        shapeXCoordToCheckAgainst = shapeCenterToWallDist;
+    }
+
+    if (((TETRIS_BOARD_HEIGHT - g_State.currentActiveShapePosY) < 2) && (g_State.currentActiveShapePosX + (shapeXCoordToCheckAgainst - 1) < TETRIS_BOARD_WIDTH))
+    {
+        retVal |= (TetrisLogic_GetBoardField(g_State.currentActiveShapePosX + (shapeXCoordToCheckAgainst - 1), g_State.currentActiveShapePosY) && GET_SHAPE_DATA_CELL(shapeData, shapeXCoordToCheckAgainst, 0));
+    }
+    if (((TETRIS_BOARD_HEIGHT - g_State.currentActiveShapePosY) < 3) && (g_State.currentActiveShapePosX + (shapeXCoordToCheckAgainst - 1) < TETRIS_BOARD_WIDTH))
+    {
+        retVal |= (TetrisLogic_GetBoardField(g_State.currentActiveShapePosX + (shapeXCoordToCheckAgainst - 1), g_State.currentActiveShapePosY + 1) && GET_SHAPE_DATA_CELL(shapeData, shapeXCoordToCheckAgainst, 1));
+    }
+    if (((TETRIS_BOARD_HEIGHT - g_State.currentActiveShapePosY) < 4) && (g_State.currentActiveShapePosX + (shapeXCoordToCheckAgainst - 1) < TETRIS_BOARD_WIDTH))
+    {
+        retVal |= (TetrisLogic_GetBoardField(g_State.currentActiveShapePosX + (shapeXCoordToCheckAgainst - 1), g_State.currentActiveShapePosY + 2) && GET_SHAPE_DATA_CELL(shapeData, shapeXCoordToCheckAgainst, 2));
+    }
+    if (((TETRIS_BOARD_HEIGHT - g_State.currentActiveShapePosY) < 5) && (g_State.currentActiveShapePosX + (shapeXCoordToCheckAgainst - 1) < TETRIS_BOARD_WIDTH))
+    {
+        retVal |= (TetrisLogic_GetBoardField(g_State.currentActiveShapePosX + (shapeXCoordToCheckAgainst - 1), g_State.currentActiveShapePosY + 3) && GET_SHAPE_DATA_CELL(shapeData, shapeXCoordToCheckAgainst, 3));
+    }
+
+    return retVal;
+}
+
+static __bit TetrisLogic_CheckForCollisionAtTheBottom(const unsigned char* shapeData)
+{
+    unsigned char shapeYCoordToCheckAgainst = 3;
+    __bit retVal = 0;
+    __bit shapeLayerContainsData = 0;
+
+    shapeYCoordToCheckAgainst++;
+    while(!shapeLayerContainsData && (shapeYCoordToCheckAgainst > 0))
+    {
+        shapeYCoordToCheckAgainst--;
+        shapeLayerContainsData = (GET_SHAPE_DATA_CELL(shapeData, 0, shapeYCoordToCheckAgainst) ||
+                                  GET_SHAPE_DATA_CELL(shapeData, 1, shapeYCoordToCheckAgainst) ||
+                                  GET_SHAPE_DATA_CELL(shapeData, 2, shapeYCoordToCheckAgainst) ||
+                                  GET_SHAPE_DATA_CELL(shapeData, 3, shapeYCoordToCheckAgainst));
+    }
+
+//    if (g_State.currentActiveShapePosY < 3)
+//    {
+//        shapeYCoordToCheckAgainst = g_State.currentActiveShapePosY;
+//    }
+
+    if (shapeLayerContainsData && (shapeYCoordToCheckAgainst > g_State.currentActiveShapePosY))
+    {
+        retVal = 1;
+    }
+    else
+    {
+        unsigned char baseXPos = g_State.currentActiveShapePosX;
+        unsigned char i = 0;
+        if(baseXPos > 0)
+        {
+            baseXPos--;
+        }
+
+        for(i = 0; (i < 4) && !retVal && ((baseXPos + i) < TETRIS_BOARD_WIDTH); i++)
+        {
+            retVal = retVal || (GET_SHAPE_DATA_CELL(shapeData, i, shapeYCoordToCheckAgainst) && TetrisLogic_GetBoardField((baseXPos + 1), (g_State.currentActiveShapePosY - shapeYCoordToCheckAgainst)));
+        }
+//        retVal |= GET_SHAPE_DATA_CELL(shapeData, 1, shapeYCoordToCheckAgainst) && TetrisLogic_GetBoardField((baseXPos + 1), (g_State.currentActiveShapePosY - shapeYCoordToCheckAgainst));
+//        retVal |= GET_SHAPE_DATA_CELL(shapeData, 2, shapeYCoordToCheckAgainst) && TetrisLogic_GetBoardField((baseXPos + 2), (g_State.currentActiveShapePosY - shapeYCoordToCheckAgainst));
+//        retVal |= GET_SHAPE_DATA_CELL(shapeData, 3, shapeYCoordToCheckAgainst) && TetrisLogic_GetBoardField((baseXPos + 3), (g_State.currentActiveShapePosY - shapeYCoordToCheckAgainst));
+    }
+
+
+
+
+//    if (g_State.currentActiveShapePosY > 3)
+//    {
+//        retVal |= (TetrisLogic_GetBoardField(g_State.currentActiveShapePosX + 1, g_State.currentActiveShapePosY) && GET_SHAPE_DATA_CELL(shapeData, 1, shapeYCoordToCheckAgainst));
+//    }
+//    if ((TETRIS_BOARD_HEIGHT - g_State.currentActiveShapePosY) < 4)
+//    {
+//        retVal |= (TetrisLogic_GetBoardField(g_State.currentActiveShapePosX + 2, g_State.currentActiveShapePosY) && GET_SHAPE_DATA_CELL(shapeData, 2, shapeYCoordToCheckAgainst));
+//    }
+//    if ((TETRIS_BOARD_HEIGHT - g_State.currentActiveShapePosY) < 5)
+//    {
+//        retVal |= (TetrisLogic_GetBoardField(g_State.currentActiveShapePosX + 3, g_State.currentActiveShapePosY) && GET_SHAPE_DATA_CELL(shapeData, 3, shapeYCoordToCheckAgainst));
+//    }
+
+    return retVal;
+}
+
+static __bit TetrisLogic_CheckForFullLineAtTheBottom(void)
+{
+    __bit retVal = 1;
+    unsigned char x = 0;
+    for (x = 0; x < TETRIS_BOARD_WIDTH; x++)
+    {
+        retVal = retVal && TetrisLogic_GetBoardField(x, 0);
+    }
+    
+    return retVal;
+}
+
+static void TetrisLogic_ShiftTheBoardDown(void)
+{
+    unsigned char y = 0;
+    for(y = 0; y < (TETRIS_BOARD_HEIGHT - 1); y++)
+    {
+        unsigned char x = 0;
+        for(x = 0; x < TETRIS_BOARD_WIDTH; x++)
+        {
+            const __bit readValue = TetrisLogic_GetBoardField(x, (y + 1));
+            TetrisLogic_SetBoardField(x, y, readValue);
+        }
+    }
+}
+
+static void TetrisLogic_DeleteShapeFromTheBoard(const unsigned char* shapeData)
+{
+    if ((shapeData != 0) && (g_State.currentActiveShapePosY < NEW_SHAPE_START_POS_Y))
+    {
+        g_State.currentActiveShapePosY++;
+        unsigned char y = 0;
+        for(y = 0; y < 4; y++)
+        {
+            if ((g_State.currentActiveShapePosY - y) > 0)
+            {
+                unsigned char x = 0;
+                for(x = 0; x < 4; x++)
+                {
+                    if ((g_State.currentActiveShapePosX + x) < TETRIS_BOARD_WIDTH)
+                    {
+                        const unsigned char xPos = ((g_State.currentActiveShapePosX + x) - 1);
+                        if (xPos < TETRIS_BOARD_WIDTH)
+                        {
+                            if (TetrisLogic_GetBoardField(xPos, (g_State.currentActiveShapePosY - y)) && GET_SHAPE_DATA_CELL(shapeData, x, y))
+                            {
+                                TetrisLogic_SetBoardField(xPos, (g_State.currentActiveShapePosY - y), 0);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        g_State.currentActiveShapePosY--;
+    }
+}
+
+static void TetrisLogic_AddShapeToTheBoard(const unsigned char* shapeData)
+{
+    unsigned char y = 0;
+    for(y = 0; y < 4; y++)
+    {        
+        if ((g_State.currentActiveShapePosY - y) >= 0)
+        {
+            unsigned char x = 0;
+            if (g_State.currentActiveShapePosX == 0)
+            {
+                x = 1;
+            }
+            for(; x < 4; x++)
+            {
+                if (GET_SHAPE_DATA_CELL(shapeData, x, y))
+                {
+                    const unsigned char xPos = ((g_State.currentActiveShapePosX + x) - 1);
+                    if (xPos < TETRIS_BOARD_WIDTH)
+                    {
+                        TetrisLogic_SetBoardField(xPos, (g_State.currentActiveShapePosY - y), 1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+void TetrisLogic_LeftButtonPressed(void)
+{
+    g_ButtonPressedMoveLeft = 1;
+}
+
+void TetrisLogic_RightButtonPressed(void)
+{
+    g_ButtonPressedMoveRight = 1;
+}
+
+void TetrisLogic_RotateButtonPressed(void)
+{
+    g_ButtonPressedRotate = 1;
+}
+
+static const unsigned char* previousShapeData = 0;
+
+void TetrisLogic_Step()
+{
+    const unsigned char* shapeData = &g_TetrisSchapesData[g_TetrisShapeDescriptor[g_State.currentActiveShape].dataStartIndex + g_State.currentActiveShapeRotation][0];
+    TetrisLogic_DeleteShapeFromTheBoard(previousShapeData);
+
+    if (g_ButtonPressedMoveLeft)
+    {
+        if (g_State.currentActiveShapePosX > 0)
+        {
+            g_State.currentActiveShapePosX--;
+//            if (TetrisLogic_CheckForCollisionOnTheLeft(shapeData))
+//            {
+//                g_State.currentActiveShapePosX++;
+//            }
+        }
+    }
+
+    if (g_ButtonPressedMoveRight)
+    {
+        if (g_State.currentActiveShapePosX < (TETRIS_BOARD_WIDTH - 1))
+        {
+            g_State.currentActiveShapePosX++;
+//            if (TetrisLogic_CheckForCollisionOnTheRight(shapeData))
+//            {
+//                g_State.currentActiveShapePosX--;
+//            }
+        }
+    }
+
+    if (g_ButtonPressedRotate)
+    {
+        unsigned char newRotation = (g_State.currentActiveShapeRotation + 1);
+
+        if (newRotation >= g_TetrisShapeDescriptor[g_State.currentActiveShape].rotationCount)
+        {
+            newRotation = 0;
+        }
+        const unsigned char* newShapeData = &g_TetrisSchapesData[g_TetrisShapeDescriptor[g_State.currentActiveShape].dataStartIndex + newRotation][0];
+        //if (!TetrisLogic_CheckForCollisionOnTheLeft(newShapeData) && !TetrisLogic_CheckForCollisionOnTheRight(newShapeData))
+        if (!TetrisLogic_CheckForCollisionAtTheBottom(newShapeData))
+        {
+            g_State.currentActiveShapeRotation = newRotation;
+            shapeData = newShapeData;
+        }
+    }
+
+    if (TetrisLogic_CheckForCollisionAtTheBottom(shapeData))
+    {
+        g_State.currentActiveShapePosY++;
+        TetrisLogic_AddShapeToTheBoard(previousShapeData);
+        TetrisLogic_NextShape();
+        shapeData = &g_TetrisSchapesData[g_TetrisShapeDescriptor[g_State.currentActiveShape].dataStartIndex][g_State.currentActiveShapeRotation];
+        previousShapeData = 0;
+    }
+
+    if (TetrisLogic_CheckForCollisionAtTheBottom(shapeData))
+    {
+        TetrisLogic_Initialise();
+    }
+    else
+    {
+        previousShapeData = shapeData;
+        TetrisLogic_AddShapeToTheBoard(shapeData);
+        g_State.currentActiveShapePosY--;
+    }
+
+
+//    if (TetrisLogic_CheckForFullLineAtTheBottom())
+//    {
+//        TetrisLogic_ShiftTheBoardDown();
+//    }
+
+    g_State.nextShape = NextRandomShape();
+    
+    g_ButtonPressedMoveLeft = 0;
+    g_ButtonPressedMoveRight = 0;
+    g_ButtonPressedRotate = 0;
+}

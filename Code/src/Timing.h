@@ -21,4 +21,8 @@ void Delay1ms();
     }\
 }
 
+void Start1MsSystemTimer();
+
+unsigned int GetSystemTimeInMs();
+
 #endif // TIMING_H_INCLUDED

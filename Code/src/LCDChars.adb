@@ -1,0 +1,9 @@
+M:LCDChars
+S:G$LCDCharTopShapeData$0$0({8}DA8d,SC:U),D,0,0
+S:G$LCDCharMiddleShapeData$0$0({8}DA8d,SC:U),D,0,0
+S:G$LCDCharTopTwoShapeData$0$0({8}DA8d,SC:U),D,0,0
+S:G$LCDCharBottomShapeData$0$0({8}DA8d,SC:U),D,0,0
+S:G$LCDCharTopAndBottomShapeData$0$0({8}DA8d,SC:U),D,0,0
+S:G$LCDCharBottomTwoShapeData$0$0({8}DA8d,SC:U),D,0,0
+S:G$LCDCharThreeShapeData$0$0({8}DA8d,SC:U),D,0,0
+S:G$LCDCharIndicesMap$0$0({7}DA7d,SC:U),D,0,0
